@@ -15,11 +15,11 @@
 }
 
 .navLink:hover {
-	background-color: #4E2713;
+    background-color: orchid;
     /*cursor: url("https://freight.cargo.site/t/original/i/35b43e3689313708541dbf4fcfbffd710717dca60693ce1bbf67afc874c48636/circle-2-5.svg"), auto !important;*/
 }
 
-.navLink:hover a{
+.navLink:hover a {
     display: block;
     color: #fffaf5 !important;
     /*cursor: url("https://freight.cargo.site/t/original/i/35b43e3689313708541dbf4fcfbffd710717dca60693ce1bbf67afc874c48636/circle-2-5.svg"), auto !important;*/
@@ -32,3 +32,13 @@
 .navLink div:last-child {
     border-right: 0;
 }
+
+.ripple-wrap {
+    text-align: center;
+    position: relative;
+}
+
+.ripple-wrap canvas {
+    text-align: center;
+
+    position: absolute;

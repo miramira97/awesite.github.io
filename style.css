@@ -1331,7 +1331,7 @@ bodycopy cargo-link a {
 }
 
 .navLink:hover {
-	background-color: #4E2713;
+	background-color: orchid;
     /*cursor: url("https://freight.cargo.site/t/original/i/35b43e3689313708541dbf4fcfbffd710717dca60693ce1bbf67afc874c48636/circle-2-5.svg"), auto !important;*/
 }
 
@@ -3180,12 +3180,12 @@ bodycopy svg.marker-overlay a {
 }
 
 #cfcf div {
-    
+
     height: 100px;
     float: left;
     background:pink;
     width: 50px;
-    margin-right: calc((100% - 300px) / 5 - 1px); 
+    margin-right: calc((100% - 300px) / 5 - 1px);
 }
 #cfcf div:last-child{
     margin-right:0;

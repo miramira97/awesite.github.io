@@ -1,15 +1,15 @@
 <html lang="en"><head>
 
-				
-			
-					
-		
+
+
+
+
 		<title>test_anisha</title>
-		
+
 
 		<!--<link rel="preload" href="https://static.cargo.site/assets/social/IconFont-Regular-0.9.1.woff" as="font" type="font/woff" crossorigin>-->
 
-		
+
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,7 +17,7 @@
 
 </head>
 	<body>
-		
+
 	<!--	<div id="toolset" class="toolset">
 		<div id="toolset_admin">
 			<a href="#" rel="load_admin">
@@ -29,14 +29,14 @@
 	</div>-->
 
 
-	
+
 
 		<customhtml><script>
   /**
  * Water ripple effect.
- * Original code (Java) by Neil Wallis 
+ * Original code (Java) by Neil Wallis
  * @link http://www.neilwallis.com/java/water.html
- * 
+ *
  * @author Sergey Chikuyonok (serge.che@gmail.com)
  * @link http://chikuyonok.ru
  */
@@ -45,7 +45,7 @@
  function waterRipple: defines and creates wr obj and canvas on top of existing image
  textture, ripple = ?
 
- function run: calls newframe and then puts in the imagedata for ripple 
+ function run: calls newframe and then puts in the imagedata for ripple
 
  function disturb: creates disturbed points offset in set radius
 
@@ -68,9 +68,9 @@ function waterRipple(img) {
         ripple,
         texture,
         line_width = 10,
-        step = line_width*2, 
+        step = line_width*2,
         count = height / line_width;
-        
+
     canvas.width = width;
     canvas.height = height;
 
@@ -79,14 +79,14 @@ function waterRipple(img) {
     canvas.style.top = img.offsetTop + 'px';
 
     img.parentNode.insertBefore(canvas, img);
-    
+
     texture = ctx.getImageData(0, 0, width, height);
     ripple = ctx.getImageData(0, 0, width, height);
-    
+
     for (var i = 0; i < size; i++) {
         last_map[i] = ripplemap[i] = 0;
     }
-    
+
     /**
      * Main loop
      */
@@ -94,7 +94,7 @@ function waterRipple(img) {
         newframe();
         ctx.putImageData(ripple, 0, 0);
     }
-    
+
     /**
      * Disturb water at specified point
      */
@@ -102,25 +102,25 @@ function waterRipple(img) {
 
         dx <<= 0; // rounds
         dy <<= 0;
- 
+
         for (var j = dy - riprad; j < dy + riprad; j++) { //j in circle radisu
-            for (var k = dx - riprad; k < dx + riprad; k++) { //k in circle radius 
+            for (var k = dx - riprad; k < dx + riprad; k++) { //k in circle radius
                 //oldind is old mouse ind? so tracks movement ?
                 ripplemap[oldind + (j*width) +k+3] += 128;
                 console.log(ripplemap.leng)
             }
         }
     }
-    
+
     /**
      * Generates new ripples
      */
     function newframe() {
         var a, b, data, cur_pixel, new_pixel, old_data;
-        
+
         var t = oldind; oldind = newind; newind = t;
         var i = 0;
-        
+
         // create local copies of variables to decrease
         // scope lookup time in Firefox
         var _width = width,
@@ -131,41 +131,41 @@ function waterRipple(img) {
             _td = texture.data,
             _half_width = half_width,
             _half_height = half_height;
-        
+
         for (var y = 0; y < _height; y++) {
             for (var x = 0; x < _width; x++) {
                 var _newind = newind + i, _mapind = oldind + i;
                 data = (
-                    _ripplemap[_mapind - _width] + 
-                    _ripplemap[_mapind + _width] + 
-                    _ripplemap[_mapind - 1] + 
+                    _ripplemap[_mapind - _width] +
+                    _ripplemap[_mapind + _width] +
+                    _ripplemap[_mapind - 1] +
                     _ripplemap[_mapind + 1]) >> 1;
-                    
+
                 data -= _ripplemap[_newind];
                 data -= data >>9;
-                
+
                 _ripplemap[_newind] = data;
 
                 //where data=0 then still, where data>0 then wave
                 data = 1024 - data;
-                
+
                 old_data = _last_map[i];
                 _last_map[i] = data;
-                
+
                 if (old_data != data) {
                     //offsets
                     a = (((x - _half_width) * data / 1024) << 0) + _half_width;
                     b = (((y - _half_height) * data / 1024) << 0) + _half_height;
-    
+
                     //bounds check
                     if (a >= _width) a = _width - 1;
                     if (a < 0) a = 0;
                     if (b >= _height) b = _height - 1;
                     if (b < 0) b = 0;
-    
+
                     new_pixel = (a + (b * _width)) * 4;
                     cur_pixel = i * 4;
-                    
+
                     _rd[cur_pixel] = _td[new_pixel];
                   // _rd[cur_pixel + 1] = _td[new_pixel + 1];
                    // _rd[cur_pixel + 2] = _td[new_pixel + 2];
@@ -173,64 +173,64 @@ function waterRipple(img) {
                           //              _rd[cur_pixel +4 ] = _td[new_pixel+4]
 
                 }
-                
+
                 ++i;
             }
         }
     }
-    
+
     canvas.onmousemove = function(/* Event */ evt) {
         disturb(evt.offsetX || evt.layerX, evt.offsetY || evt.layerY);
     };
-    
+
     setInterval(run, delay);
-    
+
     // generate random ripples
     var rnd = Math.random;
     setInterval(function() {
         disturb(rnd() * width, rnd() * height);
     }, 700);
-    
-};
-</script></customhtml>		
-		
 
-			
+};
+</script></customhtml>
+
+
+
 <div class="navLink"><a>Sourcebook</a></div>
 <div class="navLink"><a>Open Call</a></div>
 <div class="navLink"><a>About</a></div>
 <div class="navLink"><a>Contact</a></div>
 
-		
-			
-			
-	
-	
 
-	
-		
-				
+
+
+
+
+
+
+
+
 					<div class="ripple-wrap"><img src="https://freight.cargo.site/t/original/i/bb7141f2df6853fb85290afc69f42c8670959d96134cf2d7a5219aa47c38cfff/oeg.jpg" width = "750" height="889" crossorigin="Anonymous" onload="waterRipple(this);">
 
 </div>
 <div id="intro-title"><h1>ANOTHER—WORLDLY ENERGIES</h1>
 <br><h2>Symposium on Metaphysical Enterprises</h2></div>
 
-				
+
 
 
 
 
 		<style id="">/*
  * This CSS file has been generated and is served by Cargo Collective Inc
- * and is authorized to be used on Cargo Collective Inc only. 
+ * and is authorized to be used on Cargo Collective Inc only.
  *
- * This CSS resource incorporates links to font software which is 
- * the valuable copyrighted property of WebType LLC, The Font Bureau 
- * and/or their suppliers. You may not 
- * attempt to copy, install, redistribute, convert, modify or reverse 
- * engineer this font software. Please contact WebType with any 
- * questions: http://www.webtype.com 
+ * This CSS resource incorporates links to font software which is
+ * the valuable copyrighted property of WebType LLC, The Font Bureau
+ * and/or their suppliers. You may not
+ * attempt to copy, install, redistribute, convert, modify or reverse
+ * engineer this font software. Please contact WebType with any
+ * questions: http://www.webtype.com
  */
 
 @font-face {
@@ -304,6 +304,6 @@ function waterRipple(img) {
   unicode-range: U+0000-DFFF, U+F900-FFFD;
 }
 </style>
-	
+
 
 <!--<div id="following-overlay" style="display: none; position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; z-index: 2147483637;"></div></body><div id="following-container" style="background: rgb(26, 26, 26);"><iframe id="following-frame" name="following-frame" style="display: none; border: none; background: transparent;" src="/followingframe/testanisha?20-06-25.1"></iframe></div>--></html>

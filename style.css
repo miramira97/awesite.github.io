@@ -33,6 +33,12 @@
     border-right: 0;
 }
 
+/* this stuff below styles the interaxctive image. a canvas duplicating the image is 
+drawn on top of the image, but without this it will sit below the image and not overlap. 
+There is still an odd bug when you shrink the page, the images don't overlay.
+But I think this will be fixable, need to look again at the source:
+http://media.chikuyonok.ru/ripple/*/
+
 .ripple-wrap {
     text-align: center;
     position: relative;

@@ -1,3 +1,12 @@
+
+@font-face {
+  font-family: "Sabon";
+  src: url("https://type.cargo.site/Sabon/6ba17d09-69df-4c61-9564-2d602203282d-3.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+  unicode-range: U+0000-DFFF, U+F900-FFFD;
+}
+
 .navLink {
     display: inline-block;
     border-radius: 5rem;
@@ -31,4 +40,23 @@
 
 .navLink div:last-child {
     border-right: 0;
+}
+#awe-title {
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    background-color: #fffaf5;
+    padding: 4rem 6rem;
+    border-radius: 20rem;
+    border: 1px solid #4E2713;
+}
+
+#awe-title h1{
+        color: #4E2713 !important;
+        font-family: 'Montserrat',sans-serif;
+}
+
+#awe-title h2{
+        color: #4E2713 !important;
+        font-family: 'Darker Grotesque',sans-serif;
 }

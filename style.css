@@ -1,3 +1,4 @@
+
 .navLink {
     display: inline-block;
     border-radius: 5rem;
@@ -31,4 +32,30 @@
 
 .navLink div:last-child {
     border-right: 0;
+}
+         .buttons-flex {
+             display: -webkit-flex;
+             display: flex;
+             -webkit-justify-content: space-between;
+             justify-content: space-between;
+         }
+#awe-title {
+   margin:auto;
+    width: 600px;
+    background-color: #fffaf5;
+    padding: 4rem 6rem;
+    border-radius: 20rem;
+    border: 1px solid #4E2713;
+}
+
+#awe-title h1{
+    text-align:center;
+        color: #4E2713 !important;
+        font-family: 'Montserrat',sans-serif;
+}
+
+#awe-title h2{
+    text-align: center;
+        color: #4E2713 !important;
+        font-family: 'Darker Grotesque',sans-serif;
 }

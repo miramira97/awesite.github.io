@@ -8,3 +8,12 @@
 6. `git commit -m “description of change"`
 7. `git push origin branch_name`
 8. Go to github repository website (or maybe atom lets you do this), and click the ‘make pull request’ tab. Do that with your new branch. Assign someone (me) as a reviewer (and I will do the same for you), to ensure the changes are working, as well as desirable 
+
+
+# other things
+
+Trello is here: https://trello.com/b/XNC09SYZ/awe-site
+
+Google doc for content is on drive (unlinked bc public)
+
+arena for visuals: https://www.are.na/anisha-uppugonduri/other-gods

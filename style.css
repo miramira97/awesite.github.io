@@ -1,78 +1,104 @@
 
+@font-face {
+    font-family: EditorialNew;
+    src: url("editorial-thin.ttf") format("ttf"), url("editorial-thin.ttf")  format("truetype");
+}
+
+@font-face {
+    font-family: Cirka;
+    src: url("Cirka-Regular.ttf") format("ttf"), url("Cirka-Regular.ttf")  format("truetype");
+}
+
+body {
+  background-color: black;
+}
+
 .navLink {
     display: inline-block;
-    border-radius: 5rem;
-    background-color: #fffaf5;
-    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    border-radius: 60%;
+    background-color: white;
+    padding: 5rem 5rem 5rem 5rem;
     transition: all 0.2s ease-in-out;
-    border: 1px solid #4E2713;
+    /*border: 1px solid black;*/
     margin-left: 0rem;
+   margin-top:10rem;
+    font-family: 'EditorialNew', cursive;
+    font-size: 30px;
+    height: 300px;
+    width:200px;
+    text-align:center;
+    box-shadow: 
+       0 0 20px 20px #fff;
+  
 }
 
 .navLink a {
-    color: #4E2713 !important;
-    border-radius: 5rem;
-    text-decoration: none !important;
+    position:relative;
+    top:100px;
+    color: black ;
+    text-decoration: none ;
 }
 
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  50% { transform: translate(3px, -1px) rotate(-1deg); }
+  100% { transform: translate(1px, 1px) rotate(0deg); }
+  
+}
 .navLink:hover {
-    background-color: orchid;
+   /* box-shadow: 
+       0 0 60px 30px #fff,
+    0 0 100px 60px #f0f,
+    0 0 140px 90px #0ff;*/
+        box-shadow: 
+       /*0 0 60px 30px #ffffed,*/
+               inset 20px 0 80px #000,   /* inner left magenta short */
+
+  0 0 90px 90px #fff;
+      animation: shake .4s;
+   animation-iteration-count: infinite;
     /*cursor: url("https://freight.cargo.site/t/original/i/35b43e3689313708541dbf4fcfbffd710717dca60693ce1bbf67afc874c48636/circle-2-5.svg"), auto !important;*/
 }
 
 .navLink:hover a {
     display: block;
-    color: #fffaf5 !important;
+ 
     /*cursor: url("https://freight.cargo.site/t/original/i/35b43e3689313708541dbf4fcfbffd710717dca60693ce1bbf67afc874c48636/circle-2-5.svg"), auto !important;*/
 }
 
 .navLink div:first-child {
-    border-left: 0;
+    border-left: 100;
 }
 
 .navLink div:last-child {
-    border-right: 0;
+    border-right: 100;
 }
 
-/* this stuff below styles the interaxctive image. a canvas duplicating the image is 
-drawn on top of the image, but without this it will sit below the image and not overlap. 
-There is still an odd bug when you shrink the page, the images don't overlay.
-But I think this will be fixable, need to look again at the source:
-http://media.chikuyonok.ru/ripple/*/
 
-.ripple-wrap {
-    text-align: center;
-    position: relative;
-}
 
-.ripple-wrap canvas {
-    text-align: center;
 
-    position: absolute;
-}
   .buttons-flex {
              display: -webkit-flex;
              display: flex;
              -webkit-justify-content: space-between;
              justify-content: space-between;
+               margin:70px;
+
          }
 #awe-title {
-   margin:auto;
-    width: 600px;
-    background-color: #fffaf5;
-    padding: 4rem 6rem;
-    border-radius: 20rem;
-    border: 1px solid #4E2713;
+   
 }
 
 #awe-title h1{
-    text-align:center;
-        color: #4E2713 !important;
-        font-family: 'Montserrat',sans-serif;
+        color: white;
+        font-family: 'EditorialNew', cursive;
+        font-size:30px;
+        margin-bottom:0px;
 }
 
 #awe-title h2{
-    text-align: center;
-        color: #4E2713 !important;
-        font-family: 'Darker Grotesque',sans-serif;
+        color: white ;
+        font-family: sans-serif;
+        line-height: 0px;
+        margin-top:0px;
 }

@@ -1,136 +1,199 @@
 
 @font-face {
-    font-family: EditorialNew;
-    src: url("editorial-thin.ttf") format("ttf"), url("editorial-thin.ttf")  format("truetype");
+    font-family: 'EditorialNew-Light';
+    src: url('EditorialNew-Light.otf') format('otf');
 }
 
 @font-face {
-    font-family: Cirka;
-    src: url("Cirka-Regular.ttf") format("ttf"), url("Cirka-Regular.ttf")  format("truetype");
+    font-family: 'EditorialNew-Ultralight';
+    src: url('EditorialNew-Ultralight.otf') format('otf');
 }
 
 @font-face {
-    font-family: EBGaramond;
-    src: url("EBGaramond_italic.ttf") format("ttf"), url("EBGaramond_italic.ttf")  format("truetype");
+    font-family: 'EditorialNew-Regular';
+    src: url('EditorialNew-Regular.otf') format('otf');
 }
+
+@font-face {
+    font-family: 'EditorialNew-Thin';
+    src: url('EditorialNew-Thin.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'NeueHaas';
+  src: url('NeueHaasGrotesk-Roman.woff') format('woff');
+}
+
+html {
+  margin: 0;
+  padding: 0rem 0rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: black;
+  box-sizing: border-box;
+  padding: 2.5rem 4rem;
+  background-color: #f5f5f5;
+  /*box-shadow: inset 0 0 64px 32px #ccc;*/
+  margin: 0;
+  transition: 0.8s cubic-bezier(0.25,0.25,0,0.5);
 }
 
-.navLink {
-    display: inline-block;
+a {
+  text-decoration: none;
+}
+
+#title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#menu-button {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: 0.5s cubic-bezier(0.25,0.25,0,0.5);
+}
+
+#menu-button:hover {
+  transform: rotate(90deg);
+}
+
+.buttons-flex {
+  height: 80%;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 2.5rem 0rem 0rem 0rem;
+}
+
+.buttons-flex a{
+}
+
+.nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     border-radius: 60%;
-    background-color: white;
-    padding: 5rem 5rem 5rem 5rem;
-    transition: all 0.2s ease-in-out;
-    /*border: 1px solid black;*/
-    margin-left: 0rem;
-   margin-top:10rem;
+    background-color: #f5f5f5;
+
+    transition: 0.8s cubic-bezier(0.25,0.25,0,0.5);
+    border: 0px solid #ccc;
     font-family: 'EditorialNew', cursive;
-    font-size: 30px;
-    height: 300px;
-    width:200px;
-    text-align:center;
-    box-shadow: 
-       0 0 20px 20px #fff;
-  
+
+    height: 95%;
+    width: 27.5vw;
+
+    box-shadow: 0px 32px 48px #ddd, inset 0 0 64px 32px #ccc;
+
 }
 
-
-.navLink span {
+.nav-link span {
     position:relative;
-    top:100px;
-        font-size: 60px;
+    font-size: 4rem;
+    text-decoration: none;
+    transition: 0.2s cubic-bezier(0.25,0.25,0,0.5);
+}
 
-    text-decoration: none ;
-} 
+#nav-link-spirits:hover {
+  background-color: #e25d45;
+  transform: translateY(-32px);
+  border: 0px solid #c52f15;
+  box-shadow: 0px 56px 48px #ddd, inset 0 0 64px 32px #c52f15;
+}
+
+#nav-link-stones:hover {
+  background-color: #80a559;
+  transform: translateY(-32px);
+  border: 0px solid #4d7226;
+  box-shadow: 0px 56px 48px #ddd, inset 0 0 64px 32px #4d7226;
+}
+
+#nav-link-stars:hover {
+  background-color: #7b89b1;
+  transform: translateY(-32px);
+  border: 0px solid #425790;
+  box-shadow: 0px 56px 48px #ddd, inset 0 0 64px 32px #425790;
+}
+
+.nav-link:hover span {
+  color: #f5f5f5 !important;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
 
 #spirits-main-text {
-    color: #263E90;
+    color: black;
 }
 
 #stones-main-text {
-    color: #FD8B8C;
+    color: black;
 }
 
 #stars-main-text {
-    color: #9ED387;
+    color: black;
 }
+
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
   50% { transform: translate(3px, -1px) rotate(-1deg); }
   100% { transform: translate(1px, 1px) rotate(0deg); }
-  
-}
-.navLink:hover {
-   /* box-shadow: 
-       0 0 60px 30px #fff,
-    0 0 100px 60px #f0f,
-    0 0 140px 90px #0ff;*/
-        box-shadow: 
-       /*0 0 60px 30px #ffffed,*/
-               inset 20px 0 80px #000,   /* inner left magenta short */
 
-  0 0 90px 90px #fff;
-      animation: shake .4s;
-   animation-iteration-count: infinite;
-    /*cursor: url("https://freight.cargo.site/t/original/i/35b43e3689313708541dbf4fcfbffd710717dca60693ce1bbf67afc874c48636/circle-2-5.svg"), auto !important;*/
 }
-.navLink:hover {
-   /* box-shadow: 
-       0 0 60px 30px #fff,
-    0 0 100px 60px #f0f,
-    0 0 140px 90px #0ff;*/
-        box-shadow: 
-       /*0 0 60px 30px #ffffed,*/
-               inset 20px 0 80px #000,   /* inner left magenta short */
 
-  0 0 90px 90px #fff;
-      animation: shake .4s;
-   animation-iteration-count: infinite;
-    /*cursor: url("https://freight.cargo.site/t/original/i/35b43e3689313708541dbf4fcfbffd710717dca60693ce1bbf67afc874c48636/circle-2-5.svg"), auto !important;*/
+.nav-link div:first-child {
+    border-left: 0;
+}
+
+.nav-link div:last-child {
+    border-right: 0;
 }
 
 
-.navLink:hover span {
-    color:black !important;
- 
-    /*cursor: url("https://freight.cargo.site/t/original/i/35b43e3689313708541dbf4fcfbffd710717dca60693ce1bbf67afc874c48636/circle-2-5.svg"), auto !important;*/
-}
-
-.navLink div:first-child {
-    border-left: 100;
-}
-
-.navLink div:last-child {
-    border-right: 100;
-}
-
-
-  .buttons-flex {
-             display: -webkit-flex;
-             display: flex;
-             -webkit-justify-content: space-between;
-             justify-content: space-between;
-               margin:70px;
-
-         }
 #awe-title {
-   
+
 }
 
 #awe-title h1{
-        color: white;
-        font-family: 'EditorialNew', cursive;
-        font-size:30px;
-        margin-bottom:0px;
+  font-family: 'EditorialNew-Ultralight', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 200;
+  line-height: 1.3;
+  letter-spacing: 0.05rem;
+  color: black;
+  margin: 0;
+  display: inline-block;
 }
 
 #awe-title h2{
-        color: white ;
-        font-family: sans-serif;
-        line-height: 0px;
-        margin-top:0px;
+  font-family: 'NeueHaas', serif;
+  font-size: 2.3rem;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.1rem;
+  color: black;
+  margin: 0;
+  display: inline-block;
 }
 
 #mission-statement .title{
@@ -140,8 +203,8 @@ body {
 
 #mission-statement p{
     margin:100px;
- 
- 
+
+
 }
 
 #mission-statement .title{
@@ -153,7 +216,7 @@ body {
 #mission-statement .body{
     font-size:20px;
        color:white;
-    font-family:Cirka,sans-serif; 
+    font-family:Cirka,sans-serif;
 }
 
 #save-date .intro{

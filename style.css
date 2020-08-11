@@ -74,7 +74,7 @@ body {
 .inspirations{
     position:fixed;
   top:400px;
-  left:1000px;
+  left:1100px;
 }
 #spirits-main-text {
     color: #263E90;
@@ -192,15 +192,18 @@ body {
 }
 
 #mission-statement .title{
-    font-size:30px;
-    color:white;
-    font-family:Cirka,sans-serif;
-}
+    font-size:48px;
+    line-height: 1.5;
 
+    color:white;
+    font-family:sans-serif;
+}
+/*neuhaus*/
 #mission-statement .body{
-    font-size:20px;
+    font-size:48px;
        color:white;
-    font-family:Cirka,sans-serif; 
+       line-height: 1.5;
+    font-family:EditorialNew,sans-serif; 
 }
 
 #save-date .intro{

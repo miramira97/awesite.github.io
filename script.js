@@ -3,7 +3,7 @@ $(document).ready(function(){
   $("#nav-link-spirits").hover(function(){
     $('body').css("background-color", "#f8d6d1");
     $('#nav-link-spirits').css("box-shadow", "0px 56px 64px #e25d45, inset 0 0 64px 32px #af2a12");
-    //$('#nav-link-spirits').css("animation", "float 6s ease-in-out infinite");
+    //setTimeout(() => {$('#nav-link-spirits').css("animation", "float 6s ease-in-out infinite");}, 800);
     $('#nav-link-stars').css("box-shadow", "0px 16px 24px #f4c2b9, inset 0 0 64px 32px #f4c2b9");
     $('#nav-link-stars').css("background-color", "#f8d6d1");
     $('#nav-link-stars').css("filter", "blur(8px)");
@@ -14,7 +14,7 @@ $(document).ready(function(){
   }, function(){
     $('body').css("background-color", "")
     $('#nav-link-spirits').css("box-shadow", "");
-    //$('#nav-link-spirits').css("animation", "");
+    //setTimeout(() => {$('#nav-link-spirits').css("animation", "");}, 800);
     $('#nav-link-stars').css("box-shadow", "");
     $('#nav-link-stars').css("background-color", "");
     $('#nav-link-stars').css("filter", "");

@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: Agrandir;
-    src: url("Agrandir-GrandHeavy.ttf") format("ttf"), url("Agrandir-GrandHeavy.ttf")   format("truetype");
+    src: url("Agrandir-TightBlack.ttf") format("ttf"), url("Agrandir-TightBlack.ttf")   format("truetype");
 }
 body {
   background-color: black;
@@ -51,7 +51,7 @@ body {
 
 
    .mission:hover  {
-         content: url('images/Magenta/butterfly-blank.png');
+         content: url('images/moth_2.png');
   top:100px;
   left:100px;
   height:300;
@@ -65,7 +65,7 @@ body {
 }
 
    .events:hover  {
-         content: url('images/Magenta/stars-blank.png');
+         content: url('images/crescent_moon.png');
    top:40px;
   left:600px;
   height:300;
@@ -73,9 +73,29 @@ body {
     }
 .inspirations{
     position:fixed;
-  top:400px;
+  top:450px;
   left:1100px;
 }
+  .inspirations:hover  {
+         content: url('images/bloom_contrast.png');
+   top:500px;
+  left:1040px;
+  height:300;
+  width:300;
+    }
+    .inspirations .text {
+
+    opacity: 0;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 2px 0px;
+    color: #ffffff;
+}
+.inspirations:hover .text{
+opacity:1;}
+      
 #spirits-main-text {
     color: #263E90;
 }
@@ -134,17 +154,17 @@ body {
   top:550px;
         color: white ;
         font-family: 'Agrandir',sans-serif;
-        font-size:70px;
-        line-height: 0px;
+        font-size:100px;
+        line-height: 12px;
         margin-top:0px;
 }
 #awe-title h3{
   position:relative;
-  top:560px;
+  top:570px;
           color: white ;
         font-family: 'Agrandir',sans-serif;
-        font-size:70px;
-        line-height: 0px;
+        font-size:100px;
+        line-height: 12px;
         margin-top:0px;
 }
 #datetime .date{

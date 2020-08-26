@@ -6,9 +6,9 @@ $(document).ready(function(){
     $('#menu-button svg').css("fill", "#090909");
 
   }, function(){
-    //$('#menu-button').css("background-color", "");
+    $('#menu-button').css("background-color", "");
     $('#menu-button').css("transform", "");
-    //$('#menu-button svg').css("fill", "");
+    $('#menu-button svg').css("fill", "");
   });
 
   $("#menu-button").on( "click", function(){

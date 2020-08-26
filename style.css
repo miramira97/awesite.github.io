@@ -44,11 +44,6 @@
   src: url('fonts/protogrotesk-bold-TRIAL.otf') format("opentype");
 }
 
-@font-face {
-  font-family: 'Zirkon';
-  src: url('fonts/GT-Zirkon-Black-Trial.otf') format("opentype");
-}
-
 
 html body {
   margin: 0;

@@ -1,9 +1,5 @@
 $(document).ready(function(){
 
-  $("#nav-link-spirits").hover(function(){
-    $('body').css("background-color", "#f8d6d1");
-    $('#nav-link-spirits').css("box-shadow", "0px 56px 64px #e25d45, inset 0 0 64px 32px #af2a12");
-    //$('#nav-link-spirits').css("animation", "float 6s ease-in-out infinite");
   $("#menu-button").hover(function(){
     $('#menu-button').css("background-color", "#f5f5f5");
     $('#menu-button').css("transform", "rotate(90deg)");

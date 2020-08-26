@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'EditorialNew-Light';
     src: url('fonts/EditorialNew-Light.otf') format('opentype');
@@ -17,7 +16,7 @@
 @font-face {
 
     font-family: Agrandir;
-    src: url("Agrandir-TightBlack.ttf") format("ttf"), url("Agrandir-TightBlack.ttf")   format("truetype");
+    src: url("Agrandir-TightBlack.ttf") format("ttf"), url("Agrandir-TightBlack.ttf") format("truetype");
 
 }
 
@@ -27,35 +26,35 @@
 }
 
 @font-face {
-  font-family: 'Kessler-Display';
-  src: url('fonts/kesslersuperdisplay-regular-TRIAL.otf') format("opentype");
+    font-family: 'Kessler-Display';
+    src: url('fonts/kesslersuperdisplay-regular-TRIAL.otf') format("opentype");
 }
 
 @font-face {
-  font-family: 'ProtoGrotesk-Regular';
-  src: url('fonts/protogrotesk-regular-TRIAL.otf') format("opentype");
+    font-family: 'ProtoGrotesk-Regular';
+    src: url('fonts/protogrotesk-regular-TRIAL.otf') format("opentype");
 }
 
 @font-face {
-  font-family: 'ProtoGrotesk-Extralight';
-  src: url('fonts/protogrotesk-extralight-TRIAL.otf') format("opentype");
+    font-family: 'ProtoGrotesk-Extralight';
+    src: url('fonts/protogrotesk-extralight-TRIAL.otf') format("opentype");
 }
 
 @font-face {
-  font-family: 'ProtoGrotesk-Bold';
-  src: url('fonts/protogrotesk-bold-TRIAL.otf') format("opentype");
+    font-family: 'ProtoGrotesk-Bold';
+    src: url('fonts/protogrotesk-bold-TRIAL.otf') format("opentype");
 }
 
 
 html body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
 
-  background-color: #090909;
-  color: #f5f5f5;
+    background-color: #090909;
+    color: #f5f5f5;
 }
 
 * {
@@ -65,314 +64,261 @@ html body {
 /* Styles ————————————————————————————————————————————————————————————————————— */
 
 h1 {
-  display: inline;
-  font-family: 'ProtoGrotesk-Bold', sans-serif;
-  font-size: 5.25rem;
-  font-weight: normal;
-  line-height: 1.1;
-  padding: 0;
-  margin: 0;
-  color: #f5f5f5;
-  /*-webkit-text-stroke: 1px #f5f5f5;*/
+    display: inline;
+    font-family: 'ProtoGrotesk-Bold', sans-serif;
+    font-size: 5.25rem;
+    font-weight: normal;
+    line-height: 1.1;
+    padding: 0;
+    margin: 0;
+    color: #f5f5f5;
+    /*-webkit-text-stroke: 1px #f5f5f5;*/
 }
 
 h2 {
-  display: inline;
-  font-family: 'Kessler-Display', serif;
-  font-size: 4rem;
-  font-weight: normal;
-  padding: 0;
-  margin: 0;
+    display: inline;
+    font-family: 'Kessler-Display', serif;
+    font-size: 4rem;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
 
 }
 
 h3 {
-  display: inline;
-  font-family: 'Kessler-Display', serif;
-  font-size: 2rem;
-  font-weight: normal;
-  padding: 0;
-  margin: 0;
+    display: inline;
+    font-family: 'Kessler-Display', serif;
+    font-size: 2rem;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
 }
 
 h4 {
-  display: inline;
-  font-family: 'ProtoGrotesk-Regular', sans-serif;
-  font-size: 2rem;
-  font-weight: normal;
-  padding: 0;
-  margin: 0;
+    display: inline;
+    font-family: 'ProtoGrotesk-Regular', sans-serif;
+    font-size: 2rem;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
 }
 
 p {
-  display: inline;
-  font-family: 'Agrandir-Regular', serif;
-  font-size: 2rem;
-  font-weight: normal;
-  padding: 0;
-  margin: 0;
+    display: inline;
+    font-family: 'Agrandir-Regular', serif;
+    font-size: 2rem;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
 }
 
 a:hover {
-  color: darkorchid;
+    color: darkorchid;
 }
 
 /* Navigation ————————————————————————————————————————————————————————————————————— */
 
 #nav {
-  position: absolute;
-  z-index: 2;
-  width: 100%;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
 
-  padding: 2rem 3rem;
+    padding: 2rem 3rem;
 }
 
 #home-button {
-  display: inline-block;
+    display: inline-block;
 }
 
 #menu-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.75rem;
-  border: 1px solid #f5f5f5;
-  border-radius: 10rem;
-  transition: all 0.4s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem;
+    border: 1px solid #f5f5f5;
+    border-radius: 10rem;
+    transition: all 0.4s ease-out;
 }
 
 #menu-button svg {
-  width: 1.5rem;
-  height: 1.5rem;
-  fill: #f5f5f5;
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: #f5f5f5;
 }
 
 /* Menu ————————————————————————————————————————————————————————————————————— */
 
 #menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.8);
 
-  display: none;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 
-  backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 
 #menu img {
-  margin: 2rem 0rem;
+    margin: 2rem 0rem;
 }
 
 #menu-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 2rem 3rem;
-  display: flex;
-  justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 #menu-footer-left p {
-  margin-right: 2rem;
+    margin-right: 2rem;
 }
 
 /* Homepage Content ————————————————————————————————————————————————————————————————————— */
 
 #symposium-title {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 2rem 3rem;
-  width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 3rem;
+    width: 100%;
 }
 
 #title-details {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
 }
 
 #info-link {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 0;
-  padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
 }
 
 #info-link svg {
-  width: 2rem;
-  height: 2rem;
-  margin: 0.25rem 0rem 0rem 0.5rem;
-  fill: #f5f5f5;
-  stroke: #090909;
-  stroke-width: 0px;
+    width: 2rem;
+    height: 2rem;
+    margin: 0.25rem 0rem 0rem 0.5rem;
+    fill: #f5f5f5;
+    stroke: #090909;
+    stroke-width: 0px;
 }
 
 #info-link:hover svg {
-  fill: darkorchid;
+    fill: darkorchid;
 }
 
 
 
 
-.mission{
-  position:fixed;
-  top:150px;
-  left:80px;
-          display: inline-block;
+.mission .mission-image {
+    position: fixed;
+    top: 150px;
+    left: 80px;
+    display: inline-block;
 
 }
 
-
-   .mission:hover  {
-         content: url('images/moth_2.png');
-  top:150px;
-  left:80px;
-  height:300;
-  width:300;
-  transform:rotate(-30deg);
-    }
-.events{
-  position:fixed;
-  top:40px;
-  left:600px;
-}
-
-   .events:hover  {
-         content: url('images/crescent_moon.png');
-   top:40px;
-  left:600px;
-  height:300;
-  width:300;
-    }
-.inspirations{
-    position:fixed;
-  top:350px;
-  left:1250px;
-}
-
-  .inspirations:hover  {
-         content: url('images/bloom_contrast.png');
-   top:400px;
-  left:1190px;
-  height:300;
-  width:300;
-    }
-    .inspirations .text {
-
-    opacity: 0;
+.mission .mission-text{
     position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    padding: 2px 0px;
-    color: #ffffff;
-}
-.inspirations:hover .text{
-opacity:1;}
-      
-
-
-
-
-
-
-
-
-/*
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(90deg); }
-  50% { transform: translate(3px, -1px) rotate(-1deg); }
-  100% { transform: translate(1px, 1px) rotate(0deg); }
-#awe-title h2{
-  position:relative;
-  top:550px;
-        color: white ;
-        font-family: 'Agrandir',sans-serif;
-        font-size:100px;
-        line-height: 12px;
-        margin-top:0px;
-}
-#awe-title h3{
-  position:relative;
-  top:570px;
-          color: white ;
-        font-family: 'Agrandir',sans-serif;
-        font-size:100px;
-        line-height: 12px;
-        margin-top:0px;
-}
-#datetime .date{
-  position:relative;
-  top:540;
-  left:0;
-  font-size:30px;
-  font-family:sans-serif;
-  color:white;
-}
-#datetime .time{
-
-}
-
-#location_info .location{
-  position:relative;
-  top:500;
-  left:500;
-  font-size:30px;
-  font-family:sans-serif;
-  color:white;
-}
-
-#location_info .place{
-
-  font-size: 3rem;
-  font-family: 'EditorialNew-Thin', sans-serif;
-  color:white;
-}
-
-#mission-statement .title{
-    color:white;
-
+    text-transform: uppercase;
+    font-size: 40px;
+    top: 350px;
+    left: 80px;
+    color: white;
+    display: none;
 }
 
 
-#mission-statement .title{
-
-    line-height: 1.5;
-
+.mission:hover .mission-image{
+    content: url('images/moth_2.png');
+    top: 150px;
+    left: 80px;
+    height: 300;
+    width: 300;
+    transform: rotate(-30deg);
 }
 
-#mission-statement .body{
+.mission:hover .mission-text {
 
-       color:white;
-
+    display: block;
 }
 
-#save-date .intro{
-
-    color:white;
+.events .events-text {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 40px;
+    top: 180px;
+    left: 550px;
+    color: white;
+    display: none;
 }
-#save-date .title{
 
-    font-size:30px;
+
+.events .events-image {
+    position: fixed;
+    top: 40px;
+    left: 600px;
 }
 
-#save-date .date{
-color:white;
-
+.events:hover .events-image {
+    content: url('images/moon_2.png');
+    top: 40px;
+    left: 600px;
+    height: 300;
+    width: 300;
 }
-*/
+
+.events:hover .events-text {
+
+    display: block;
+}
+
+.inspirations .inspirations-image {
+    position: fixed;
+    top: 350px;
+    left: 1250px;
+}
+
+.inspirations .inspiration-text {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 40px;
+    top: 350px;
+    left: 1150px;
+    color: white;
+    display: none;
+}
+
+.inspirations:hover .inspirations-image {
+    content: url('images/bloom_2.png');
+    top: 400px;
+    left: 1190px;
+    height: 300;
+    width: 300;
+}
+
+
+
+.inspirations:hover .inspiration-text {
+    display: block;
+}
+
+

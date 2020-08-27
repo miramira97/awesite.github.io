@@ -229,7 +229,7 @@ a:hover {
 
 
 .mission .mission-image {
-    position: fixed;
+    position: absolute;
     top: 150px;
     left: 80px;
     display: inline-block;
@@ -238,6 +238,7 @@ a:hover {
 
 .mission .mission-text{
     position: absolute;
+    font-family: 'Kessler-Display', serif;
     text-transform: uppercase;
     font-size: 40px;
     top: 350px;
@@ -264,6 +265,7 @@ a:hover {
 .events .events-text {
     position: absolute;
     text-transform: uppercase;
+    font-family: 'Kessler-Display', serif;
     font-size: 40px;
     top: 180px;
     left: 550px;
@@ -273,7 +275,7 @@ a:hover {
 
 
 .events .events-image {
-    position: fixed;
+    position: absolute;
     top: 40px;
     left: 600px;
 }
@@ -292,7 +294,7 @@ a:hover {
 }
 
 .inspirations .inspirations-image {
-    position: fixed;
+    position: absolute;
     top: 350px;
     left: 1250px;
 }
@@ -300,6 +302,7 @@ a:hover {
 .inspirations .inspiration-text {
     position: absolute;
     text-transform: uppercase;
+    font-family: 'Kessler-Display', serif;
     font-size: 40px;
     top: 350px;
     left: 1150px;

@@ -17,15 +17,106 @@ $(document).ready(function(){
       $('#menu-button').css("background-color", "#f5f5f5");
       $('#menu-button').css("transform", "rotate(90deg)");
       $('#menu-button svg').css("fill", "#090909");
+      $('#nav').css("z-index", "100");
     } else {
       $('#menu').css("display", "");
-      $('#menu-button').css("background-color", "");
-      $('#menu-button svg').css("fill", "");
+      $('#nav').css("z-index", "");
+      //$('#menu-button').css("background-color", "");
+      //$('#menu-button svg').css("fill", "");
     }
   });
 
 
+  $("#cursor").css({'display': 'none'});
+  $("#moth-2").css({'display': 'none'});
+  $("#moon-2").css({'display': 'none'});
+  $("#lotus-2").css({'display': 'none'});
+
+//moth hover
+  $("#moth-hover-area").hover(function(){
+    $("#cursor").css({'display': 'block'});
+    $("#cursor").html('<small>MISSION</small>');
+    $("#moth-2").css({'display': 'block'});
+    $("#moth-1").css({'display': 'none'});
+    $('html').css({'cursor': 'none'});
+    changeCursor();
+  }, function() {
+    $("#cursor").css({'display': 'none'});
+    $("#moth-2").css({'display': 'none'});
+    $("#moth-1").css({'display': ''});
+    $('html').css({'cursor': 'auto'});
+  });
+
+  /*$("#moth-hover-area").on( "click", function(){
+    $("#content").load("mission.html");
+  });*/
+
+// moon hover
+  $("#moon-hover-area").hover(function(){
+    $("#cursor").css({'display': 'block'});
+    $("#cursor").html('<small>SOURCEBOOK</small>');
+    $("#moon-2").css({'display': 'block'});
+    $("#moon-1").css({'display': 'none'});
+    $('html').css({'cursor': 'none'});
+    changeCursor();
+  }, function() {
+    $("#cursor").css({'display': 'none'});
+    $("#moon-2").css({'display': 'none'});
+    $("#moon-1").css({'display': ''});
+    $('html').css({'cursor': 'auto'});
+  });
+
+  // lotus hover
+    $("#lotus-hover-area").hover(function(){
+      $("#cursor").css({'display': 'block'});
+      $("#cursor").html('<small>ABOUT</small>');
+      $("#lotus-2").css({'display': 'block'});
+      $("#lotus-1").css({'display': 'none'});
+      $('html').css({'cursor': 'none'});
+      changeCursor();
+    }, function() {
+      $("#cursor").css({'display': 'none'});
+      $("#lotus-2").css({'display': 'none'});
+      $("#lotus-1").css({'display': ''});
+      $('html').css({'cursor': 'auto'});
+    });
+
+
 });
+
+
+function changeCursor() {
+  var ElementCursor = {
+      cursorElement: "",
+      setCursor: function (cursorId) {
+          $('html').css({
+              'cursor': ''
+          });
+          $('html').mousedown(function (e) {return false;});
+          ElementCursor.cursorElement = cursorId;
+          ElementCursor.updateCursor();
+      },
+      removeCursor: function () {
+          $('html').css({
+              'cursor': ''
+          });
+          ElementCursor.cursorElement = '';
+      },
+      updateCursor: function () {
+          $(document).mousemove(function (e) {
+              $('#' + ElementCursor.cursorElement).css({
+                  'position': 'fixed',
+                      'top': e.pageY-10 + 'px',
+                      'left': e.pageX-50 + 'px'
+              });
+          });
+      }
+  };
+
+  ElementCursor.setCursor("cursor");
+
+}
+
 
 /*
 $(document).ready(function(){
@@ -34,7 +125,6 @@ $(document).ready(function(){
     $('body').css("background-color", "#f8d6d1");
     $('#nav-link-spirits').css("box-shadow", "0px 56px 64px #e25d45, inset 0 0 64px 32px #af2a12");
     //setTimeout(() => {$('#nav-link-spirits').css("animation", "float 6s ease-in-out infinite");}, 800);
->>>>>>> 14aa4134bf0dc9b7f0dd0a4d999953ed45decb27
     $('#nav-link-stars').css("box-shadow", "0px 16px 24px #f4c2b9, inset 0 0 64px 32px #f4c2b9");
     $('#nav-link-stars').css("background-color", "#f8d6d1");
     $('#nav-link-stars').css("filter", "blur(8px)");
@@ -45,11 +135,7 @@ $(document).ready(function(){
   }, function(){
     $('body').css("background-color", "")
     $('#nav-link-spirits').css("box-shadow", "");
-<<<<<<< HEAD
-    //$('#nav-link-spirits').css("animation", "");
-=======
     //setTimeout(() => {$('#nav-link-spirits').css("animation", "");}, 800);
->>>>>>> 14aa4134bf0dc9b7f0dd0a4d999953ed45decb27
     $('#nav-link-stars').css("box-shadow", "");
     $('#nav-link-stars').css("background-color", "");
     $('#nav-link-stars').css("filter", "");
@@ -102,5 +188,4 @@ $(document).ready(function(){
 
 
 });
-
 */

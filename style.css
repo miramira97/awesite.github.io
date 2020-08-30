@@ -41,8 +41,28 @@
 }
 
 @font-face {
+    font-family: 'ProtoGrotesk-Light';
+    src: url('fonts/protogrotesk-light-TRIAL.otf') format("opentype");
+}
+
+@font-face {
     font-family: 'ProtoGrotesk-Bold';
     src: url('fonts/protogrotesk-bold-TRIAL.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Ogg-Regular';
+    src: url('fonts/Ogg-Regular.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Post-Book';
+    src: url('fonts/PostGrotesk-Book.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Post-Light';
+    src: url('fonts/PostGrotesk-Light.otf') format("opentype");
 }
 
 
@@ -53,8 +73,14 @@ html body {
     height: 100%;
     box-sizing: border-box;
 
-    background-color: #090909;
-    color: #f5f5f5;
+    background-color: #052645;
+    color: #c4ac9d;
+
+    overflow: hidden;
+}
+
+html {
+  background-color: #c4ac9d;
 }
 
 * {
@@ -65,19 +91,19 @@ html body {
 
 h1 {
     display: inline;
-    font-family: 'ProtoGrotesk-Bold', sans-serif;
-    font-size: 5.25rem;
+    font-family: 'Ogg-Regular', sans-serif;
+    font-size: 7.5rem;
     font-weight: normal;
     line-height: 1.1;
     padding: 0;
     margin: 0;
-    color: #f5f5f5;
+    color: #c4ac9d;
     /*-webkit-text-stroke: 1px #f5f5f5;*/
 }
 
 h2 {
     display: inline;
-    font-family: 'Kessler-Display', serif;
+    font-family: 'Ogg-Regular', serif;
     font-size: 4rem;
     font-weight: normal;
     padding: 0;
@@ -87,8 +113,8 @@ h2 {
 
 h3 {
     display: inline;
-    font-family: 'Kessler-Display', serif;
-    font-size: 2rem;
+    font-family: 'Ogg-Regular', serif;
+    font-size: 1.5rem;
     font-weight: normal;
     padding: 0;
     margin: 0;
@@ -96,8 +122,8 @@ h3 {
 
 h4 {
     display: inline;
-    font-family: 'ProtoGrotesk-Regular', sans-serif;
-    font-size: 2rem;
+    font-family: 'Post-Light', sans-serif;
+    font-size: 1.5rem;
     font-weight: normal;
     padding: 0;
     margin: 0;
@@ -105,22 +131,30 @@ h4 {
 
 p {
     display: inline;
-    font-family: 'Agrandir-Regular', serif;
+    font-family: 'Post-Light', serif;
     font-size: 2rem;
     font-weight: normal;
     padding: 0;
     margin: 0;
 }
 
+small {
+    display: inline;
+    font-family: 'Ogg-Regular', serif;
+    font-size: 1.5rem;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+
 a:hover {
-    color: darkorchid;
+    color: #ff4f01;
 }
 
 /* Navigation ————————————————————————————————————————————————————————————————————— */
 
 #nav {
     position: absolute;
-    z-index: 2;
     width: 100%;
 
     display: flex;
@@ -140,7 +174,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     padding: 0.75rem;
-    border: 1px solid #f5f5f5;
+    border: 1px solid #C5AC9D;
     border-radius: 10rem;
     transition: all 0.4s ease-out;
 }
@@ -148,7 +182,22 @@ a:hover {
 #menu-button svg {
     width: 1.5rem;
     height: 1.5rem;
-    fill: #f5f5f5;
+    fill: #c4ac9d;
+}
+
+#cursor {
+  z-index: 99;
+  background-color: #c4ac9d;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 800px;
+  pointer-events: none;
+  /*box-shadow: 0px 0px 10px 10px rgba(9, 9, 9, 0.75);*/
+  color: #052645;
+  /*backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);*/
 }
 
 /* Menu ————————————————————————————————————————————————————————————————————— */
@@ -160,17 +209,18 @@ a:hover {
     z-index: 1;
     height: 100vh;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(5, 38, 69, 0.75);
 
     display: none;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
 
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
 }
 
-#menu img {
+#menu svg {
     margin: 2rem 0rem;
 }
 
@@ -198,10 +248,14 @@ a:hover {
     width: 100%;
 }
 
+#myElement {
+    pointer-events: none;
+}
+
 #title-details {
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 #info-link {
@@ -216,12 +270,182 @@ a:hover {
     width: 2rem;
     height: 2rem;
     margin: 0.25rem 0rem 0rem 0.5rem;
-    fill: #f5f5f5;
-    stroke: #090909;
-    stroke-width: 0px;
+    fill: #c4ac9d;
+    /*stroke: #090909;
+    stroke-width: 0px;*/
 }
 
 #info-link:hover svg {
+
+    fill: #ff4f01;
+}
+
+/* Moth Link ————————————————————————————————————————————————————————————————————— */
+
+#moth-link {
+  position: absolute;
+  top: 15%;
+  left: -5%;
+  transform: rotate(-15deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 50%;
+  background-color: none;
+}
+
+#moth-link-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+#moth-1 {
+  max-width:100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+
+#moth-2 {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  position: absolute;
+  z-index: 2;
+}
+
+#moth-hover-area {
+  width: 60%;
+  height: 40%;
+  margin: auto;
+  display: block;
+  position: absolute;
+  z-index: 10;
+  background-color: transparent;
+  transform: rotate(-5deg);
+  cursor: none;
+}
+
+/* Moon Link ————————————————————————————————————————————————————————————————————— */
+
+#moon-link {
+  position: absolute;
+  top: 5%;
+  left: 40%;
+  transform: rotate(0deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+  width: 40%;
+  background-color: transparent;
+}
+
+#moon-link-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+#moon-1 {
+  max-width:100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+
+#moon-2 {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  position: absolute;
+  z-index: 2;
+
+}
+
+#moon-hover-area {
+  width: 60%;
+  height: 100%;
+  margin: auto;
+  display: block;
+  position: absolute;
+  z-index: 10;
+  background-color: transparent;
+  transform: rotate(0deg);
+  cursor: none;
+}
+
+/* Lotus Link ————————————————————————————————————————————————————————————————————— */
+
+#lotus-link {
+  position: absolute;
+  bottom: 0%;
+  right: 5%;
+  transform: rotate(0deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  width: 20%;
+  background-color: transparent;
+}
+
+#lotus-link-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+#lotus-1 {
+  max-width:150%;
+  max-height: 150%;
+  margin: auto;
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+
+#lotus-2 {
+  max-width: 150%;
+  max-height: 150%;
+  margin: auto;
+  position: absolute;
+  z-index: 2;
+  border: 1px solud white;
+}
+
+#lotus-hover-area {
+  width: 60%;
+  height: 40%;
+  margin: auto;
+  display: block;
+  position: absolute;
+  top: 2.5%;
+  z-index: 200;
+  background-color: transparent;
+  opacity: 0.25;
+  transform: rotate(0deg);
+  cursor: none;
+}
+
+
+/*#moth-link-image:hover #moth-1 {
+
     fill: darkorchid;
 }
 
@@ -244,25 +468,18 @@ a:hover {
     top: 350px;
     left: 80px;
     color: white;
+
     display: none;
 }
 
-
-.mission:hover .mission-image{
-    content: url('images/moth_2.png');
-    top: 150px;
-    left: 80px;
-    height: 300;
-    width: 300;
-    transform: rotate(-30deg);
-}
-
-.mission:hover .mission-text {
-
+#moth-link-image:hover #moth-2 {
     display: block;
+
+}*/
+
 }
 
-.events .events-text {
+/*.events .events-text {
     position: absolute;
     text-transform: uppercase;
     font-family: 'Kessler-Display', serif;
@@ -322,6 +539,6 @@ a:hover {
 
 .inspirations:hover .inspiration-text {
     display: block;
-}
+}*/
 
 

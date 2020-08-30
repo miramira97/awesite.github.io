@@ -276,6 +276,7 @@ a:hover {
 }
 
 #info-link:hover svg {
+
     fill: #ff4f01;
 }
 
@@ -444,9 +445,100 @@ a:hover {
 
 
 /*#moth-link-image:hover #moth-1 {
+
+    fill: darkorchid;
+}
+
+
+
+
+.mission .mission-image {
+    position: absolute;
+    top: 150px;
+    left: 80px;
+    display: inline-block;
+
+}
+
+.mission .mission-text{
+    position: absolute;
+    font-family: 'Kessler-Display', serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    top: 350px;
+    left: 80px;
+    color: white;
+
     display: none;
 }
 
 #moth-link-image:hover #moth-2 {
     display: block;
+
 }*/
+
+}
+
+/*.events .events-text {
+    position: absolute;
+    text-transform: uppercase;
+    font-family: 'Kessler-Display', serif;
+    font-size: 40px;
+    top: 170px;
+    left: 620px;
+    color: white;
+    display: none;
+}
+
+
+.events .events-image {
+    position: absolute;
+    top: 40px;
+    left: 600px;
+}
+
+.events:hover .events-image {
+    content: url('images/moon_2.png');
+    top: 40px;
+    left: 600px;
+    height: 300;
+    width: 300;
+}
+
+.events:hover .events-text {
+
+    display: block;
+}
+
+.inspirations .inspirations-image {
+    position: absolute;
+    top: 350px;
+    left: 1250px;
+}
+
+.inspirations .inspiration-text {
+    position: absolute;
+    text-transform: uppercase;
+    font-family: 'Kessler-Display', serif;
+    font-size: 40px;
+    top: 350px;
+    left: 1150px;
+    color: white;
+    display: none;
+}
+
+.inspirations:hover .inspirations-image {
+    content: url('images/bloom_2.png');
+    top: 400px;
+    left: 1190px;
+    height: 300;
+    width: 300;
+}
+
+
+
+.inspirations:hover .inspiration-text {
+    display: block;
+}*/
+
+

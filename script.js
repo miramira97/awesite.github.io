@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
   $("#menu-button").hover(function(){
-    $('#menu-button').css("background-color", "#f5f5f5");
+    $('#menu-button').css("background-color", "#c4ac9d");
     $('#menu-button').css("transform", "rotate(90deg)");
-    $('#menu-button svg').css("fill", "#090909");
+    $('#menu-button svg').css("fill", "#052645");
 
   }, function(){
     $('#menu-button').css("background-color", "");
@@ -14,9 +14,9 @@ $(document).ready(function(){
   $("#menu-button").on( "click", function(){
     if ($('#menu').css("display") === "none"){
       $('#menu').css("display", "flex");
-      $('#menu-button').css("background-color", "#f5f5f5");
+      $('#menu-button').css("background-color", "#c4ac9d");
       $('#menu-button').css("transform", "rotate(90deg)");
-      $('#menu-button svg').css("fill", "#090909");
+      $('#menu-button svg').css("fill", "#052645");
       $('#nav').css("z-index", "100");
     } else {
       $('#menu').css("display", "");
@@ -35,7 +35,7 @@ $(document).ready(function(){
 //moth hover
   $("#moth-hover-area").hover(function(){
     $("#cursor").css({'display': 'block'});
-    $("#cursor").html('<small>MISSION</small>');
+    $("#cursor").html('<small>Mission</small>');
     $("#moth-2").css({'display': 'block'});
     $("#moth-1").css({'display': 'none'});
     $('html').css({'cursor': 'none'});
@@ -54,7 +54,7 @@ $(document).ready(function(){
 // moon hover
   $("#moon-hover-area").hover(function(){
     $("#cursor").css({'display': 'block'});
-    $("#cursor").html('<small>SOURCEBOOK</small>');
+    $("#cursor").html('<small>Sourcebook</small>');
     $("#moon-2").css({'display': 'block'});
     $("#moon-1").css({'display': 'none'});
     $('html').css({'cursor': 'none'});
@@ -69,7 +69,7 @@ $(document).ready(function(){
   // lotus hover
     $("#lotus-hover-area").hover(function(){
       $("#cursor").css({'display': 'block'});
-      $("#cursor").html('<small>ABOUT</small>');
+      $("#cursor").html('<small>About</small>');
       $("#lotus-2").css({'display': 'block'});
       $("#lotus-1").css({'display': 'none'});
       $('html').css({'cursor': 'none'});

@@ -445,11 +445,21 @@ a:hover {
 
 /* Mission Statement Page ————————————————————————————————————————————————————————————————————— */
 
+
 #mission-statement{
-      display: inline;
-    font-family: 'Ogg-Regular', serif;
-    font-size: 4rem;
-    font-weight: normal;
-    padding: 2rem;
-    
+  margin-left:300px;
+  margin-right:300px;
+}
+#mission-statement .title{
+
+    font-size:48px;
+    line-height: 1.5;
+        font-family: 'Ogg-Regular', sans-serif;
+
+}
+/*neuhaus*/
+#mission-statement .bodytext{
+    font-size:35px;
+       line-height: 1.5;
+    font-family: 'Post-Light', sans-serif;
 }

@@ -443,102 +443,52 @@ a:hover {
   cursor: none;
 }
 
+/* Mission Statement Page ————————————————————————————————————————————————————————————————————— */
 
-/*#moth-link-image:hover #moth-1 {
+@keyframes glow {
+  from {
+    box-shadow: 
+       0 0 400px #c4ac9d,
+        0 0 600px #c4ac9d,
+              0 0 100px #c4ac9d;
 
-    fill: darkorchid;
+  }
+  to {
+    box-shadow:
+      0 0 600px #c4ac9d,
+        0 0 400px #c4ac9d;
+  }
 }
 
+#mission-statement{
+  display:inline-block;
+  position:relative;
+  margin-top:10px;
+  margin-left:300px;
+  margin-right:300px;
+  animation: glow 2s linear infinite alternate;
 
-
-
-.mission .mission-image {
-    position: absolute;
-    top: 150px;
-    left: 80px;
-    display: inline-block;
-
-}
-
-.mission .mission-text{
-    position: absolute;
-    font-family: 'Kessler-Display', serif;
-    text-transform: uppercase;
-    font-size: 40px;
-    top: 350px;
-    left: 80px;
-    color: white;
-
-    display: none;
-}
-
-#moth-link-image:hover #moth-2 {
-    display: block;
-
-}*/
+border:3px;
+padding:20px;
+border-radius:30px;
+border-style:solid;
+   box-shadow:
+        0 0 60px 30px #c4ac9d, 
+        0 0 40px 0px white; /* outer cyan */ /* inner white */
+      
 
 }
+#mission-statement .title{
 
-/*.events .events-text {
-    position: absolute;
-    text-transform: uppercase;
-    font-family: 'Kessler-Display', serif;
-    font-size: 40px;
-    top: 170px;
-    left: 620px;
-    color: white;
-    display: none;
+    font-size:48px;
+    line-height: 1.5;
+
+        font-family: 'Ogg-Regular', sans-serif;
+
 }
-
-
-.events .events-image {
-    position: absolute;
-    top: 40px;
-    left: 600px;
+/*neuhaus*/
+#mission-statement .bodytext{
+    font-size:35px;
+       line-height: 1.5;
+    font-family: 'Post-Light', sans-serif;
 }
-
-.events:hover .events-image {
-    content: url('images/moon_2.png');
-    top: 40px;
-    left: 600px;
-    height: 300;
-    width: 300;
-}
-
-.events:hover .events-text {
-
-    display: block;
-}
-
-.inspirations .inspirations-image {
-    position: absolute;
-    top: 350px;
-    left: 1250px;
-}
-
-.inspirations .inspiration-text {
-    position: absolute;
-    text-transform: uppercase;
-    font-family: 'Kessler-Display', serif;
-    font-size: 40px;
-    top: 350px;
-    left: 1150px;
-    color: white;
-    display: none;
-}
-
-.inspirations:hover .inspirations-image {
-    content: url('images/bloom_2.png');
-    top: 400px;
-    left: 1190px;
-    height: 300;
-    width: 300;
-}
-
-
-
-.inspirations:hover .inspiration-text {
-    display: block;
-}*/
-
-

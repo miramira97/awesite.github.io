@@ -3,8 +3,8 @@
 $(document).ready(function(){
 
   $("#menu-button").hover(function(){
-    $('#menu-button').css("background-color", "#ff4f01");
-    $('#menu-button').css("border-color", "#ff4f01");
+    $('#menu-button').css("background-color", "#c4ac9d");
+    $('#menu-button').css("border-color", "#c4ac9d");
     $('#menu-button').css("transform", "rotate(90deg)");
     $('#menu-button svg').css("fill", "#090909");
 
@@ -18,25 +18,25 @@ $(document).ready(function(){
   $("#menu-button").on( "click", function(){
     if ($('#menu').css("display") === "none"){
       $('#menu').fadeIn(400);
-      //$('#menu').css("display", "flex");
-      $('#menu-button').css("background-color", "#ff4f01");
+      $('#menu').css("display", "flex");
+      $('#menu-button').css("background-color", "#c4ac9d");
       $('#menu-button').css("transform", "rotate(90deg)");
-      $('#menu-button').css("border-color", "#ff4f01");
+      $('#menu-button').css("border-color", "#c4ac9d");
       $('#menu-button svg').css("fill", "#090909");
       $('#nav').css("z-index", "100");
 
-      /*$("#menu-button").hover(function(){
+      $("#menu-button").hover(function(){
         $('#menu-button').css("background-color", "");
         $('#menu-button').css("border-color", "");
         $('#menu-button').css("transform", "");
         $('#menu-button svg').css("fill", "");
 
       }, function(){
-        $('#menu-button').css("background-color", "#ff4f01");
-        $('#menu-button').css("border-color", "#ff4f01");
+        $('#menu-button').css("background-color", "#c4ac9d");
+        $('#menu-button').css("border-color", "#c4ac9d");
         $('#menu-button').css("transform", "rotate(90deg)");
         $('#menu-button svg').css("fill", "#090909");
-      });*/
+      });
 
     } else {
       $('#menu').fadeOut(400);
@@ -45,9 +45,9 @@ $(document).ready(function(){
       //$('#menu-button').css("background-color", "");
       //$('#menu-button svg').css("fill", "");
 
-      /*$("#menu-button").hover(function(){
-        $('#menu-button').css("background-color", "#ff4f01");
-        $('#menu-button').css("border-color", "#ff4f01");
+      $("#menu-button").hover(function(){
+        $('#menu-button').css("background-color", "#c4ac9d");
+        $('#menu-button').css("border-color", "#c4ac9d");
         $('#menu-button').css("transform", "rotate(90deg)");
         $('#menu-button svg').css("fill", "#090909");
 
@@ -56,7 +56,7 @@ $(document).ready(function(){
         $('#menu-button').css("border-color", "");
         $('#menu-button').css("transform", "");
         $('#menu-button svg').css("fill", "");
-      });*/
+      });
 
     }
   });
@@ -72,6 +72,8 @@ $(document).ready(function(){
     $("#cursor").css({'display': 'block'});
     $("#cursor").css({'color': '#dea8fa'});
     $("#cursor").css({'background-color': '#090909'});
+    $("#cursor").css({'border-color': '#dea8fa'});
+    //$("#cursor").css({'text-shadow': '0px 0px 4px #dea8fa'});
     $("#cursor").html('<small>Mission</small>');
     //$("#moth-1").hide(function(){$("#moth-2").show();});
     $("#moth-2").css({'display': 'block'});
@@ -95,6 +97,8 @@ $(document).ready(function(){
     $("#cursor").css({'display': 'block'});
     $("#cursor").css({'color': '#b7c7f7'});
     $("#cursor").css({'background-color': '#090909'});
+    $("#cursor").css({'border-color': '#b7c7f7'});
+    //$("#cursor").css({'text-shadow': '0px 0px 4px #b7c7f7'});
     $("#cursor").html('<small>Sourcebook</small>');
     $("#moon-2").css({'display': 'block'});
     $("#moon-1").css({'display': 'none'});
@@ -112,6 +116,8 @@ $(document).ready(function(){
       $("#cursor").css({'display': 'block'});
       $("#cursor").css({'color': '#90a565'});
       $("#cursor").css({'background-color': '#090909'});
+      $("#cursor").css({'border-color': '#90a565'});
+      //$("#cursor").css({'text-shadow': '0px 0px 4px #90a565'});
       $("#cursor").html('<small>About</small>');
       $("#lotus-2").css({'display': 'block'});
       $("#lotus-1").css({'display': 'none'});
@@ -123,6 +129,24 @@ $(document).ready(function(){
       $("#lotus-1").css({'display': ''});
       $('html').css({'cursor': 'auto'});
     });
+
+
+    (function() {
+
+    var quotes = $(".quotes");
+    var quoteIndex = -1;
+
+    function showNextQuote() {
+        ++quoteIndex;
+        quotes.eq(quoteIndex % quotes.length)
+            .fadeIn(1000)
+            .delay(4000)
+            .fadeOut(1000, showNextQuote);
+    }
+
+    showNextQuote();
+
+})();
 
 
 });

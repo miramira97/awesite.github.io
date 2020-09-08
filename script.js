@@ -1,5 +1,47 @@
 $(document).ready(function(){
 
+  if (window.location.pathname == "/mission.html") {
+
+    console.log("on the mission page");
+
+    $("#home-button").css("color", "#dea8fa");
+    $( "#menu" ).find('*').css("color", "#dea8fa" );
+    $( "#menu" ).find('*').css("border-color", "#dea8fa" );
+    $( "#menu svg" ).css("fill", "#dea8fa" );
+    $( "#menu-button" ).css("border-color", "#dea8fa" );
+    $( "#menu-button svg" ).css("fill", "#dea8fa" );
+
+    $("#menu-button").hover(function(){
+      $('#menu-button').css("background-color", "#dea8fa");
+      $('#menu-button').css("border-color", "#dea8fa");
+      $('#menu-button').css("transform", "rotate(90deg)");
+      $('#menu-button svg').css("fill", "#090909");
+
+    }, function(){
+      $('#menu-button').css("background-color", "#090909");
+      $('#menu-button').css("border-color", "#dea8fa");
+      $('#menu-button').css("transform", "");
+      $('#menu-button svg').css("fill", "#dea8fa");
+    });
+
+     $("#nav").css("background-image", "linear-gradient(rgba(9,9,9,1), rgba(9,9,9,1), rgba(9,9,9,0.5)");
+
+  } else {
+
+    console.log("on the home page");
+
+    $("#home-button").css("color", "");
+    $( "#menu" ).find('*').css("color", "" );
+    $( "#menu" ).find('*').css("border-color", "" );
+    $( "#menu svg" ).css("fill", "" );
+    $( "#menu-button" ).css("border-color", "" );
+    $( "#menu-button svg" ).css("fill", "" );
+
+    $("#nav").css("background-image", "");
+  }
+
+  
+
   $("#menu-button").hover(function(){
     $('#menu-button').css("background-color", "#c4ac9d");
     $('#menu-button').css("border-color", "#c4ac9d");
@@ -151,43 +193,7 @@ $(document).ready(function(){
 
     console.log(window.location.pathname);
 
-    if (window.location.pathname == "/mission.html") {
 
-      console.log("on the mission page");
-
-      $("#home-button").css("color", "#dea8fa");
-      $( "#menu" ).find('*').css("color", "#dea8fa" );
-      $( "#menu" ).find('*').css("border-color", "#dea8fa" );
-      $( "#menu" ).find('*').css("border-color", "#dea8fa" );
-      $( "#menu svg" ).find('*').css("fill", "#dea8fa" );
-
-      $("#menu-button").hover(function(){
-        $('#menu-button').css("background-color", "#dea8fa");
-        $('#menu-button').css("border-color", "#dea8fa");
-        $('#menu-button').css("transform", "rotate(90deg)");
-        $('#menu-button svg').css("fill", "#090909");
-
-      }, function(){
-        $('#menu-button').css("background-color", "#090909");
-        $('#menu-button').css("border-color", "#dea8fa");
-        $('#menu-button').css("transform", "");
-        $('#menu-button svg').css("fill", "#dea8fa");
-      });
-
-       $("#nav").css("background-image", "linear-gradient(rgba(9,9,9,1), rgba(9,9,9,0)");
-
-    } else {
-
-      console.log("on the home page");
-
-      $("#home-button").css("color", "");
-      $( "#menu" ).find('*').css("color", "" );
-      $( "#menu" ).find('*').css("border-color", "" );
-      $( "#menu" ).find('*').css("border-color", "" );
-      $( "#menu svg" ).find('*').css("fill", "" );
-
-      $("#nav").css("background-image", "");
-    }
 
 
 });

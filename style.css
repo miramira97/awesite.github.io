@@ -449,6 +449,7 @@ a:hover {
 }
 
 #info-link:hover svg {
+
     fill: #ff4f01;
 }
 
@@ -623,15 +624,53 @@ a:hover {
   cursor: none;
 }
 
-#mission-statement {
-  margin: 10rem 3rem;
-  background-color: transparent;
+
+/* Mission Statement Page ————————————————————————————————————————————————————————————————————— */
+
+@keyframes glow {
+  from {
+    box-shadow: 
+       0 0 400px #c4ac9d,
+        0 0 600px #c4ac9d,
+              0 0 100px #c4ac9d;
+
+  }
+  to {
+    box-shadow:
+      0 0 600px #c4ac9d,
+        0 0 400px #c4ac9d;
+  }
 }
 
-/*#moth-link-image:hover #moth-1 {
-    display: none;
-}
+#mission-statement{
+  display:inline-block;
+  position:relative;
+  margin-top:10px;
+  margin-left:300px;
+  margin-right:300px;
+  animation: glow 2s linear infinite alternate;
 
-#moth-link-image:hover #moth-2 {
-    display: block;
-}*/
+border:3px;
+padding:20px;
+border-radius:30px;
+border-style:solid;
+   box-shadow:
+        0 0 60px 30px #c4ac9d, 
+        0 0 40px 0px white; /* outer cyan */ /* inner white */
+      
+
+}
+#mission-statement .title{
+
+    font-size:48px;
+    line-height: 1.5;
+
+        font-family: 'Ogg-Regular', sans-serif;
+
+}
+/*neuhaus*/
+#mission-statement .bodytext{
+    font-size:35px;
+       line-height: 1.5;
+    font-family: 'Post-Light', sans-serif;
+}

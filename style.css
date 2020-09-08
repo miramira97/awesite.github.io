@@ -674,23 +674,23 @@ a:hover {
     color:#dea8fa;
     font-family: 'Roobert-Light', sans-serif;
 }
-#mission-intro a{
-  color:#dea8fa;
 
+#mission-intro a{
+    color:#dea8fa;
 }
+
 #mission-intro .title{
     font-family: 'Ogg-Thin', sans-serif;
 
 }
+
 #mission-statement .title{
-
-/*text-shadow: 0 0 30px var(--used-foreground-color), 0 0 40px var(--used-foreground-color), 0 0 50px var(--used-foreground-color), 0 0 60px var(--used-foreground-color), 0 0 70px var(--used-foreground-color);*/
-
+    /*text-shadow: 0 0 30px var(--used-foreground-color), 0 0 40px var(--used-foreground-color), 0 0 50px var(--used-foreground-color), 0 0 60px var(--used-foreground-color), 0 0 70px var(--used-foreground-color);*/
     line-height: 1.5;
-color:#dea8fa;
-        font-family: 'Ogg-Regular', sans-serif;
-
+    color:#dea8fa;
+    font-family: 'Ogg-Thin', sans-serif;
 }
+
 /*neuhaus*/
 #mission-statement .bodytext{
   color:#dea8fa;

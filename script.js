@@ -152,12 +152,14 @@ $(document).ready(function(){
     console.log(window.location.pathname);
 
     if (window.location.pathname == "/mission.html") {
+
       console.log("on the mission page");
+
       $("#home-button").css("color", "#dea8fa");
       $( "#menu" ).find('*').css("color", "#dea8fa" );
       $( "#menu" ).find('*').css("border-color", "#dea8fa" );
-      $( "#menu-button" ).find('*').css("border-color", "#dea8fa" );
-      $( "#menu-button svg" ).find('*').css("fill", "#dea8fa" );
+      $( "#menu" ).find('*').css("border-color", "#dea8fa" );
+      $( "#menu svg" ).find('*').css("fill", "#dea8fa" );
 
       $("#menu-button").hover(function(){
         $('#menu-button').css("background-color", "#dea8fa");
@@ -172,14 +174,19 @@ $(document).ready(function(){
         $('#menu-button svg').css("fill", "#dea8fa");
       });
 
+       $("#nav").css("background-image", "linear-gradient(rgba(9,9,9,1), rgba(9,9,9,0)");
 
     } else {
+
       console.log("on the home page");
+
       $("#home-button").css("color", "");
       $( "#menu" ).find('*').css("color", "" );
       $( "#menu" ).find('*').css("border-color", "" );
-      $( "#menu-button" ).find('*').css("border-color", "" );
-      $( "#menu-button svg" ).find('*').css("fill", "" );
+      $( "#menu" ).find('*').css("border-color", "" );
+      $( "#menu svg" ).find('*').css("fill", "" );
+
+      $("#nav").css("background-image", "");
     }
 
 

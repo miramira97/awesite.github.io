@@ -428,6 +428,8 @@ a:hover {
     padding: 0.75rem 1.5rem 0.75rem 1.5rem;
     border: 1px solid #c4ac9d;
     border-radius: 0px 8px 8px 0px;
+    text-decoration: none;
+    color: #c4ac9d;
 }
 
 #info-link:hover {

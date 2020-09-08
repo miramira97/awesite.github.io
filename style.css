@@ -629,11 +629,12 @@ a:hover {
 
 /* Mission Statement Page ————————————————————————————————————————————————————————————————————— */
 
+
 @keyframes glow {
   from {
-    box-shadow:
+    box-shadow: 
        0 0 64px #dea8fa,
-
+       
               0 0 64px #dea8fa;
 
   }
@@ -650,36 +651,39 @@ a:hover {
   margin-left:100px;
   margin-right:100px;
   margin-bottom:50px;
-  font-size:65px;
-  padding-top: 40px;
-  float:left;
-  border:8px;
-  border-radius:8px;
-  padding-left:80px;
-  padding-right: 80px;
-  padding-bottom: 40px;
-  animation:3s glow linear infinite alternate;
+        font-size:65px;
+padding-top: 40px;
+float:left;
+border:8px;
+border-radius:8px;
+padding-left:80px;
+padding-right: 80px;
+padding-bottom: 40px;
+animation:3s glow linear infinite alternate;
+
+      
+
 }
 #mission-intro{
     margin-top:150px;
-    margin-left:100px;
-    margin-right:100px;
-    font-size:35px;
+  margin-left:100px;
+  margin-right:100px;
+
+      font-size:35px;
     line-height: 1.5;
-    color:#dea8fa;
+color:#dea8fa;
     font-family: 'Post-Light', sans-serif;
 }
-
 #mission-intro a{
-    color:#dea8fa;
+  color:#dea8fa;
 
 }
 #mission-intro .title{
-    font-family: 'Ogg-Regular', sans-serif;
+          font-family: 'Ogg-Regular', sans-serif;
 
 }
 #mission-statement .title{
-
+ 
 /*text-shadow: 0 0 30px var(--used-foreground-color), 0 0 40px var(--used-foreground-color), 0 0 50px var(--used-foreground-color), 0 0 60px var(--used-foreground-color), 0 0 70px var(--used-foreground-color);*/
 
     line-height: 1.5;

@@ -1,3 +1,26 @@
+  window.onload = function () { var lc = getComputedStyle(document.documentElement).getPropertyValue('--light-color')
+            var dc = getComputedStyle(document.documentElement).getPropertyValue('--dark-color')
+console.log(localStorage.getItem('theme'));
+if (localStorage.getItem("theme") === null) {
+    localStorage.setItem('theme','dark')
+  //...
+}
+
+
+    if (localStorage.getItem("theme") === 'light') {
+   console.log('yes')
+       document.documentElement.style.setProperty('--used-background-color', lc);
+
+  //...document.documentElement.style.setProperty('--used-background-color', lc);
+         document.documentElement.style.setProperty('--used-foreground-color', dc);
+       document.getElementById('moth-1').src='images/moth-bitmap-light-1.png';
+              document.getElementById('moth-2').src='images/moth-bitmap-light-2.png';
+ document.getElementById('moon-1').src='images/moon-bitmap-light-1.png';
+              document.getElementById('moon-2').src='images/moon-bitmap-light-2.png';
+              document.getElementById('lotus-1').src='images/lotus-bitmap-light-1.png';
+              document.getElementById('lotus-2').src='images/lotus-bitmap-light-2.png';
+}
+}
 function changeCSS(theme,cssLinkIndex) {
 
     var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);

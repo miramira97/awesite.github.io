@@ -630,46 +630,45 @@ a:hover {
 @keyframes glow {
   from {
     box-shadow: 
-       0 0 400px #c4ac9d,
-        0 0 600px #c4ac9d,
-              0 0 100px #c4ac9d;
+       0 0 64px #dea8fa,
+       
+              0 0 64px #dea8fa;
 
   }
   to {
     box-shadow:
-      0 0 600px #c4ac9d,
-        0 0 400px #c4ac9d;
+        0 0 52px #dea8fa;
   }
 }
 
 #mission-statement{
   display:inline-block;
   position:relative;
-  margin-top:10px;
-  margin-left:300px;
-  margin-right:300px;
-  animation: glow 2s linear infinite alternate;
-
+  margin-top:130px;
+  margin-left:200px;
+  margin-right:200px;
+float:left;
 border:3px;
 padding:20px;
-border-radius:30px;
-border-style:solid;
-   box-shadow:
-        0 0 60px 30px #c4ac9d, 
-        0 0 40px 0px white; /* outer cyan */ /* inner white */
+animation:4s glow linear infinite alternate;
+
       
 
 }
 #mission-statement .title{
+ 
+/*text-shadow: 0 0 30px var(--used-foreground-color), 0 0 40px var(--used-foreground-color), 0 0 50px var(--used-foreground-color), 0 0 60px var(--used-foreground-color), 0 0 70px var(--used-foreground-color);*/
 
-    font-size:48px;
+    font-size:35px;
     line-height: 1.5;
-
+color:#dea8fa;
         font-family: 'Ogg-Regular', sans-serif;
 
 }
 /*neuhaus*/
 #mission-statement .bodytext{
+color:#dea8fa;
+
     font-size:35px;
        line-height: 1.5;
     font-family: 'Post-Light', sans-serif;

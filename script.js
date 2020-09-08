@@ -24,7 +24,7 @@ $(document).ready(function(){
       $('#menu-button svg').css("fill", "#dea8fa");
     });
 
-     $("#nav").css("background-image", "linear-gradient(rgba(9,9,9,1), rgba(9,9,9,1), rgba(9,9,9,0.5)");
+     $("#nav").css("background-image", "linear-gradient(rgba(9,9,9,1), rgba(9,9,9,1), rgba(9,9,9,0)");
 
   } else {
 
@@ -40,7 +40,7 @@ $(document).ready(function(){
     $("#nav").css("background-image", "");
   }
 
-  
+
 
   $("#menu-button").hover(function(){
     $('#menu-button').css("background-color", "#c4ac9d");

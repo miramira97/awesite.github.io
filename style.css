@@ -644,22 +644,45 @@ a:hover {
 #mission-statement{
   display:inline-block;
   position:relative;
-  margin-top:130px;
+  margin-top:80px;
   margin-left:150px;
   margin-right:150px;
+  margin-bottom:50px;
+        font-size:65px;
+padding-top: 40px;
 float:left;
-border:3px;
-padding:20px;
+border:8px;
+border-radius:8px;
+padding-left:80px;
+padding-right: 80px;
+padding-bottom: 40px;
 animation:3s glow linear infinite alternate;
 
       
+
+}
+#mission-intro{
+    margin-top:150px;
+  margin-left:150px;
+  margin-right:150px;
+
+      font-size:35px;
+    line-height: 1.5;
+color:#dea8fa;
+    font-family: 'Post-Light', sans-serif;
+}
+#mission-intro a{
+  color:#dea8fa;
+
+}
+#mission-intro .title{
+          font-family: 'Ogg-Regular', sans-serif;
 
 }
 #mission-statement .title{
  
 /*text-shadow: 0 0 30px var(--used-foreground-color), 0 0 40px var(--used-foreground-color), 0 0 50px var(--used-foreground-color), 0 0 60px var(--used-foreground-color), 0 0 70px var(--used-foreground-color);*/
 
-    font-size:35px;
     line-height: 1.5;
 color:#dea8fa;
         font-family: 'Ogg-Regular', sans-serif;
@@ -669,7 +692,7 @@ color:#dea8fa;
 #mission-statement .bodytext{
 color:#dea8fa;
 
-    font-size:35px;
        line-height: 1.5;
-    font-family: 'Post-Light', sans-serif;
+           font-family: 'Post-Light', sans-serif;
+
 }

@@ -151,7 +151,7 @@ $(document).ready(function(){
 
     console.log(window.location.pathname);
 
-    if (window.location.pathname == "mission.html") {
+    if (window.location.pathname == "/mission.html") {
       console.log("on the mission page");
     } else {
       console.log("on the home page");

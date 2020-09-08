@@ -663,8 +663,8 @@ animation:3s glow linear infinite alternate;
 }
 #mission-intro{
     margin-top:150px;
-  margin-left:150px;
-  margin-right:150px;
+  margin-left:100px;
+  margin-right:100px;
 
       font-size:35px;
     line-height: 1.5;

@@ -61,6 +61,12 @@
 }
 
 @font-face {
+    font-family: 'Ogg-Thin';
+    src: url('fonts/Ogg-Thin.otf') format("opentype");
+}
+
+
+@font-face {
     font-family: 'Post-Book';
     src: url('fonts/PostGrotesk-Book.otf') format("opentype");
 }
@@ -70,23 +76,57 @@
     src: url('fonts/PostGrotesk-Light.otf') format("opentype");
 }
 
+@font-face {
+    font-family: 'Surt-Light';
+    src: url('fonts/Surt-LightExp..otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Surt-Light-Ext';
+    src: url('fonts/Surt-LightExtended.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Garnett-Light';
+    src: url('fonts/Garnett-Light.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Garnett-Regular';
+    src: url('fonts/Garnett-Regular.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Haas-Regular';
+    src: url('fonts/NeueHaas.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Roobert-Light';
+    src: url('fonts/RoobertTRIAL-Light.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Roobert-Regular';
+    src: url('fonts/RoobertTRIAL-Regular.otf') format("opentype");
+}
 
 html body {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
     box-sizing: border-box;
 
     /*background-color: #020F1C;*/
     background-color: #090909;
     color: #c4ac9d;
+}
 
-    overflow: hidden;
+body {
+  overflow: auto;
 }
 
 html {
-  background-color: #c4ac9d;
+  background-color: #090909;
 }
 
 * {
@@ -97,19 +137,20 @@ html {
 
 h1 {
     display: inline;
-    font-family: 'Ogg-Regular', sans-serif;
+    font-family: 'Ogg-Thin', sans-serif;
     font-size: 7.5rem;
     font-weight: normal;
     line-height: 1.1;
     padding: 0;
     margin: 0;
     color: #c4ac9d;
+    /*text-shadow: 0px 0px 16px #c4ac9d;*/
     /*-webkit-text-stroke: 1px #f5f5f5;*/
 }
 
 h2 {
     display: inline;
-    font-family: 'Ogg-Regular', serif;
+    font-family: 'Ogg-Thin', serif;
     font-size: 4rem;
     font-weight: normal;
     padding: 0;
@@ -119,7 +160,7 @@ h2 {
 
 h3 {
     display: inline;
-    font-family: 'Ogg-Light', serif;
+    font-family: 'Ogg-Thin', serif;
     font-size: 1.5rem;
     font-weight: normal;
     padding: 0;
@@ -128,8 +169,18 @@ h3 {
 
 h4 {
     display: inline;
-    font-family: 'Post-Light', sans-serif;
-    font-size: 2rem;
+    font-family: 'Roobert-Light', sans-serif;
+    font-size: 1.5rem;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+
+h5 {
+    display: inline;
+    font-family: 'Roobert-Light', serif;
+    font-size: 7.5rem;
+    line-height: 1.1;
     font-weight: normal;
     padding: 0;
     margin: 0;
@@ -137,8 +188,9 @@ h4 {
 
 p {
     display: inline;
-    font-family: 'Post-Light', serif;
+    font-family: 'Roobert-Light', serif;
     font-size: 1.5rem;
+    line-height: 1.5;
     font-weight: normal;
     padding: 0;
     margin: 0;
@@ -146,21 +198,23 @@ p {
 
 small {
     display: inline;
-    font-family: 'Ogg-Regular', serif;
+    font-family: 'Ogg-Thin', serif;
     font-size: 1.5rem;
+    line-height: 1.5;
     font-weight: normal;
     padding: 0;
     margin: 0;
 }
 
 a:hover {
-    color: #ff4f01;
 }
 
 /* Navigation ————————————————————————————————————————————————————————————————————— */
 
 #nav {
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
 
     display: flex;
@@ -173,6 +227,8 @@ a:hover {
 
 #home-button {
     display: inline-block;
+    text-decoration: none;
+    color: #c4ac9d;
 }
 
 #menu-button {
@@ -194,14 +250,15 @@ a:hover {
 
 #cursor {
   z-index: 99;
-  background-color: #c4ac9d;
-  padding: 0.5rem 1rem;
+  background-color: transparent;
+  padding: 0.5rem 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid #ffffff;
   border-radius: 800px;
   pointer-events: none;
-  /*box-shadow: 0px 0px 10px 10px rgba(9, 9, 9, 0.75);*/
+  /*box-shadow: 0px 0px 16px 16px rgba(9, 9, 9, 1);*/
   color: #020F1C;
   /*backdrop-filter: blur(32px);
   -webkit-backdrop-filter: blur(32px);*/
@@ -210,15 +267,22 @@ a:hover {
 /* Menu ————————————————————————————————————————————————————————————————————— */
 
 #menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(9, 9, 9, 0.75);
+    z-index: 98;
+    height: 100%;
+    width: 100%;
+
+    padding: 2rem 3rem;
+
+    background-color: rgba(9, 9, 9, 0.5);
 
     display: none;
+
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 
     backdrop-filter: blur(32px);
     -webkit-backdrop-filter: blur(32px);
@@ -226,14 +290,20 @@ a:hover {
 
 #menu-content {
   width: 100%;
-  height: 100%;
-
+  height: auto;
+  flex-grow: 2;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 
+  background-color: transparent;
 }
+
+#menu-content a {
+  text-decoration: none;
+  color: #c4ac9d;
+ }
 
 #menu svg {
     margin: 2rem 0rem;
@@ -255,28 +325,57 @@ a:hover {
 }
 
 #menu-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    padding: 1.5rem 3rem 2rem 3rem;
     display: flex;
     justify-content: space-between;
-    border-top: 0px solid white;
+    align-items: center;
+    background-color: transparent;
+    /*border: 1px solid #c4ac9d;*/
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-#menu-footer svg {
-  height: 1.5rem;
-  width: 1.5rem;
+#menu-footer a:hover {
+  color: #090909;
+  background-color: #c4ac9d;
 }
 
-#menu-footer-left a {
-    margin-right: 2rem;
+#menu-footer-1 {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #c4ac9d;
+  border-radius: 8px;
+  flex-grow: 1;
+  transition: all 0.4s ease-out;
+  margin-right: 1.5rem;
 }
 
-#menu-footer-left p {
-    margin-right: 2rem;
+#menu-footer-2 {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #c4ac9d;
+  border-radius: 8px;
+  flex-grow: 1;
+  transition: all 0.4s ease-out;
 }
+
+#menu-footer-3 {
+  min-width: 1rem;
+  min-height: 1rem;
+  display: block;
+  flex-grow: 2;
+}
+
+#menu-footer-4 {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #c4ac9d;
+  border-radius: 8px;
+  flex-grow: 1;
+  transition: all 0.4s ease-out;
+}
+
+
 
 /* Homepage Content ————————————————————————————————————————————————————————————————————— */
 
@@ -286,6 +385,14 @@ a:hover {
     left: 0;
     padding: 2rem 3rem;
     width: 100%;
+    text-align: left;
+
+    /*text-shadow: 0px 0px 16px #c4ac9d;*/
+
+}
+
+.quotes {
+  display: none;
 }
 
 #myElement {
@@ -297,26 +404,43 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
+    /*border: 1px solid #c4ac9d;*/
+    border-radius: 8px;
+}
+
+#home-footer-left {
+    padding: 0.75rem 1.5rem 0.75rem 1.5rem;
     border-top: 1px solid #c4ac9d;
-    border-radius: 0px;
-    padding: 1.5rem 0rem 0rem 0rem;
+    border-left: 1px solid #c4ac9d;
+    border-bottom: 1px solid #c4ac9d;
+    border-radius: 8px 0px 0px 8px;
+    flex-grow: 2;
 }
 
 #info-link {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     margin: 0;
     /*padding: 0.5rem 2rem;
     border: 1px solid #c4ac9d;*/
-    border-radius: 0px 8px 8px 0px;
     transition: all 0.4s ease-out;
+    padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+    border: 1px solid #c4ac9d;
+    border-radius: 0px 8px 8px 0px;
+}
+
+#info-link:hover {
+  background-color: #c4ac9d;
+  color: #090909;
+  /*border-color: #ff4f01;*/
 }
 
 #info-link svg {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: 0.3rem 0rem 0rem 0.2rem;
+    display: none;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: 0rem 0rem 0rem 0rem;
     transform: rotate(-45deg);
     fill: #c4ac9d;
     transition: all 0.4s ease-out;
@@ -388,14 +512,14 @@ a:hover {
 
 #moon-link {
   position: absolute;
-  top: 5%;
-  left: 40%;
+  top: 0%;
+  left: 32%;
   transform: rotate(0deg);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 40%;
-  width: 40%;
+  width: 55%;
   background-color: transparent;
 }
 
@@ -404,8 +528,8 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
+  height: 150%;
+  width: 150%;
 }
 
 #moon-1 {
@@ -427,15 +551,15 @@ a:hover {
 }
 
 #moon-hover-area {
-  width: 50%;
-  height: 90%;
+  width: 32%;
+  height: 48%;
   margin: auto;
   display: block;
   position: absolute;
-  top: 3%;
-  left: 27%;
+  top: 24%;
+  left: 35%;
   z-index: 10;
-  background-color: none;
+  background-color: transparent;
   opacity: 0.5;
   transform: rotate(0deg);
   cursor: none;
@@ -445,24 +569,26 @@ a:hover {
 
 #lotus-link {
   position: absolute;
-  bottom: -2%;
-  right: 7.5%;
-  transform: rotate(10deg);
+  bottom: 0%;
+  right: 3%;
+  transform: rotate(0deg);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 65%;
-  width: 20%;
+  width: 30%;
   background-color: transparent;
+  overflow: hidden;
 }
 
 #lotus-link-image {
+  transform: rotate(10deg);
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
+  height: 80%;
+  width: 80%;
 }
 
 #lotus-1 {
@@ -484,19 +610,20 @@ a:hover {
 }
 
 #lotus-hover-area {
-  width: 12%;
-  height: 25%;
+  width: 14%;
+  height: 28%;
   margin: auto;
   display: block;
   position: absolute;
-  bottom: 32%;
-  right: 9%;
-  z-index: 200;
+  bottom: 33%;
+  right: 10%;
+  z-index: 11;
   background-color: transparent;
   opacity: 0.25;
   transform: rotate(0deg);
   cursor: none;
 }
+
 
 /* Mission Statement Page ————————————————————————————————————————————————————————————————————— */
 

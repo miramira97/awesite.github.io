@@ -160,7 +160,7 @@ h2 {
 
 h3 {
     display: inline;
-    font-family: 'Ogg-Thin', serif;
+    font-family: 'Ogg-Light', serif;
     font-size: 1.5rem;
     font-weight: normal;
     padding: 0;
@@ -198,7 +198,7 @@ p {
 
 small {
     display: inline;
-    font-family: 'Ogg-Thin', serif;
+    font-family: 'Ogg-Light', serif;
     font-size: 1.5rem;
     line-height: 1.5;
     font-weight: normal;
@@ -428,6 +428,8 @@ a:hover {
     padding: 0.75rem 1.5rem 0.75rem 1.5rem;
     border: 1px solid #c4ac9d;
     border-radius: 0px 8px 8px 0px;
+    text-decoration: none;
+    color: #c4ac9d;
 }
 
 #info-link:hover {
@@ -626,6 +628,7 @@ a:hover {
 
 
 /* Mission Statement Page ————————————————————————————————————————————————————————————————————— */
+
 
 @keyframes glow {
   from {

@@ -667,20 +667,19 @@ a:hover {
 }
 #mission-intro{
     margin-top:150px;
-  margin-left:100px;
-  margin-right:100px;
-
-      font-size:35px;
+    margin-left:100px;
+    margin-right:100px;
+    font-size:35px;
     line-height: 1.5;
-color:#dea8fa;
-    font-family: 'Post-Light', sans-serif;
+    color:#dea8fa;
+    font-family: 'Roobert-Light', sans-serif;
 }
 #mission-intro a{
   color:#dea8fa;
 
 }
 #mission-intro .title{
-          font-family: 'Ogg-Regular', sans-serif;
+    font-family: 'Ogg-Thin', sans-serif;
 
 }
 #mission-statement .title{
@@ -694,9 +693,8 @@ color:#dea8fa;
 }
 /*neuhaus*/
 #mission-statement .bodytext{
-color:#dea8fa;
-
-       line-height: 1.5;
-           font-family: 'Post-Light', sans-serif;
+  color:#dea8fa;
+  line-height: 1.5;
+  font-family: 'Roobert-Light', sans-serif;
 
 }

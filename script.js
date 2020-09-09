@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  if (window.location.pathname == "/mission.html") {
+  if (window.location.pathname == "/mission.html" || window.location.pathname == "/Users/ioanbutiu/github/awesite.github.io/mission.html") {
 
     console.log("on the mission page");
 

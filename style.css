@@ -138,7 +138,7 @@ html {
 h1 {
     display: inline;
     font-family: 'Ogg-Thin', sans-serif;
-    font-size: 7.5rem;
+    font-size: 6rem;
     font-weight: normal;
     line-height: 1.1;
     padding: 0;
@@ -386,9 +386,15 @@ a:hover {
     padding: 2rem 3rem;
     width: 100%;
     text-align: left;
-
+    overflow: visible;
     /*text-shadow: 0px 0px 16px #c4ac9d;*/
 
+}
+
+#symposium-title-text {
+  display: flex;
+  flex-flow: row-nowrap;
+  justify-content: flex-start;
 }
 
 .quotes {
@@ -633,14 +639,12 @@ a:hover {
 @keyframes glow {
   from {
     box-shadow:
-       0 0 64px #dea8fa,
-
-              0 0 64px #dea8fa;
+       0 0 32px #dea8fa;
 
   }
   to {
     box-shadow:
-        0 0 52px #dea8fa;
+        0 0 64px #dea8fa;
   }
 }
 
@@ -648,19 +652,16 @@ a:hover {
   display:inline-block;
   /*position:relative;
   z-index: -1;*/
-  margin: 12rem 3rem 3rem 3rem;
-  font-size: 4rem;
+  margin: 12rem 9rem 3rem 3rem;
   font-weight: normal;
-  padding-top: 40px;
-  float:left;
-  border:8px;
+
   border-radius:8px;
-  padding-left:80px;
-  padding-right: 80px;
-  padding-bottom: 40px;
-  animation:3s glow linear infinite alternate;
 
+  padding: 2rem 3rem 4rem 3rem;
 
+  animation: 4s glow ease-out infinite alternate;
+
+  border: 1px solid #dea8fa;
 
 }
 #mission-intro{
@@ -694,8 +695,24 @@ a:hover {
   color:#dea8fa;
   line-height: 1.5;
   font-family: 'Roobert-Light', sans-serif;
+  font-size: 3rem;
   font-weight: normal;
   padding: 0;
   margin: 0;
 
+}
+
+#mission-footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 3rem;
+  width: 100%;
+  height: 100%;
+}
+
+#mission-footer svg{
+  width: 16rem;
+  height: 16rem;
 }

@@ -732,13 +732,15 @@ a:hover {
 }
 #events-title{
  
-margin-top:100px;
+margin-top:150px;
 
 
 }
 #events-title h2{
+
   display:inline;
 position:relative;
+color:#b7c8f7;
 margin-left:40px;
 }
 

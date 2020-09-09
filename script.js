@@ -25,7 +25,8 @@ $(document).ready(function(){
     });
 
      $("#nav").css("background-image", "linear-gradient(rgba(9,9,9,1), rgba(9,9,9,1), rgba(9,9,9,0)");
-     $("#nav").css("padding-bottom", "6rem");
+     //$("#nav").css("padding-bottom", "6rem");
+     $("#nav").css("position", "static");
 
   } else {
 
@@ -39,7 +40,8 @@ $(document).ready(function(){
     $( "#menu-button svg" ).css("fill", "" );
 
     $("#nav").css("background-image", "");
-     $("#nav").css("padding-bottom", "");
+    $("#nav").css("padding-bottom", "");
+    $("#nav").css("position", "");
   }
 
 

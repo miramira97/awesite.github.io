@@ -701,7 +701,6 @@ a:hover {
   margin: 0;
 
 }
-
 #mission-footer {
   display: flex;
   flex-flow: row wrap;
@@ -716,3 +715,71 @@ a:hover {
   width: 16rem;
   height: 16rem;
 }
+
+/* Calendar Page ————————————————————————————————————————————————————————————————————— */
+@keyframes glow-blue {
+  from {
+    box-shadow:
+       0 0 64px #b7c8f7,
+
+              0 0 64px #b7c8f7;
+
+  }
+  to {
+    box-shadow:
+        0 0 52px #b7c8f7;
+  }
+}
+#events-title{
+ 
+margin-top:100px;
+
+
+}
+#events-title h2{
+  display:inline;
+position:relative;
+margin-left:40px;
+}
+
+#event-1 {
+display:inline-block;
+  /*position:relative;
+  z-index: -1;*/
+  margin: 5rem 3rem 3rem 3rem;
+  font-size: 4rem;
+  font-weight: normal;
+  padding-top: 40px;
+  float:left;
+  border:8px;
+  border-radius:8px;
+  padding-left:80px;
+  padding-right: 80px;
+  padding-bottom: 40px;
+  animation:3s glow-blue linear infinite alternate;
+
+}
+
+#event-2{
+  display:inline-block;
+  /*position:relative;
+  z-index: -1;*/
+  margin: 5rem 3rem 3rem 3rem;
+  font-size: 4rem;
+  font-weight: normal;
+  padding-top: 40px;
+  float:left;
+  border:8px;
+  border-radius:8px;
+  padding-left:80px;
+  padding-right: 80px;
+  padding-bottom: 40px;
+  animation:3s glow-blue linear infinite alternate;
+}
+#events h5{
+  font-size: 55px;
+  color:#b7c8f7;}
+ #events h3{
+  font-size: 55px;
+  color:#b7c8f7;}
+

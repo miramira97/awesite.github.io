@@ -200,7 +200,7 @@ small {
     display: inline;
     font-family: 'Ogg-Light', serif;
     font-size: 1.5rem;
-    line-height: 1.5;
+    line-height: 1.4;
     font-weight: normal;
     padding: 0;
     margin: 0;
@@ -235,17 +235,23 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.75rem;
-    border: 1px solid #C5AC9D;
+    padding: 0rem;
+    border: 0px solid #C5AC9D;
     border-radius: 10rem;
     transition: all 0.4s ease-out;
     cursor: pointer;
 }
 
 #menu-button svg {
-    width: 1.5rem;
-    height: 1.5rem;
-    fill: #c4ac9d;
+    width: 3rem;
+    height: 3rem;
+}
+
+#eye-closed {
+}
+
+#eye-open {
+  display: none;
 }
 
 #cursor {
@@ -266,6 +272,21 @@ a:hover {
 
 /* Menu ————————————————————————————————————————————————————————————————————— */
 
+@keyframes glowMenu1 {
+  from {box-shadow: 0 0 0px #b7c7f7;}
+  to {box-shadow: 0 0 64px #b7c7f7;}
+}
+
+@keyframes glowMenu2 {
+  from {box-shadow: 0 0 0px #dea8fa;}
+  to {box-shadow: 0 0 64px #dea8fa;}
+}
+
+@keyframes glowMenu3 {
+  from {box-shadow: 0 0 0px #90a565;}
+  to {box-shadow: 0 0 64px #90a565;}
+}
+
 #menu {
     position: fixed;
     top: 0;
@@ -276,7 +297,7 @@ a:hover {
 
     padding: 2rem 3rem;
 
-    background-color: rgba(9, 9, 9, 0.5);
+    background-color: rgba(9, 9, 9, 0.75);
 
     display: none;
 
@@ -294,34 +315,61 @@ a:hover {
   flex-grow: 2;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-
+  justify-content: stretch;
+  align-items: flex-start;
+  padding: 4rem 0rem 1rem 0rem;
   background-color: transparent;
 }
 
 #menu-content a {
+
+}
+
+.menu-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #c4ac9d;
+  padding: 2rem 3rem;
+  margin: 1rem 0rem;
+  border-radius: 8px;
   text-decoration: none;
   color: #c4ac9d;
- }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 2s ease-out;
+}
 
 #menu svg {
     margin: 2rem 0rem;
 }
 
-#menu-mission-link:hover {
-  color: #dea8fa;
-  transition: all 0.4s ease-out;
-}
-
-#menu-sourcebook-link:hover {
+#menu-events-link:hover {
+  background-color: transparent;
+  border-color: #b7c7f7;
   color: #b7c7f7;
   transition: all 0.4s ease-out;
+  box-shadow: 0 0 32px #b7c7f7;
+  /*animation: 2s glowMenu1 ease-out infinite alternate;*/
 }
 
-#menu-about-link:hover {
+#menu-mission-link:hover {
+  background-color: transparent;
+  border-color: #dea8fa;
+  color: #dea8fa;
+  transition: all 0.4s ease-out;
+  box-shadow: 0 0 32px #dea8fa;
+  /*animation: 4s glowMenu2 ease-out infinite alternate;*/
+}
+
+#menu-sources-link:hover {
+  background-color: transparent;
+  border-color: #90a565;
   color: #90a565;
   transition: all 0.4s ease-out;
+  box-shadow: 0 0 32px #90a565;
+  /*animation: 4s glowMenu3 ease-out infinite alternate;*/
 }
 
 #menu-footer {
@@ -330,7 +378,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
-    /*border: 1px solid #c4ac9d;*/
+    border: 0px solid #c4ac9d;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -342,9 +390,9 @@ a:hover {
 
 #menu-footer-1 {
   display: block;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border: 1px solid #c4ac9d;
-  border-radius: 8px;
+  border-radius: 800px;
   flex-grow: 1;
   transition: all 0.4s ease-out;
   margin-right: 1.5rem;
@@ -352,9 +400,9 @@ a:hover {
 
 #menu-footer-2 {
   display: block;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border: 1px solid #c4ac9d;
-  border-radius: 8px;
+  border-radius: 800px;
   flex-grow: 1;
   transition: all 0.4s ease-out;
 }
@@ -368,9 +416,9 @@ a:hover {
 
 #menu-footer-4 {
   display: block;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border: 1px solid #c4ac9d;
-  border-radius: 8px;
+  border-radius: 800px;
   flex-grow: 1;
   transition: all 0.4s ease-out;
 }
@@ -378,6 +426,24 @@ a:hover {
 
 
 /* Homepage Content ————————————————————————————————————————————————————————————————————— */
+
+@keyframes glow4 {
+  from {
+    box-shadow:0 0 0px #c4ac9d;
+  }
+  to {
+    box-shadow: 0 0 32px #c4ac9d;
+  }
+}
+
+@keyframes textGlow1 {
+  from {
+    text-shadow:0 0 0px #c4ac9d;
+  }
+  to {
+    text-shadow: 0 0 32px #c4ac9d;
+  }
+}
 
 #symposium-title {
     position: absolute;
@@ -388,6 +454,7 @@ a:hover {
     text-align: left;
     overflow: visible;
     /*text-shadow: 0px 0px 16px #c4ac9d;*/
+    /*animation: 4s textGlow1 ease-out infinite alternate;*/
 
 }
 
@@ -410,17 +477,31 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
-    /*border: 1px solid #c4ac9d;*/
+    border: 0px solid #c4ac9d;
     border-radius: 8px;
 }
 
 #home-footer-left {
-    padding: 0.75rem 1.5rem 0.75rem 1.5rem;
-    border-top: 1px solid #c4ac9d;
-    border-left: 1px solid #c4ac9d;
-    border-bottom: 1px solid #c4ac9d;
-    border-radius: 8px 0px 0px 8px;
+    border-radius: 8px;
     flex-grow: 2;
+    border: 1px solid #c4ac9d;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 3rem;
+    /*animation: 4s glow4 ease-out infinite alternate;*/
+}
+
+#home-footer-left div{
+    padding: 0.5rem 1.5rem;
+    margin-right: 3rem;
+    /*border-right: 1px solid #c4ac9d;*/
+    border-right: 0px solid #c4ac9d;
+    border-radius: 0px;
+    flex-grow: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #info-link {
@@ -431,9 +512,13 @@ a:hover {
     /*padding: 0.5rem 2rem;
     border: 1px solid #c4ac9d;*/
     transition: all 0.4s ease-out;
-    padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+    padding: 0.5rem 1.5rem;
+    /*border-top: 1px solid #c4ac9d;
+    border-right: 1px solid #c4ac9d;
+    border-bottom: 1px solid #c4ac9d;
+    border-radius: 0px 8px 8px 0px;*/
     border: 1px solid #c4ac9d;
-    border-radius: 0px 8px 8px 0px;
+    border-radius: 800px;
     text-decoration: none;
     color: #c4ac9d;
 }
@@ -638,13 +723,10 @@ a:hover {
 
 @keyframes glow {
   from {
-    box-shadow:
-       0 0 32px #dea8fa;
-
+    box-shadow:0 0 0px #dea8fa;
   }
   to {
-    box-shadow:
-        0 0 64px #dea8fa;
+    box-shadow: 0 0 64px #dea8fa;
   }
 }
 
@@ -664,12 +746,43 @@ a:hover {
   border: 1px solid #dea8fa;
 
 }
+#mission-intro{
+    margin-top:150px;
+    margin-left:100px;
+    margin-right:100px;
+    font-size: 2rem;
+    line-height: 1.5;
+    color:#dea8fa;
+    font-family: 'Roobert-Light', sans-serif;
+}
 
-#mission-statement h5{
+#mission-intro a{
+    color:#dea8fa;
+}
 
-  font-size: 55px;
-  color:#dea8fa;}
+#mission-intro .title{
+    font-family: 'Ogg-Thin', sans-serif;
 
+}
+
+#mission-statement .title{
+    /*text-shadow: 0 0 30px var(--used-foreground-color), 0 0 40px var(--used-foreground-color), 0 0 50px var(--used-foreground-color), 0 0 60px var(--used-foreground-color), 0 0 70px var(--used-foreground-color);*/
+    line-height: 1.5;
+    color:#dea8fa;
+    font-family: 'Ogg-Thin', sans-serif;
+}
+
+/*neuhaus*/
+#mission-statement .bodytext{
+  color:#dea8fa;
+  line-height: 1.75;
+  font-family: 'Roobert-Light', sans-serif;
+  font-size: 3rem;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+
+}
 
 #mission-footer {
   display: flex;
@@ -682,9 +795,9 @@ a:hover {
 }
 
 #mission-footer svg{
-  width: 16rem;
-  height: 16rem;
+
 }
+
 
 /* Calendar Page ————————————————————————————————————————————————————————————————————— */
 @keyframes glow-blue {
@@ -701,7 +814,7 @@ a:hover {
   }
 }
 #events-title{
- 
+
 margin-top:150px;
 
 
@@ -754,4 +867,3 @@ display:inline-block;
  #events h3{
   font-size: 55px;
   color:#b7c8f7;}
-

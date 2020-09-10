@@ -16,6 +16,17 @@ $(document).ready(function(){
      //$("#nav").css("padding-bottom", "6rem");
      //$("#nav").css("position", "static");
 
+  } else if(window.location.pathname == "/stars.html" || window.location.pathname == "/Users/ioanbutiu/github/awesite.github.io/stars.html") {
+
+    console.log("on the events page");
+
+    $("#home-button").css("color", "#b7c7f7");
+    $( "#menu" ).find('*').css("color", "#b7c7f7" );
+    $( "#menu" ).find('*').css("border-color", "#b7c7f7" );
+    $( "#menu svg" ).css("fill", "#b7c7f7");
+    $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("stroke", "#b7c7f7" );
+    $( "#eye-open, #eye-open circle, #eye-open path" ).css("stroke", "#b7c7f7" );
+
   } else {
 
     console.log("on the home page");

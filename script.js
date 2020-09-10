@@ -81,6 +81,8 @@ $(document).ready(function(){
       $('#menu-button svg').css("fill", "#090909");*/
       $('#nav').css("z-index", "100");
 
+      //$("#nav").css("position", "fixed");
+
       $("#eye-open").css("display","block");
       $("#eye-closed").css("display","none");
 
@@ -112,6 +114,8 @@ $(document).ready(function(){
       $('#nav').css("z-index", "100");
       //$('#menu-button').css("background-color", "");
       //$('#menu-button svg').css("fill", "");
+
+      //$("#nav").css("position", "");
 
       $("#eye-open").css("display","none");
       $("#eye-closed").css("display","block");

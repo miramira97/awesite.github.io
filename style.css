@@ -212,13 +212,27 @@ a:hover {
 /* Navigation ————————————————————————————————————————————————————————————————————— */
 
 #nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+
+    padding: 2rem 3rem;
+}
+
+#menu-home-button {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     margin: auto;
 
@@ -232,6 +246,10 @@ a:hover {
 }
 
 #menu-button {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 2rem 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,6 +258,7 @@ a:hover {
     border-radius: 10rem;
     transition: all 0.4s ease-out;
     cursor: pointer;
+    z-index: 100;
 }
 
 #menu-button svg {
@@ -734,7 +753,7 @@ a:hover {
   display:inline-block;
   /*position:relative;
   z-index: -1;*/
-  margin: 12rem 9rem 3rem 3rem;
+  margin: 9rem 9rem 3rem 3rem;
   font-weight: normal;
 
   border-radius:8px;
@@ -803,40 +822,38 @@ a:hover {
 @keyframes glow-blue {
   from {
     box-shadow:
-       0 0 64px #b7c8f7,
-
-              0 0 64px #b7c8f7;
+       0 0 0px #b7c8f7;
 
   }
   to {
     box-shadow:
-        0 0 52px #b7c8f7;
+        0 0 64px #b7c8f7;
   }
 }
 #events-title{
 
-margin-top:150px;
+  margin-top: 6rem;
 
 
 }
 #events-title h2{
 
   display:inline;
-position:relative;
-color:#b7c8f7;
-margin-left:40px;
+  position:relative;
+  color:#b7c8f7;
+  margin-left:40px;
 }
 
 #event-1 {
 display:inline-block;
   /*position:relative;
   z-index: -1;*/
-  margin: 5rem 3rem 3rem 3rem;
+  margin: 3rem 9rem 3rem 3rem;
   font-size: 4rem;
   font-weight: normal;
   padding-top: 40px;
   float:left;
-  border:8px;
+  border: 1px solid #b7c8f7;
   border-radius:8px;
   padding-left:80px;
   padding-right: 80px;
@@ -849,12 +866,12 @@ display:inline-block;
   display:inline-block;
   /*position:relative;
   z-index: -1;*/
-  margin: 5rem 3rem 3rem 3rem;
+  margin: 3rem 9rem 3rem 3rem;
   font-size: 4rem;
   font-weight: normal;
   padding-top: 40px;
   float:left;
-  border:8px;
+  border: 1px solid #b7c8f7;
   border-radius:8px;
   padding-left:80px;
   padding-right: 80px;

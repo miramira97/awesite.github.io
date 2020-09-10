@@ -1,19 +1,30 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="eye-favicon.png" type="image/x-icon">
-
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
-    <title>(AN)OTHERWORLDLYENERGIES</title>
+    <title>AWE</title>
   </head>
   <body>
     <div id="nav">
       <a href="index.html" id="home-button"><h3>AN</h3><h4>OTHER</h4><h3>WORLDLY</h3><h4>ENERGIES</h4></a>
       <div id="menu-button">
-        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+        <svg id="eye-closed" width="54" height="54" viewBox="0 0 54 54" stroke="#c4ac9d" dir=""xmlns="http://www.w3.org/2000/svg">
+        <circle cx="27" cy="27" r="26" stroke="#c4ac9d" stroke-width="2"/>
+        <path d="M1 27H27H53" stroke="#c4ac9d" stroke-width="2"/>
+        </svg>
+
+        <svg id="eye-open" width="54" height="54" viewBox="0 0 54 54" fill="none"  xmlns="http://www.w3.org/2000/svg">
+        <circle cx="27" cy="27" r="26" stroke="#C4AC9D" stroke-width="2"/>
+        <circle cx="27" cy="27" r="12" stroke="#C4AC9D" stroke-width="2"/>
+        <path d="M53 27C53 27 41.3594 39 27 39C12.6406 39 1 27 1 27C1 27 12.6406 15 27 15C41.3594 15 53 27 53 27Z" stroke="#C4AC9D" stroke-width="2" stroke-linejoin="bevel"/>
+        </svg>
+
+
+        <!--<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M15.3953 2.6875C15.3953 5.4375 13.0876 6.8125 12.9337 11.875V12H12.0106C11.8568 6.875 9.39526 5.5 9.39526 2.6875C9.39526 1 10.626 0 12.3953 0C14.0876 0 15.3953 1 15.3953 2.6875Z" fill=""/>
           <path d="M15.3953 21.3125C15.3953 18.5625 13.0876 17.1875 12.9337 12.125V12H12.0106C11.8568 17.125 9.39526 18.5 9.39526 21.3125C9.39526 23 10.626 24 12.3953 24C14.0876 24 15.3953 23 15.3953 21.3125Z" fill=""/>
           <path d="M21.9602 9.94176C19.5786 11.3168 17.234 10.0057 12.7728 12.4038L12.6645 12.4663L12.203 11.6668C16.5644 8.97111 16.5245 6.15185 18.9602 4.74561C20.4216 3.90186 21.903 4.46773 22.7876 5.99993C23.6338 7.46551 23.4216 9.09801 21.9602 9.94176Z" fill=""/>
@@ -22,13 +33,13 @@
           <path d="M2.83037 9.94176C5.21194 11.3168 7.55657 10.0057 12.0177 12.4038L12.126 12.4663L12.5875 11.6668C8.22608 8.97111 8.26607 6.15186 5.83037 4.74561C4.36896 3.90186 2.88755 4.46773 2.00293 5.99993C1.15678 7.46551 1.36896 9.09801 2.83037 9.94176Z" fill=""/>
           <path d="M18.9602 19.2543C16.5786 17.8793 16.5416 15.1932 12.2343 12.5288L12.1261 12.4663L12.5876 11.6668C17.1029 14.0961 19.5245 12.6519 21.9602 14.0581C23.4216 14.9019 23.6722 16.4677 22.7876 17.9999C21.9414 19.4655 20.4216 20.098 18.9602 19.2543Z" fill=""/>
           <path d="M2.83037 9.94176C5.21194 11.3168 7.55657 10.0057 12.0177 12.4038L12.126 12.4663L12.5875 11.6668C8.22608 8.97111 8.26607 6.15186 5.83037 4.74561C4.36896 3.90186 2.88755 4.46773 2.00293 5.99993C1.15678 7.46551 1.36896 9.09801 2.83037 9.94176Z" fill=""/>
-        </svg>
+        </svg>-->
       </div>
     </div>
     <div id="menu">
       <div id="menu-content">
-        <h2><a href="stars.html" id="menu-mission-link">Events</a></h2>
-        <svg width="25" height="24" viewBox="0 0 25 24" fill="#c4ac9d" xmlns="http://www.w3.org/2000/svg">
+        <a href="mission.html" id="menu-events-link" class="menu-link"><h2>Upcoming Events</h2></a>
+        <!--<svg width="25" height="24" viewBox="0 0 25 24" fill="#c4ac9d" xmlns="http://www.w3.org/2000/svg">
           <path d="M15.3953 2.6875C15.3953 5.4375 13.0876 6.8125 12.9337 11.875V12H12.0106C11.8568 6.875 9.39526 5.5 9.39526 2.6875C9.39526 1 10.626 0 12.3953 0C14.0876 0 15.3953 1 15.3953 2.6875Z" fill=""/>
           <path d="M15.3953 21.3125C15.3953 18.5625 13.0876 17.1875 12.9337 12.125V12H12.0106C11.8568 17.125 9.39526 18.5 9.39526 21.3125C9.39526 23 10.626 24 12.3953 24C14.0876 24 15.3953 23 15.3953 21.3125Z" fill=""/>
           <path d="M21.9602 9.94176C19.5786 11.3168 17.234 10.0057 12.7728 12.4038L12.6645 12.4663L12.203 11.6668C16.5644 8.97111 16.5245 6.15185 18.9602 4.74561C20.4216 3.90186 21.903 4.46773 22.7876 5.99993C23.6338 7.46551 23.4216 9.09801 21.9602 9.94176Z" fill=""/>
@@ -37,9 +48,9 @@
           <path d="M2.83037 9.94176C5.21194 11.3168 7.55657 10.0057 12.0177 12.4038L12.126 12.4663L12.5875 11.6668C8.22608 8.97111 8.26607 6.15186 5.83037 4.74561C4.36896 3.90186 2.88755 4.46773 2.00293 5.99993C1.15678 7.46551 1.36896 9.09801 2.83037 9.94176Z" fill=""/>
           <path d="M18.9602 19.2543C16.5786 17.8793 16.5416 15.1932 12.2343 12.5288L12.1261 12.4663L12.5876 11.6668C17.1029 14.0961 19.5245 12.6519 21.9602 14.0581C23.4216 14.9019 23.6722 16.4677 22.7876 17.9999C21.9414 19.4655 20.4216 20.098 18.9602 19.2543Z" fill=""/>
           <path d="M2.83037 9.94176C5.21194 11.3168 7.55657 10.0057 12.0177 12.4038L12.126 12.4663L12.5875 11.6668C8.22608 8.97111 8.26607 6.15186 5.83037 4.74561C4.36896 3.90186 2.88755 4.46773 2.00293 5.99993C1.15678 7.46551 1.36896 9.09801 2.83037 9.94176Z" fill=""/>
-        </svg>
-        <h2><a href="spirits.html" id="menu-sourcebook-link">Mission</a></h2>
-        <svg width="25" height="24" viewBox="0 0 25 24" fill="#c4ac9d" xmlns="http://www.w3.org/2000/svg">
+        </svg>-->
+        <a href="mission.html" id="menu-mission-link" class="menu-link"><h2>Mission</h2></a>
+        <!--<svg width="25" height="24" viewBox="0 0 25 24" fill="#c4ac9d" xmlns="http://www.w3.org/2000/svg">
           <path d="M15.3953 2.6875C15.3953 5.4375 13.0876 6.8125 12.9337 11.875V12H12.0106C11.8568 6.875 9.39526 5.5 9.39526 2.6875C9.39526 1 10.626 0 12.3953 0C14.0876 0 15.3953 1 15.3953 2.6875Z" fill=""/>
           <path d="M15.3953 21.3125C15.3953 18.5625 13.0876 17.1875 12.9337 12.125V12H12.0106C11.8568 17.125 9.39526 18.5 9.39526 21.3125C9.39526 23 10.626 24 12.3953 24C14.0876 24 15.3953 23 15.3953 21.3125Z" fill=""/>
           <path d="M21.9602 9.94176C19.5786 11.3168 17.234 10.0057 12.7728 12.4038L12.6645 12.4663L12.203 11.6668C16.5644 8.97111 16.5245 6.15185 18.9602 4.74561C20.4216 3.90186 21.903 4.46773 22.7876 5.99993C23.6338 7.46551 23.4216 9.09801 21.9602 9.94176Z" fill=""/>
@@ -48,8 +59,8 @@
           <path d="M2.83037 9.94176C5.21194 11.3168 7.55657 10.0057 12.0177 12.4038L12.126 12.4663L12.5875 11.6668C8.22608 8.97111 8.26607 6.15186 5.83037 4.74561C4.36896 3.90186 2.88755 4.46773 2.00293 5.99993C1.15678 7.46551 1.36896 9.09801 2.83037 9.94176Z" fill=""/>
           <path d="M18.9602 19.2543C16.5786 17.8793 16.5416 15.1932 12.2343 12.5288L12.1261 12.4663L12.5876 11.6668C17.1029 14.0961 19.5245 12.6519 21.9602 14.0581C23.4216 14.9019 23.6722 16.4677 22.7876 17.9999C21.9414 19.4655 20.4216 20.098 18.9602 19.2543Z" fill=""/>
           <path d="M2.83037 9.94176C5.21194 11.3168 7.55657 10.0057 12.0177 12.4038L12.126 12.4663L12.5875 11.6668C8.22608 8.97111 8.26607 6.15186 5.83037 4.74561C4.36896 3.90186 2.88755 4.46773 2.00293 5.99993C1.15678 7.46551 1.36896 9.09801 2.83037 9.94176Z" fill=""/>
-        </svg>
-        <h2><a href="https://linktr.ee/anotherworldlyenergies" target="blank" id="menu-about-link">Sources</a></h2>
+        </svg>-->
+        <a href="https://linktr.ee/anotherworldlyenergies" target="blank" id="menu-sources-link" class="menu-link"><h2>Sources</h2></a>
       </div>
       <div id="menu-footer">
             <p><a id="menu-footer-1">Email</a></p>
@@ -65,14 +76,14 @@
           <div id="moth-color"></div>
           <img id="moth-1" src="images/moth-bitmap-1-2.png">
           <img id="moth-2" src="images/moth-bitmap-2-2.png">
-          <a href="spirits.html" id="moth-hover-area"></a>
+          <a href="mission.html" id="moth-hover-area"></a>
         </div>
       </div>
       <div id="moon-link">
         <div id="moon-link-image">
           <img id="moon-1" src="images/moon-bitmap-1-12.png">
           <img id="moon-2" src="images/moon-bitmap-2-6.png">
-          <a href="stars.html" target="" id="moon-hover-area"></a>
+          <a href="" target="" id="moon-hover-area"></a>
         </div>
       </div>
       <a href="https://linktr.ee/anotherworldlyenergies" target="blank" id="lotus-hover-area"></a>
@@ -125,8 +136,9 @@
         <div id="title-details">
           <div id="home-footer-left">
             <!--<p style="margin-right: 1.5rem;">Building Other Worlds</p>-->
-            <p style="margin-right: 1.5rem;">18 October 3020 Decolonial Era</p>
-            <p></p>
+            <div style="border-right: 0px solid #c4ac9d;"><p>18 October 3020 <small>Decolonial Era</small></p></div>
+            <div  style="border-right: 0px solid #c4ac9d;"><p>9 AM <small>PDT</small></p></div>
+            <div><p>Data<small>land</small></p></div>
           </div>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLScUlFXk5FSF6TfrHDzfGL9CxDU_1L3HklAT08agx1waT7h4CA/viewform?usp=sf_link" target="_blank" id="info-link">
             <p>RSVP</p>

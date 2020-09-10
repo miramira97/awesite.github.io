@@ -802,7 +802,26 @@ a:hover {
   margin: 0;
 
 }
+#mission-statement a{
+      color:#dea8fa;
 
+}
+#mission-statement h3{
+    color:#dea8fa;
+  line-height: 1.75;
+  font-size: 3rem;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+#mission-statement h5{
+    color:#dea8fa;
+  line-height: 1.75;
+  font-size: 3rem;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
 #mission-footer {
   display: flex;
   flex-flow: row wrap;

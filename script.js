@@ -1,28 +1,16 @@
 $(document).ready(function(){
 
-  if (window.location.pathname == "/mission.html" || window.location.pathname == "/Users/ioanbutiu/github/awesite.github.io/mission.html") {
+  if (window.location.pathname == "/stars.html" || window.location.pathname == "/Users/ioanbutiu/github/awesite.github.io/mission.html") {
 
     console.log("on the mission page");
 
     $("#home-button").css("color", "#dea8fa");
     $( "#menu" ).find('*').css("color", "#dea8fa" );
     $( "#menu" ).find('*').css("border-color", "#dea8fa" );
-    $( "#menu svg" ).css("fill", "#dea8fa" );
-    $( "#menu-button" ).css("border-color", "#dea8fa" );
-    $( "#menu-button svg" ).css("fill", "#dea8fa" );
+    $( "#menu svg" ).css("fill", "#dea8fa");
+    $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("stroke", "#dea8fa" );
+    $( "#eye-open, #eye-open circle, #eye-open path" ).css("stroke", "#dea8fa" );
 
-    $("#menu-button").hover(function(){
-      $('#menu-button').css("background-color", "#dea8fa");
-      $('#menu-button').css("border-color", "#dea8fa");
-      $('#menu-button').css("transform", "rotate(90deg)");
-      $('#menu-button svg').css("fill", "#090909");
-
-    }, function(){
-      $('#menu-button').css("background-color", "#090909");
-      $('#menu-button').css("border-color", "#dea8fa");
-      $('#menu-button').css("transform", "");
-      $('#menu-button svg').css("fill", "#dea8fa");
-    });
 
      //$("#nav").css("background-image", "linear-gradient(rgba(9,9,9,1), rgba(9,9,9,1), rgba(9,9,9,0)");
      //$("#nav").css("padding-bottom", "6rem");
@@ -36,50 +24,75 @@ $(document).ready(function(){
     $( "#menu" ).find('*').css("color", "" );
     $( "#menu" ).find('*').css("border-color", "" );
     $( "#menu svg" ).css("fill", "" );
-    $( "#menu-button" ).css("border-color", "" );
-    $( "#menu-button svg" ).css("fill", "" );
 
-    $("#nav").css("background-image", "");
-    $("#nav").css("padding-bottom", "");
+    $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("stroke", "" );
+    $( "#eye-open, #eye-open circle, #eye-open path" ).css("stroke", "" );
+
+    //$("#nav").css("background-image", "");
+    //$("#nav").css("padding-bottom", "");
     //$("#nav").css("position", "");
   }
 
 
 
   $("#menu-button").hover(function(){
-    $('#menu-button').css("background-color", "#c4ac9d");
+
+    $("#eye-closed").css("display","none");
+    $("#eye-open").css("display","block");
+
+
+    /*$('#menu-button').css("background-color", "#c4ac9d");
     $('#menu-button').css("border-color", "#c4ac9d");
     $('#menu-button').css("transform", "rotate(90deg)");
-    $('#menu-button svg').css("fill", "#090909");
+    $('#menu-button svg').css("fill", "#090909");*/
 
   }, function(){
-    $('#menu-button').css("background-color", "");
+    /*$('#menu-button').css("background-color", "");
     $('#menu-button').css("border-color", "");
     $('#menu-button').css("transform", "");
-    $('#menu-button svg').css("fill", "");
+    $('#menu-button svg').css("fill", "");*/
+
+    $("#eye-open").css("display","none");
+    $("#eye-closed").css("display","block");
+
+
   });
 
+
   $("#menu-button").on( "click", function(){
+
     if ($('#menu').css("display") === "none"){
       $('#menu').fadeIn(400);
       $('#menu').css("display", "flex");
-      $('#menu-button').css("background-color", "#c4ac9d");
+      /*$('#menu-button').css("background-color", "#c4ac9d");
       $('#menu-button').css("transform", "rotate(90deg)");
       $('#menu-button').css("border-color", "#c4ac9d");
-      $('#menu-button svg').css("fill", "#090909");
+      $('#menu-button svg').css("fill", "#090909");*/
       $('#nav').css("z-index", "100");
 
-      $("#menu-button").hover(function(){
-        $('#menu-button').css("background-color", "");
-        $('#menu-button').css("border-color", "");
-        $('#menu-button').css("transform", "");
-        $('#menu-button svg').css("fill", "");
+      $("#eye-open").css("display","block");
+      $("#eye-closed").css("display","none");
+
+      /*$("#menu-button").hover(function(){
+      $('#menu-button').css("background-color", "");
+      $('#menu-button').css("border-color", "");
+      $('#menu-button').css("transform", "");
+      $('#menu-button svg').css("fill", "");
 
       }, function(){
         $('#menu-button').css("background-color", "#c4ac9d");
         $('#menu-button').css("border-color", "#c4ac9d");
         $('#menu-button').css("transform", "rotate(90deg)");
         $('#menu-button svg').css("fill", "#090909");
+      });*/
+
+      $("#menu-button").hover(function(){
+
+        $("#eye-open").css("display","none");
+        $("#eye-closed").css("display","block");
+      }, function(){
+        $("#eye-closed").css("display","none");
+        $("#eye-open").css("display","block");
       });
 
     } else {
@@ -89,17 +102,29 @@ $(document).ready(function(){
       //$('#menu-button').css("background-color", "");
       //$('#menu-button svg').css("fill", "");
 
-      $("#menu-button").hover(function(){
-        $('#menu-button').css("background-color", "#c4ac9d");
-        $('#menu-button').css("border-color", "#c4ac9d");
-        $('#menu-button').css("transform", "rotate(90deg)");
-        $('#menu-button svg').css("fill", "#090909");
+      $("#eye-open").css("display","none");
+      $("#eye-closed").css("display","block");
+
+      /*$("#menu-button").hover(function(){
+      $('#menu-button').css("background-color", "#c4ac9d");
+      $('#menu-button').css("border-color", "#c4ac9d");
+      $('#menu-button').css("transform", "rotate(90deg)");
+      $('#menu-button svg').css("fill", "#090909");
 
       }, function(){
         $('#menu-button').css("background-color", "");
         $('#menu-button').css("border-color", "");
         $('#menu-button').css("transform", "");
         $('#menu-button svg').css("fill", "");
+      });*/
+
+      $("#menu-button").hover(function(){
+
+        $("#eye-closed").css("display","none");
+        $("#eye-open").css("display","block");
+      }, function(){
+        $("#eye-open").css("display","none");
+        $("#eye-closed").css("display","block");
       });
 
     }
@@ -118,7 +143,7 @@ $(document).ready(function(){
     $("#cursor").css({'background-color': '#090909'});
     $("#cursor").css({'border-color': '#dea8fa'});
     //$("#cursor").css({'text-shadow': '0px 0px 4px #dea8fa'});
-    $("#cursor").html('<small>Spirits</small>');
+    $("#cursor").html('<p><small>Spirits</small></p>');
     //$("#moth-1").hide(function(){$("#moth-2").show();});
     $("#moth-2").css({'display': 'block'});
     $("#moth-1").css({'display': 'none'});
@@ -143,7 +168,7 @@ $(document).ready(function(){
     $("#cursor").css({'background-color': '#090909'});
     $("#cursor").css({'border-color': '#b7c7f7'});
     //$("#cursor").css({'text-shadow': '0px 0px 4px #b7c7f7'});
-    $("#cursor").html('<small>Stars</small>');
+    $("#cursor").html('<p><small>Stars</small></p>');
     $("#moon-2").css({'display': 'block'});
     $("#moon-1").css({'display': 'none'});
     $('html').css({'cursor': 'none'});
@@ -162,7 +187,7 @@ $(document).ready(function(){
       $("#cursor").css({'background-color': '#090909'});
       $("#cursor").css({'border-color': '#90a565'});
       //$("#cursor").css({'text-shadow': '0px 0px 4px #90a565'});
-      $("#cursor").html('<small>Stones</small>');
+      $("#cursor").html('<p><small>Stones</small></p>');
       $("#lotus-2").css({'display': 'block'});
       $("#lotus-1").css({'display': 'none'});
       $('html').css({'cursor': 'none'});

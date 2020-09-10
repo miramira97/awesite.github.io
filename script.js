@@ -79,7 +79,7 @@ $(document).ready(function(){
       $('#menu-button').css("transform", "rotate(90deg)");
       $('#menu-button').css("border-color", "#c4ac9d");
       $('#menu-button svg').css("fill", "#090909");*/
-      $('#nav').css("z-index", "100");
+      //$('#nav').css("z-index", "100");
 
       //$("#nav").css("position", "fixed");
 
@@ -111,7 +111,7 @@ $(document).ready(function(){
     } else {
       $('#menu').fadeOut(400);
       //$('#menu').css("display", "");
-      $('#nav').css("z-index", "100");
+      //$('#nav').css("z-index", "100");
       //$('#menu-button').css("background-color", "");
       //$('#menu-button svg').css("fill", "");
 

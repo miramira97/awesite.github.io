@@ -4,44 +4,89 @@ $(document).ready(function(){
 
     console.log("on the mission page");
 
-    $("#home-button").css("color", "#dea8fa");
-    $( "#menu" ).find('*').css("color", "#dea8fa" );
     $( "#menu" ).find('*').css("border-color", "#dea8fa" );
-    $( "#menu svg" ).css("fill", "#dea8fa");
+    $(".menu-link, #menu-footer-1, #menu-footer-2, #menu-footer-4, #home-button").css({'color':'#dea8fa', 'border-color':'#dea8fa'});
+    $("#menu-mission-link").css({'box-shadow':'0px 0px 32px #dea8fa'});
     $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("stroke", "#dea8fa" );
     $( "#eye-open, #eye-open circle, #eye-open path" ).css("stroke", "#dea8fa" );
 
+    $("#menu-events-link").hover(function(){
+      $(this).css({'color':'#b7c7f7','border-color':'#b7c7f7', 'box-shadow':'0px 0px 32px #b7c7f7'});
+    }, function(){
+      $(this).css({'color':'#dea8fa','border-color':'#dea8fa', 'box-shadow':''});
+    });
 
-     //$("#nav").css("background-image", "linear-gradient(rgba(9,9,9,1), rgba(9,9,9,1), rgba(9,9,9,0)");
-     //$("#nav").css("padding-bottom", "6rem");
-     //$("#nav").css("position", "static");
+    $("#menu-sources-link").hover(function(){
+      $(this).css({'color':'#90a565','border-color':'#90a565', 'box-shadow':'0px 0px 32px #90a565'});
+    }, function(){
+      $(this).css({'color':'#dea8fa','border-color':'#dea8fa', 'box-shadow':''});
+    });
+
+    $("#menu-footer-1, #menu-footer-2, #menu-footer-4").hover(function(){
+      $(this).css({'background-color':'#dea8fa', 'color':'#090909'});
+    }, function(){
+      $(this).css({'background-color':'#090909', 'color':'#dea8fa'});
+    });
 
   } else if(window.location.pathname == "/stars.html" || window.location.pathname == "/Users/ioanbutiu/github/awesite.github.io/stars.html") {
 
     console.log("on the events page");
 
-    $("#home-button").css("color", "#b7c7f7");
-    $( "#menu" ).find('*').css("color", "#b7c7f7" );
     $( "#menu" ).find('*').css("border-color", "#b7c7f7" );
-    $( "#menu svg" ).css("fill", "#b7c7f7");
+    $(".menu-link, #menu-footer-1, #menu-footer-2, #menu-footer-4, #home-button").css({'color':'#b7c7f7', 'border-color':'#b7c7f7'});
+    $("#menu-events-link").css({'box-shadow':'0px 0px 32px #b7c7f7'});
     $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("stroke", "#b7c7f7" );
     $( "#eye-open, #eye-open circle, #eye-open path" ).css("stroke", "#b7c7f7" );
 
+    $("#menu-mission-link").hover(function(){
+      $(this).css({'color':'#dea8fa','border-color':'#dea8fa', 'box-shadow':'0px 0px 32px #dea8fa'});
+    }, function(){
+      $(this).css({'color':'#b7c7f7','border-color':'#b7c7f7', 'box-shadow':''});
+    });
+
+    $("#menu-sources-link").hover(function(){
+      $(this).css({'color':'#90a565','border-color':'#90a565', 'box-shadow':'0px 0px 32px #90a565'});
+    }, function(){
+      $(this).css({'color':'#b7c7f7','border-color':'#b7c7f7', 'box-shadow':''});
+    });
+
+    $("#menu-footer-1, #menu-footer-2, #menu-footer-4").hover(function(){
+      $(this).css({'background-color':'#b7c7f7', 'color':'#090909'});
+    }, function(){
+      $(this).css({'background-color':'#090909', 'color':'#b7c7f7'});
+    });
+
   } else {
 
-    console.log("on the home page");
+    $( "#menu" ).find('*').css("border-color", "#c4ac9d" );
+    $(".menu-link, #menu-footer-1, #menu-footer-2, #menu-footer-4, #home-button").css({'color':'#c4ac9d', 'border-color':'#c4ac9d'});
+    $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("stroke", "#c4ac9d" );
+    $( "#eye-open, #eye-open circle, #eye-open path" ).css("stroke", "#c4ac9d" );
 
-    $("#home-button").css("color", "");
-    $( "#menu" ).find('*').css("color", "" );
-    $( "#menu" ).find('*').css("border-color", "" );
-    $( "#menu svg" ).css("fill", "" );
+    $("#menu-events-link").hover(function(){
+      $(this).css({'color':'#b7c7f7','border-color':'#b7c7f7', 'box-shadow':'0px 0px 32px #b7c7f7'});
+    }, function(){
+      $(this).css({'color':'#c4ac9d','border-color':'#c4ac9d', 'box-shadow':''});
+    });
 
-    $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("stroke", "" );
-    $( "#eye-open, #eye-open circle, #eye-open path" ).css("stroke", "" );
+    $("#menu-mission-link").hover(function(){
+      $(this).css({'color':'#dea8fa','border-color':'#dea8fa', 'box-shadow':'0px 0px 32px #dea8fa'});
+    }, function(){
+      $(this).css({'color':'#c4ac9d','border-color':'#c4ac9d', 'box-shadow':''});
+    });
 
-    //$("#nav").css("background-image", "");
-    //$("#nav").css("padding-bottom", "");
-    //$("#nav").css("position", "");
+    $("#menu-sources-link").hover(function(){
+      $(this).css({'color':'#90a565','border-color':'#90a565', 'box-shadow':'0px 0px 32px #90a565'});
+    }, function(){
+      $(this).css({'color':'#c4ac9d','border-color':'#c4ac9d', 'box-shadow':''});
+    });
+
+    $("#menu-footer-1, #menu-footer-2, #menu-footer-4").hover(function(){
+      $(this).css({'background-color':'#c4ac9d', 'color':'#090909'});
+    }, function(){
+      $(this).css({'background-color':'#090909', 'color':'#c4ac9d'});
+    });
+
   }
 
 
@@ -157,6 +202,7 @@ $(document).ready(function(){
     $("#cursor").css({'color': '#dea8fa'});
     $("#cursor").css({'background-color': '#090909'});
     $("#cursor").css({'border-color': '#dea8fa'});
+    //$("#cursor").css({'box-shadow': '0 0 16px #dea8fa'});
     //$("#cursor").css({'text-shadow': '0px 0px 4px #dea8fa'});
     $("#cursor").html('<p><small>Spirits</small></p>');
     //$("#moth-1").hide(function(){$("#moth-2").show();});
@@ -182,6 +228,7 @@ $(document).ready(function(){
     $("#cursor").css({'color': '#b7c7f7'});
     $("#cursor").css({'background-color': '#090909'});
     $("#cursor").css({'border-color': '#b7c7f7'});
+    //$("#cursor").css({'box-shadow': '0 0 16px #b7c7f7'});
     //$("#cursor").css({'text-shadow': '0px 0px 4px #b7c7f7'});
     $("#cursor").html('<p><small>Stars</small></p>');
     $("#moon-2").css({'display': 'block'});
@@ -201,11 +248,13 @@ $(document).ready(function(){
       $("#cursor").css({'color': '#90a565'});
       $("#cursor").css({'background-color': '#090909'});
       $("#cursor").css({'border-color': '#90a565'});
+      //$("#cursor").css({'box-shadow': '0 0 16px #90a565'});
       //$("#cursor").css({'text-shadow': '0px 0px 4px #90a565'});
       $("#cursor").html('<p><small>Stones</small></p>');
       $("#lotus-2").css({'display': 'block'});
       $("#lotus-1").css({'display': 'none'});
       $('html').css({'cursor': 'none'});
+
       changeCursor();
     }, function() {
       $("#cursor").css({'display': 'none'});

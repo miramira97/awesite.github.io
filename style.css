@@ -859,11 +859,12 @@ a:hover {
 }
 
 #mission-footer svg:hover {
-  
+
 }
 
 
 /* Calendar Page ————————————————————————————————————————————————————————————————————— */
+
 @keyframes glow-blue {
   from {
     box-shadow:
@@ -929,3 +930,77 @@ display:inline-block;
  #events h3{
   font-size: 55px;
   color:#b7c8f7;}
+
+/* Mobile ————————————————————————————————————————————————————————————————————— */
+
+#mobile-overlay {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  z-index: 300;
+  top: 0;
+  left: 0;
+  background-color: rgba(9, 9, 9, 1);
+  padding: 0rem 0rem;
+  text-align: center;
+}
+
+#mobile-overlay div {
+  margin: 1rem 0rem;
+}
+
+#mobile-title {
+
+}
+
+#mobile-details {
+  border: 1px solid #c4ac9d;
+  border-radius: 8px;
+  margin: 0rem 1.5rem;
+}
+
+#mobile-details p {
+  display: block;
+  padding: 0.5rem 3rem;
+}
+
+#mobile-rsvp-link {
+  width: auto;
+  color: #090909;
+  text-decoration: none;
+  border: 1px solid #c4ac9d;
+  background-color: #c4ac9d;
+  border-radius: 800px;
+  padding: 0.5rem 1.5rem;
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+#under-construction {
+  display: block;
+  width: 100%;
+  color: #090909;
+  background-color: #c4ac9d;
+  padding: 1rem 0rem;
+  margin-bottom: 0rem !important;
+}
+
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    #mobile-overlay {
+      overflow: scroll;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    #content {
+      display: none;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+  }

@@ -432,6 +432,10 @@ a:hover {
   display: none;
 }
 
+.quotes-mobile {
+  display: none;
+}
+
 #myElement {
     pointer-events: none;
 }

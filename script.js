@@ -242,6 +242,23 @@ $(document).ready(function(){
       $('html').css({'cursor': 'auto'});
     });
 
+    (function() {
+
+    var quotes = $(".quotes-mobile");
+    var quoteIndex = -1;
+
+    function showNextQuote() {
+        ++quoteIndex;
+        quotes.eq(quoteIndex % quotes.length)
+            .fadeIn(1000)
+            .delay(4000)
+            .fadeOut(1000, showNextQuote);
+    }
+
+    showNextQuote();
+
+    })();
+
 
     (function() {
 

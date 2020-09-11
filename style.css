@@ -521,17 +521,23 @@ a:hover {
 
 /* Moth Link ————————————————————————————————————————————————————————————————————— */
 
+@keyframes mothAnimate {
+  from {transform: rotate(-30deg) translateY(0px) translateX(0px);}
+  to {transform: rotate(-30deg) translateY(10px) translateX(-5px);}
+}
+
 #moth-link {
   position: absolute;
   top: 15%;
   left: 0%;
-  transform: rotate(-30deg);
   display: flex;
+  transform: rotate(-30deg);
   justify-content: center;
   align-items: center;
   height: 45%;
   width: 45%;
   background-color: none;
+  /*animation: 4s mothAnimate ease-out infinite alternate;*/
 }
 
 #moth-link-image {
@@ -576,17 +582,22 @@ a:hover {
 
 /* Moon Link ————————————————————————————————————————————————————————————————————— */
 
+@keyframes moonAnimate {
+  from {transform: translateY(0px);}
+  to {transform: translateY(-5px);}
+}
+
 #moon-link {
   position: absolute;
   top: 0%;
   left: 32%;
-  transform: rotate(0deg);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 40%;
   width: 55%;
   background-color: transparent;
+  /*animation: 2s moonAnimate ease-out infinite alternate;*/
 }
 
 #moon-link-image {
@@ -633,11 +644,15 @@ a:hover {
 
 /* Lotus Link ————————————————————————————————————————————————————————————————————— */
 
+@keyframes lotusAnimate {
+  from {transform: rotate(10deg);}
+  to {transform: rotate(0deg);}
+}
+
 #lotus-link {
   position: absolute;
   bottom: 0%;
   right: 3%;
-  transform: rotate(0deg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -645,10 +660,11 @@ a:hover {
   width: 30%;
   background-color: transparent;
   overflow: hidden;
+  transform: rotate(10deg);
+  /*animation: 10s lotusAnimate ease-out infinite alternate;*/
 }
 
 #lotus-link-image {
-  transform: rotate(10deg);
   position: relative;
   display: flex;
   justify-content: center;

@@ -297,35 +297,38 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.6s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 #menu svg {
     margin: 2rem 0rem;
 }
 
-#menu-events-link:hover {
+#menu-events-link {
   /*background-color: #090909;
   border-color: #b7c7f7;
   color: #b7c7f7;
   box-shadow: 0 0 32px #b7c7f7;
   animation: 2s glowMenu1 ease-out infinite alternate;*/
+  transition: all 0.4s ease-out;
 }
 
-#menu-mission-link:hover {
+#menu-mission-link {
   /*background-color: #090909;
   border-color: #dea8fa;
   color: #dea8fa;
   box-shadow: 0 0 32px #dea8fa;
   /*animation: 4s glowMenu2 ease-out infinite alternate;*/
+  transition: all 0.4s ease-out;
 }
 
-#menu-sources-link:hover {
+#menu-sources-link {
   /*background-color: #090909;
   border-color: #90a565;
   color: #90a565;
   box-shadow: 0 0 32px #90a565;
   animation: 4s glowMenu3 ease-out infinite alternate;*/
+  transition: all 0.4s ease-out;
 }
 
 #menu-footer {

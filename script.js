@@ -1,5 +1,27 @@
 $(document).ready(function(){
 
+  /*$("#menu-events-link").hover(function(){
+    $("#menu-events-link h2").css({'opacity':'0'});
+    setTimeout(function(){ $("#menu-events-link h2").html('Stars'); }, 0);
+    setTimeout(function(){ $("#menu-events-link h2").css({'opacity':'1'}); }, 0);
+  }, function(){
+    $("#menu-events-link h2").css({'opacity':'0'});
+    setTimeout(function(){ $("#menu-events-link h2").html('Events'); }, 100);
+    setTimeout(function(){ $("#menu-events-link h2").css({'opacity':'1'}); }, 100);
+  });
+
+  $("#menu-mission-link").hover(function(){
+    $(this).css({'color':'#90a565','border-color':'#90a565', 'box-shadow':'0px 0px 32px #90a565'});
+  }, function(){
+    $(this).css({'color':'#dea8fa','border-color':'#dea8fa', 'box-shadow':''});
+  });
+
+  $("#menu-sources-link").hover(function(){
+    $(this).css({'color':'#90a565','border-color':'#90a565', 'box-shadow':'0px 0px 32px #90a565'});
+  }, function(){
+    $(this).css({'color':'#dea8fa','border-color':'#dea8fa', 'box-shadow':''});
+  });*/
+
   if (window.location.pathname == "/spirits.html" || window.location.pathname == "/Users/ioanbutiu/github/awesite.github.io/spirits.html") {
 
     console.log("on the mission page");

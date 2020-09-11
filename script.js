@@ -198,38 +198,22 @@ $(document).ready(function(){
 
 //moth hover
   $("#moth-hover-area").hover(function(){
-    $("#cursor").css({'display': 'block'});
-    $("#cursor").css({'color': '#dea8fa'});
-    $("#cursor").css({'background-color': '#090909'});
-    $("#cursor").css({'border-color': '#dea8fa'});
-    //$("#cursor").css({'box-shadow': '0 0 16px #dea8fa'});
-    //$("#cursor").css({'text-shadow': '0px 0px 4px #dea8fa'});
+    $("#cursor").css({'display': 'flex', 'color': '#dea8fa', 'background-color': '#090909', 'border-color': '#dea8fa'});
     $("#cursor").html('<p><small>Spirits</small></p>');
-    //$("#moth-1").hide(function(){$("#moth-2").show();});
     $("#moth-2").css({'display': 'block'});
     $("#moth-1").css({'display': 'none'});
     $('html').css({'cursor': 'none'});
     changeCursor();
   }, function() {
     $("#cursor").css({'display': 'none'});
-    //$("#moth-2").hide(function(){$("#moth-1").show();});
     $("#moth-2").css({'display': 'none'});
     $("#moth-1").css({'display': ''});
     $('html').css({'cursor': 'auto'});
   });
 
-  /*$("#moth-hover-area").on( "click", function(){
-    $("#content").load("mission.html");
-  });*/
-
 // moon hover
   $("#moon-hover-area").hover(function(){
-    $("#cursor").css({'display': 'block'});
-    $("#cursor").css({'color': '#b7c7f7'});
-    $("#cursor").css({'background-color': '#090909'});
-    $("#cursor").css({'border-color': '#b7c7f7'});
-    //$("#cursor").css({'box-shadow': '0 0 16px #b7c7f7'});
-    //$("#cursor").css({'text-shadow': '0px 0px 4px #b7c7f7'});
+    $("#cursor").css({'display': 'flex', 'color': '#b7c7f7', 'background-color': '#090909', 'border-color': '#b7c7f7'});
     $("#cursor").html('<p><small>Stars</small></p>');
     $("#moon-2").css({'display': 'block'});
     $("#moon-1").css({'display': 'none'});
@@ -244,12 +228,7 @@ $(document).ready(function(){
 
   // lotus hover
     $("#lotus-hover-area").hover(function(){
-      $("#cursor").css({'display': 'block'});
-      $("#cursor").css({'color': '#90a565'});
-      $("#cursor").css({'background-color': '#090909'});
-      $("#cursor").css({'border-color': '#90a565'});
-      //$("#cursor").css({'box-shadow': '0 0 16px #90a565'});
-      //$("#cursor").css({'text-shadow': '0px 0px 4px #90a565'});
+      $("#cursor").css({'display': 'block', 'color': '#90a565', 'background-color': '#090909', 'border-color': '#90a565'});
       $("#cursor").html('<p><small>Stones</small></p>');
       $("#lotus-2").css({'display': 'block'});
       $("#lotus-1").css({'display': 'none'});

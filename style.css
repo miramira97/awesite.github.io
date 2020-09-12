@@ -660,11 +660,11 @@ a:hover {
   width: 30%;
   background-color: transparent;
   overflow: hidden;
-  transform: rotate(10deg);
   /*animation: 10s lotusAnimate ease-out infinite alternate;*/
 }
 
 #lotus-link-image {
+  transform: rotate(10deg);
   position: relative;
   display: flex;
   justify-content: center;

@@ -79,7 +79,7 @@ html {
 h1 {
     display: inline;
     font-family: 'Ogg-Thin', serif;
-    font-size: 6rem;
+    font-size: 8vw;
     font-weight: normal;
     line-height: 1.1;
     padding: 0;
@@ -92,7 +92,7 @@ h1 {
 h2 {
     display: inline;
     font-family: 'Ogg-Thin', serif;
-    font-size: 4rem;
+    font-size: 5vw;
     font-weight: normal;
     padding: 0;
     margin: 0;
@@ -102,7 +102,7 @@ h2 {
 h3 {
     display: inline;
     font-family: 'Ogg-Light', serif;
-    font-size: 1.5rem;
+    font-size: 2vw;
     font-weight: normal;
     padding: 0;
     margin: 0;
@@ -111,7 +111,7 @@ h3 {
 h4 {
     display: inline;
     font-family: 'Roobert-Light', sans-serif;
-    font-size: 1.5rem;
+    font-size: 2vw;
     font-weight: normal;
     padding: 0;
     margin: 0;
@@ -120,7 +120,7 @@ h4 {
 h5 {
     display: inline;
     font-family: 'Roobert-Light', serif;
-    font-size: 6rem;
+    font-size: 8vw;
     line-height: 1.1;
     font-weight: normal;
     padding: 0;
@@ -130,7 +130,7 @@ h5 {
 p {
     display: inline;
     font-family: 'Roobert-Light', serif;
-    font-size: 1.5rem;
+    font-size: 2vw;
     line-height: 1.5;
     font-weight: normal;
     padding: 0;
@@ -140,7 +140,7 @@ p {
 small {
     display: inline;
     font-family: 'Ogg-Light', serif;
-    font-size: 1.5rem;
+    font-size: 2vw;
     line-height: 1.4;
     font-weight: normal;
     padding: 0;

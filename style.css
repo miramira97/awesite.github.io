@@ -79,7 +79,7 @@ html {
 h1 {
     display: inline;
     font-family: 'Ogg-Thin', serif;
-    font-size: 8vw;
+    font-size: 7vw;
     font-weight: normal;
     line-height: 1.1;
     padding: 0;
@@ -120,7 +120,7 @@ h4 {
 h5 {
     display: inline;
     font-family: 'Roobert-Light', serif;
-    font-size: 8vw;
+    font-size: 7vw;
     line-height: 1.1;
     font-weight: normal;
     padding: 0;
@@ -190,8 +190,10 @@ a:hover {
 }
 
 #menu-button svg {
-    width: 3rem;
-    height: 3rem;
+    max-width: 3vw;
+    max-height: 3vw;
+    min-width: 2vw;
+    min-height: 2vw;
 }
 
 #eye-closed {

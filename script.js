@@ -1,7 +1,12 @@
 $(document).ready(function(){
 
   /*$("#menu-events-link").hover(function(){
-    $("#menu-events-link h2").css({'opacity':'0'});
+    $("#menu-events-link h2").css(function(){
+
+    });
+
+
+      {'opacity':'0'});
     setTimeout(function(){ $("#menu-events-link h2").html('Stars'); }, 0);
     setTimeout(function(){ $("#menu-events-link h2").css({'opacity':'1'}); }, 0);
   }, function(){

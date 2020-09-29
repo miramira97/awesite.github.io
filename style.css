@@ -619,6 +619,18 @@ a:hover {}
         transform: rotate(-30deg) translateY(10px) translateX(-5px);
     }
 }
+@keyframes beeAnimate
+{
+    0% {
+        left: 0;
+    }
+    10% {
+        left: 50%;
+    }
+    100% {
+        left: 10%;
+    }
+}
 
 #moth-link {
     position: absolute;
@@ -633,7 +645,16 @@ a:hover {}
     background-color: none;
     /*animation: 4s mothAnimate ease-out infinite alternate;*/
 }
-
+#bee-1{
+  position:absolute;
+opacity:0;
+max-width:30%;
+height:auto;
+}
+#moth-link:hover #bee-1{
+  opacity:1;
+  animation: beeAnimate 5s;
+}
 #moth-link-image {
     position: relative;
     display: flex;

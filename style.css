@@ -23,15 +23,20 @@
     font-family: 'Roobert-Regular';
     src: url('fonts/RoobertTRIAL-Regular.otf') format("opentype");
 }
-
+:root {
+  --dark-color:#090909;
+  --light-color:#c4ac9d;
+ --foreground-color:var(--light-color);
+ --background-color:var(--dark-color);
+}
 html body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
     /*background-color: #020F1C;*/
-    background-color: #090909;
-    color: #c4ac9d;
+    background-color:var(--background-color);
+    color: var(--foreground-color);
 }
 
 body {
@@ -39,7 +44,7 @@ body {
 }
 
 html {
-    background-color: #090909;
+    background-color: var(--background-color);
 }
 
 * {
@@ -84,7 +89,7 @@ h1 {
     line-height: 1.1;
     padding: 0;
     margin: 0;
-    color: #c4ac9d;
+    color: var(--foreground-color);
     /*text-shadow: 0px 0px 16px #c4ac9d;*/
     /*-webkit-text-stroke: 1px #f5f5f5;*/
 }
@@ -169,7 +174,7 @@ a:hover {}
 #home-button {
     display: inline-block;
     text-decoration: none;
-    color: #c4ac9d;
+    color: var(--foreground-color);
 }
 
 #menu-button {
@@ -313,7 +318,7 @@ a:hover {}
 .menu-link {
     width: 100%;
     flex-grow: 1;
-    border: 1px solid #c4ac9d;
+    border: 1px solid var(--foreground-color);
     padding: 2rem 3rem;
     margin: 1rem 0rem;
     border-radius: 8px;
@@ -351,7 +356,7 @@ a:hover {}
     font-weight: normal;
     padding: 0;
     margin: 0;
-    color: #c4ac9d;
+    color: var(--foreground-color);
     opacity: 0;
 }
 
@@ -424,7 +429,7 @@ a:hover {}
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
-    border: 0px solid #c4ac9d;
+    border: 0px solid var(--foreground-color);
     border-radius: 8px;
 }
 
@@ -436,7 +441,7 @@ a:hover {}
 #menu-footer-1 {
     display: block;
     padding: 0.5rem 1.5rem;
-    border: 1px solid #c4ac9d;
+    border: 1px solid var(--foreground-color);
     border-radius: 800px;
     flex-grow: 1;
     transition: all 0.4s ease-out;
@@ -447,7 +452,7 @@ a:hover {}
 #menu-footer-2 {
     display: block;
     padding: 0.5rem 1.5rem;
-    border: 1px solid #c4ac9d;
+    border: 1px solid var(--foreground-color);
     border-radius: 800px;
     flex-grow: 1;
     transition: all 0.4s ease-out;
@@ -470,7 +475,7 @@ a:hover {}
 #menu-footer-4 {
     display: block;
     padding: 0.5rem 1.5rem;
-    border: 1px solid #c4ac9d;
+    border: 1px solid var(--foreground-color);
     border-radius: 800px;
     flex-grow: 1;
     transition: all 0.4s ease-out;
@@ -537,14 +542,14 @@ a:hover {}
     justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
-    border: 0px solid #c4ac9d;
+    border: 0px solid var(--foreground-color);
     border-radius: 8px;
 }
 
 #home-footer-left {
     border-radius: 8px;
     flex-grow: 2;
-    border: 1px solid #c4ac9d;
+    border: 1px solid var(--foreground-color);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -556,7 +561,7 @@ a:hover {}
     padding: 0.5rem 1.5rem;
     margin-right: 3rem;
     /*border-right: 1px solid #c4ac9d;*/
-    border-right: 0px solid #c4ac9d;
+    border-right: 0px solid var(--foreground-color);
     border-radius: 0px;
     flex-grow: 0;
     display: flex;
@@ -577,15 +582,15 @@ a:hover {}
     border-right: 1px solid #c4ac9d;
     border-bottom: 1px solid #c4ac9d;
     border-radius: 0px 8px 8px 0px;*/
-    border: 1px solid #c4ac9d;
+    border: 1px solid var(--foreground-color);
     border-radius: 800px;
     text-decoration: none;
-    color: #c4ac9d;
+    color: var(--foreground-color);
 }
 
 #info-link:hover {
-    background-color: #c4ac9d;
-    color: #090909;
+    background-color: var(--foreground-color);
+    color: var(--background-color);
     /*box-shadow: 0 0 16px #c4ac9d;
   transform: translateY(-0.5rem);
   border-color: #ff4f01;*/
@@ -597,7 +602,7 @@ a:hover {}
     height: 1.6rem;
     margin: 0rem 0rem 0rem 0rem;
     transform: rotate(-45deg);
-    fill: #c4ac9d;
+    fill: var(--foreground-color);
     transition: all 0.4s ease-out;
     /*stroke: #090909;
     stroke-width: 0px;*/
@@ -849,7 +854,7 @@ a:hover {}
 
 #mission-statement a:hover {
     background-color: #dea8fa;
-    color: #090909;
+    color: var(--background-color);
 }
 
 #mission-intro {
@@ -1044,7 +1049,7 @@ a:hover {}
 }
 
 #event-rsvp:hover h4 {
-    color: #090909;
+    color: var(--background-color);
 }
 
 

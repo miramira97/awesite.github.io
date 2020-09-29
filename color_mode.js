@@ -15,26 +15,44 @@ function lightMode() {
     let root = document.documentElement;
     let lc = getComputedStyle(root).getPropertyValue('--light-color');
     let dc = getComputedStyle(root).getPropertyValue('--dark-color');
+        let dp = getComputedStyle(root).getPropertyValue('--dark-purple');
+
     root.style.setProperty('--background-color', lc);
     root.style.setProperty('--foreground-color', dc);
+    root.style.setProperty('--used-purple', dp);
+    document.getElementById("home-button").style.color = dc
+
     console.log("YES")
 
     if (document.URL.includes("index.html")) {
         lightModeHomeImages()
+    }
+       if (document.URL.includes("spirits.html")) {
+document.getElementById("nav").getElementsByTagName("h4")[2].style.color = dp
+
     }
     localStorage.setItem("theme", "light")
 }
 
 function darkMode() {
     let root = document.documentElement;
-    let lc = getComputedStyle(root).getPropertyValue('--dark-color');
-    let dc = getComputedStyle(root).getPropertyValue('--light-color');
-    root.style.setProperty('--background-color', lc);
-    root.style.setProperty('--foreground-color', dc);
+    let dc = getComputedStyle(root).getPropertyValue('--dark-color');
+    let lc = getComputedStyle(root).getPropertyValue('--light-color');
+            let lp = getComputedStyle(root).getPropertyValue('--light-purple');
+
+    root.style.setProperty('--background-color', dc);
+    root.style.setProperty('--foreground-color', lc);
+        root.style.setProperty('--used-purple', lp);
+
     console.log("YES")
+    document.getElementById("home-button").style.color = lc
 
     if (document.URL.includes("index.html")) {
         darkModeHomeImages()
+    }
+           if (document.URL.includes("spirits.html")) {
+document.getElementById("nav").getElementsByTagName("h4")[2].style.color = lp
+
     }
     localStorage.setItem("theme", "dark")
 }

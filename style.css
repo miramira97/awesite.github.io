@@ -26,6 +26,9 @@
 :root {
   --dark-color:#090909;
   --light-color:#c4ac9d;
+  --light-purple:#dea8fa;
+  --dark-purple:#70236b;
+  --used-purple:var(--light-purple);
  --foreground-color:var(--light-color);
  --background-color:var(--dark-color);
 }
@@ -821,11 +824,11 @@ a:hover {}
 
 @keyframes glow {
     from {
-        box-shadow: 0 0 16px #dea8fa;
+        box-shadow: 0 0 16px var(--used-purple);
     }
 
     to {
-        box-shadow: 0 0 64px #dea8fa;
+        box-shadow: 0 0 64px var(--used-purple);
     }
 }
 
@@ -842,18 +845,18 @@ a:hover {}
 
     animation: 4s glow ease-out infinite alternate;
 
-    border: 1px solid #dea8fa;
+    border: 1px solid var(--used-purple);
 
 }
 
 #mission-statement a {
     text-decoration: none;
-    border-bottom: 1px solid #dea8fa;
+    border-bottom: 1px solid var(--used-purple);
     transition: all 0.4s ease-out;
 }
 
 #mission-statement a:hover {
-    background-color: #dea8fa;
+    background-color: var(--used-purple);
     color: var(--background-color);
 }
 
@@ -863,12 +866,12 @@ a:hover {}
     margin-right: 100px;
     font-size: 2rem;
     line-height: 1.5;
-    color: #dea8fa;
+    color: var(--used-purple);
     font-family: 'Roobert-Light', sans-serif;
 }
 
 #mission-intro a {
-    color: #dea8fa;
+    color: var(--used-purple);
 }
 
 #mission-intro .title {
@@ -879,13 +882,13 @@ a:hover {}
 #mission-statement .title {
     /*text-shadow: 0 0 30px var(--used-foreground-color), 0 0 40px var(--used-foreground-color), 0 0 50px var(--used-foreground-color), 0 0 60px var(--used-foreground-color), 0 0 70px var(--used-foreground-color);*/
     line-height: 1.5;
-    color: #dea8fa;
+    color: var(--used-purple);
     font-family: 'Ogg-Thin', sans-serif;
 }
 
 /*neuhaus*/
 #mission-statement .bodytext {
-    color: #dea8fa;
+    color: var(--used-purple);
     line-height: 1.75;
     font-family: 'Roobert-Light', sans-serif;
     font-size: 3rem;
@@ -896,12 +899,12 @@ a:hover {}
 }
 
 #mission-statement a {
-    color: #dea8fa;
+    color: var(--used-purple);
 
 }
 
 #mission-statement h3 {
-    color: #dea8fa;
+    color: var(--used-purple);
     line-height: 1.75;
     font-size: 3rem;
     font-weight: normal;
@@ -910,7 +913,7 @@ a:hover {}
 }
 
 #mission-statement h5 {
-    color: #dea8fa;
+    color: var(--used-purple);
     line-height: 1.75;
     font-size: 3rem;
     font-weight: normal;

@@ -28,6 +28,9 @@
   --light-color:#c4ac9d;
   --light-purple:#dea8fa;
   --dark-purple:#70236b;
+  --light-blue:#b7c8f7;
+  --dark-blue:#234a87;
+  --used-blue:var(--light-blue);
   --used-purple:var(--light-purple);
  --foreground-color:var(--light-color);
  --background-color:var(--dark-color);
@@ -939,13 +942,13 @@ a:hover {}
 @keyframes glow-blue {
     from {
         box-shadow:
-            0 0 16px #b7c8f7;
+            0 0 16px var(--used-blue);
 
     }
 
     to {
         box-shadow:
-            0 0 64px #b7c8f7;
+            0 0 64px var(--used-blue);
     }
 }
 
@@ -959,7 +962,7 @@ a:hover {}
 #events-title h2 {
     display: inline;
     position: relative;
-    color: #b7c8f7;
+    color: var(--used-blue);
     margin-left: 40px;
 }
 
@@ -975,7 +978,7 @@ a:hover {}
     font-weight: normal;
 
     float: left;
-    border: 1px solid #b7c8f7;
+    border: 1px solid var(--used-blue);
     border-radius: 8px;
     animation: 3s glow-blue linear infinite alternate;
 
@@ -992,7 +995,7 @@ a:hover {}
     font-weight: normal;
     padding-top: 40px;
     float: left;
-    border: 1px solid #b7c8f7;
+    border: 1px solid var(--used-blue);
     border-radius: 8px;
     padding-left: 80px;
     padding-right: 80px;
@@ -1001,28 +1004,28 @@ a:hover {}
 }
 
 #events h1 {
-    color: #b7c8f7;
+    color: var(--used-blue);
 }
 
 #events h3 {
     display: inline;
     font-family: 'Ogg-Thin';
     font-size: 3rem;
-    color: #b7c8f7;
+    color: var(--used-blue);
     padding-right: 2rem;
 }
 
 #events h4 {
     display: inline;
     font-size: 3rem;
-    color: #b7c8f7;
+    color: var(--used-blue);
     padding-right: 2rem;
 }
 
 #event-title {
     padding: 9rem 3rem 2rem 3rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid #b7c8f7;
+    border-bottom: 1px solid var(--used-blue);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1040,15 +1043,15 @@ a:hover {}
   border-right: 1px solid #c4ac9d;
   border-bottom: 1px solid #c4ac9d;
   border-radius: 0px 8px 8px 0px;*/
-    border: 1px solid #b7c8f7;
+    border: 1px solid var(--used-blue);
     border-radius: 800px;
     text-decoration: none;
-    color: #b7c8f7;
+    color: var(--used-blue);
     transition: all 0.4s ease-out;
 }
 
 #event-rsvp:hover {
-    background-color: #b7c8f7;
+    background-color: var(--used-blue);
 }
 
 #event-rsvp:hover h4 {
@@ -1074,7 +1077,7 @@ a:hover {}
     align-items: baseline;
 
     padding: 0rem 1rem 0rem 0rem;
-    border-top: 0px solid #b7c8f7;
+    border-top: 0px solid var(--used-blue);
 }
 
 .event-detail h3 {

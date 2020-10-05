@@ -103,18 +103,22 @@ h3 {
     display: inline;
     font-family: 'Ogg-Light', serif;
     font-size: 2vw;
+    line-height: 1.5;
     font-weight: normal;
     padding: 0;
     margin: 0;
+    letter-spacing: 1px;
 }
 
 h4 {
     display: inline;
     font-family: 'Roobert-Light', sans-serif;
     font-size: 2vw;
+    line-height: 1.5;
     font-weight: normal;
     padding: 0;
     margin: 0;
+    letter-spacing: 1px;
 }
 
 h5 {
@@ -135,16 +139,18 @@ p {
     font-weight: normal;
     padding: 0;
     margin: 0;
+    letter-spacing: 1px;
 }
 
 small {
     display: inline;
-    font-family: 'Ogg-Light', serif;
+    font-family: 'Ogg-Thin', serif;
     font-size: 2vw;
-    line-height: 1.4;
+    line-height: 1.5;
     font-weight: normal;
     padding: 0;
     margin: 0;
+    letter-spacing: 1px;
 }
 
 a:hover {}
@@ -451,13 +457,10 @@ a:hover {}
     border-radius: 800px;
     flex-grow: 1;
     transition: all 0.4s ease-out;
-    opacity: 0.5;
-    cursor: default;
     text-decoration: none;
 }
 
 #menu-footer-2 {
-    background-color: unset !important;
 }
 
 #menu-footer-3 {
@@ -996,6 +999,14 @@ a:hover {}
     color: #b7c8f7;
 }
 
+#events p {
+    color: #b7c8f7;
+}
+
+#events small {
+    color: #b7c8f7;
+}
+
 #events h3 {
     display: inline;
     font-family: 'Ogg-Thin';
@@ -1006,6 +1017,7 @@ a:hover {}
 
 #events h4 {
     display: inline;
+    font-family: 'Roobert-Light';
     font-size: 3rem;
     color: #b7c8f7;
     padding-right: 2rem;
@@ -1057,6 +1069,32 @@ a:hover {}
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: baseline;
+}
+
+#keynote-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200%;
+  border-top: 1px solid #b7c8f7;
+  border-bottom: 1px solid #b7c8f7;
+  padding: 1rem 3rem;
+  margin: 2rem -3rem 0rem -3rem;
+}
+
+#keynote-container svg {
+  display: none;
+  fill: #b7c8f7;
+  width: 3.5vw;
+  height: 3.5vw;
+  stroke: #090909;
+  stroke-width: 1px;
+}
+
+#keynote-description{
+  border-bottom: 0px solid #b7c8f7;
+  padding: 2rem 3rem 1rem 3rem;
+  margin: 0rem -3rem 0rem -3rem;
 }
 
 .event-detail {

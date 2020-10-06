@@ -49,7 +49,7 @@ $(document).ready(function(){
       $(this).css({'color':'#dea8fa','border-color':'#dea8fa', 'box-shadow':''});
     });
 
-    $("#menu-footer-1, #menu-footer-4").hover(function(){
+    $("#menu-footer-1, #menu-footer-2, #menu-footer-4").hover(function(){
       $(this).css({'background-color':'#dea8fa', 'color':'#090909'});
     }, function(){
       $(this).css({'background-color':'#090909', 'color':'#dea8fa'});
@@ -77,7 +77,7 @@ $(document).ready(function(){
       $(this).css({'color':'#b7c7f7','border-color':'#b7c7f7', 'box-shadow':''});
     });
 
-    $("#menu-footer-1, #menu-footer-4").hover(function(){
+    $("#menu-footer-1, #menu-footer-2, #menu-footer-4").hover(function(){
       $(this).css({'background-color':'#b7c7f7', 'color':'#090909'});
     }, function(){
       $(this).css({'background-color':'#090909', 'color':'#b7c7f7'});
@@ -108,7 +108,7 @@ $(document).ready(function(){
       $(this).css({'color':'#c4ac9d','border-color':'#c4ac9d', 'box-shadow':''});
     });
 
-    $("#menu-footer-1, #menu-footer-4").hover(function(){
+    $("#menu-footer-1, #menu-footer-2, #menu-footer-4").hover(function(){
       $(this).css({'background-color':'#c4ac9d', 'color':'#090909'});
     }, function(){
       $(this).css({'background-color':'#090909', 'color':'#c4ac9d'});

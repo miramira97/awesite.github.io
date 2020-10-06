@@ -23,6 +23,9 @@ function lightMode() {
     root.style.setProperty('--used-blue', db);
 
     document.getElementById("home-button").style.color = dc
+    document.getElementById("eye-closed").style.stroke = dc
+        document.getElementById("eye-open").style.stroke = dc
+
 
     console.log("YES")
 

@@ -838,6 +838,9 @@ a:hover {}
     }
 }
 
+#line-mission
+{display: inline-block; height: 1px; width: 6rem; margin: 0rem 0.5rem; background-color: var(--used-purple);}
+
 #mission-statement {
     display: inline-block;
     /*position:relative;
@@ -954,7 +957,7 @@ a:hover {}
             0 0 64px var(--used-blue);
     }
 }
-#line-stars{
+#line-events{
 
 display: inline-block; height: 1px; width: 6rem; margin: 0rem 0.5rem; background-color: var(--used-blue);}
 #events-title {

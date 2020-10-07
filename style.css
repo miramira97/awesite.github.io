@@ -5,13 +5,13 @@
 }
 
 @font-face {
-    font-family: 'Ogg-Light';
-    src: url('fonts/Ogg-Light.otf') format("opentype");
+    font-family: 'Apoc-Light';
+    src: url('fonts/ApocTrial-Light.otf') format("opentype");
 }
 
 @font-face {
-    font-family: 'Ogg-Thin';
-    src: url('fonts/Ogg-Light.otf') format("opentype");
+    font-family: 'Apoc-Hairline';
+    src: url('fonts/ApocTrial-Hairline.otf') format("opentype");
 }
 
 @font-face {
@@ -78,20 +78,21 @@ html {
 
 h1 {
     display: inline;
-    font-family: 'Ogg-Thin', serif;
-    font-size: 7vw;
+    font-family: 'Apoc-Hairline', serif;
+    font-size: 7.5vw;
     font-weight: normal;
     line-height: 1.1;
     padding: 0;
     margin: 0;
     color: #c4ac9d;
+    letter-spacing: 1px;
     /*text-shadow: 0px 0px 16px #c4ac9d;*/
     /*-webkit-text-stroke: 1px #f5f5f5;*/
 }
 
 h2 {
     display: inline;
-    font-family: 'Ogg-Thin', serif;
+    font-family: 'Apoc-Hairline', serif;
     font-size: 5vw;
     font-weight: normal;
     padding: 0;
@@ -101,7 +102,7 @@ h2 {
 
 h3 {
     display: inline;
-    font-family: 'Ogg-Light', serif;
+    font-family: 'Apoc-Hairline', serif;
     font-size: 2vw;
     line-height: 1.5;
     font-weight: normal;
@@ -124,7 +125,7 @@ h4 {
 h5 {
     display: inline;
     font-family: 'Roobert-Light', serif;
-    font-size: 7vw;
+    font-size: 7.5vw;
     line-height: 1.1;
     font-weight: normal;
     padding: 0;
@@ -144,7 +145,7 @@ p {
 
 small {
     display: inline;
-    font-family: 'Ogg-Thin', serif;
+    font-family: 'Apoc-Hairline', serif;
     font-size: 2vw;
     line-height: 1.5;
     font-weight: normal;
@@ -550,7 +551,7 @@ a:hover {}
     border: 1px solid #c4ac9d;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     margin-right: 3rem;
     /*animation: 4s glow4 ease-out infinite alternate;*/
@@ -558,7 +559,7 @@ a:hover {}
 
 #home-footer-left div {
     padding: 0.5rem 1.5rem;
-    margin-right: 3rem;
+    margin-right: 0rem;
     /*border-right: 1px solid #c4ac9d;*/
     border-right: 0px solid #c4ac9d;
     border-radius: 0px;
@@ -1011,7 +1012,6 @@ a:hover {}
 
 #events h3 {
     display: inline;
-    font-family: 'Ogg-Thin';
     font-size: 3rem;
     color: #b7c8f7;
     padding-right: 2rem;
@@ -1019,7 +1019,6 @@ a:hover {}
 
 #events h4 {
     display: inline;
-    font-family: 'Roobert-Light';
     font-size: 3rem;
     color: #b7c8f7;
     padding-right: 2rem;

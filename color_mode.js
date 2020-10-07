@@ -1,5 +1,7 @@
 window.onload = function() {
     console.log('3')
+
+    //use localstorage to pick theme so that it saves when moving around pages
     console.log(localStorage.getItem('theme'))
     if (localStorage.getItem('theme') == 'light') {
         lightMode()
@@ -11,24 +13,30 @@ window.onload = function() {
 }
 
 function lightMode() {
+
+    //get color vars
     let root = document.documentElement;
     let lc = getComputedStyle(root).getPropertyValue('--light-color');
     let dc = getComputedStyle(root).getPropertyValue('--dark-color');
     let dp = getComputedStyle(root).getPropertyValue('--dark-purple');
     let db = getComputedStyle(root).getPropertyValue('--dark-blue');
 
+    //set color vars
     root.style.setProperty('--background-color', lc);
     root.style.setProperty('--foreground-color', dc);
     root.style.setProperty('--used-purple', dp);
     root.style.setProperty('--used-blue', db);
 
+    //home button stuff
     document.getElementById("home-button").style.color = dc
     $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("stroke", dc );
     $( "#eye-open, #eye-open circle, #eye-open path" ).css("stroke", dc );
+    $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("fill", lc );
 
 
     console.log("YES")
 
+    //page specific stuff
     if (document.URL.includes("index.html")) {
         lightModeHomeImages()
     }
@@ -40,6 +48,8 @@ function lightMode() {
         document.getElementById("nav").getElementsByTagName("h4")[2].style.color = db
 
     }
+
+    //set localstorage
     localStorage.setItem("theme", "light")
 }
 
@@ -57,6 +67,7 @@ function darkMode() {
 ;
       $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("stroke", lc );
     $( "#eye-open, #eye-open circle, #eye-open path" ).css("stroke", lc );
+    $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("fill", dc );
 
     console.log("YES")
     document.getElementById("home-button").style.color = lc

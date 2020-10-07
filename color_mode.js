@@ -23,8 +23,8 @@ function lightMode() {
     root.style.setProperty('--used-blue', db);
 
     document.getElementById("home-button").style.color = dc
-    document.getElementById("eye-closed").style.stroke = dc
-        document.getElementById("eye-open").style.stroke = dc
+    $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("stroke", dc );
+    $( "#eye-open, #eye-open circle, #eye-open path" ).css("stroke", dc );
 
 
     console.log("YES")

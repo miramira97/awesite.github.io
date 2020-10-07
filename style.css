@@ -519,7 +519,7 @@ a:hover {}
 
 #symposium-title-text {
     display: flex;
-    flex-flow: row-nowrap;
+    flex-flow: row nowrap;
     justify-content: flex-start;
 }
 
@@ -549,6 +549,7 @@ a:hover {}
     flex-grow: 2;
     border: 1px solid #c4ac9d;
     display: flex;
+    flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
     margin-right: 3rem;
@@ -1199,18 +1200,47 @@ a:hover {}
 
     #mobile-overlay {
         overflow: scroll;
-        display: flex;
+        display: none;
         flex-flow: column nowrap;
         justify-content: flex-start;
         align-items: center;
     }
 
     #content {
-        display: none;
+        display: block;
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 10vw;
+    }
+
+    #home-footer-left {
+      flex-flow: column nowrap;
+    }
+
+    #title-details {
+      flex-flow: column nowrap;
+    }
+
+    #mobile-line-break {
+      display: block;
+    }
+
+    #symposium-title {
+        padding: 2rem 3rem;
+        width: 100%;
+        text-align: center;
+        overflow: visible;
+        /*text-shadow: 0px 0px 16px #c4ac9d;*/
+        /*animation: 4s textGlow1 ease-out infinite alternate;*/
+
+    }
+
+    #symposium-title-text {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
     }
 
 }

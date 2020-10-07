@@ -48,10 +48,15 @@ function darkMode() {
     let dc = getComputedStyle(root).getPropertyValue('--dark-color');
     let lc = getComputedStyle(root).getPropertyValue('--light-color');
     let lp = getComputedStyle(root).getPropertyValue('--light-purple');
+    let lb = getComputedStyle(root).getPropertyValue('--light-blue');
 
     root.style.setProperty('--background-color', dc);
     root.style.setProperty('--foreground-color', lc);
-    root.style.setProperty('--used-purple', lp);
+    root.style.setProperty('--used-purple', lp)
+        root.style.setProperty('--used-blue', lb);
+;
+      $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("stroke", lc );
+    $( "#eye-open, #eye-open circle, #eye-open path" ).css("stroke", lc );
 
     console.log("YES")
     document.getElementById("home-button").style.color = lc

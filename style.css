@@ -5,13 +5,13 @@
 }
 
 @font-face {
-    font-family: 'Ogg-Light';
-    src: url('fonts/Ogg-Light.otf') format("opentype");
+    font-family: 'Apoc-Light';
+    src: url('fonts/ApocTrial-Light.otf') format("opentype");
 }
 
 @font-face {
-    font-family: 'Ogg-Thin';
-    src: url('fonts/Ogg-Thin.otf') format("opentype");
+    font-family: 'Apoc-Hairline';
+    src: url('fonts/ApocTrial-Hairline.otf') format("opentype");
 }
 
 @font-face {
@@ -102,7 +102,7 @@ html {
 
 h1 {
     display: inline;
-    font-family: 'Ogg-Thin', serif;
+    font-family: 'Apoc-Hairline', serif;
     font-size: 7.5vw;
     font-weight: normal;
     line-height: 1.1;
@@ -115,8 +115,8 @@ h1 {
 
 h2 {
     display: inline;
-    font-family: 'Ogg-Thin', serif;
-    font-size: 4vw;
+    font-family: 'Apoc-Hairline', serif;
+    font-size: 5vw;
     font-weight: normal;
     padding: 0;
     margin: 0;
@@ -125,7 +125,7 @@ h2 {
 
 h3 {
     display: inline;
-    font-family: 'Ogg-Light', serif;
+    font-family: 'Apoc-Hairline', serif;
     font-size: 2vw;
     line-height: 1.5;
     font-weight: normal;
@@ -178,7 +178,7 @@ p {
 
 small {
     display: inline;
-    font-family: 'Ogg-Thin', serif;
+    font-family: 'Apoc-Hairline', serif;
     font-size: 2vw;
     line-height: 1.5;
     font-weight: normal;
@@ -634,7 +634,7 @@ a:hover {}
 
 #symposium-title-text {
     display: flex;
-    flex-flow: row-nowrap;
+    flex-flow: row nowrap;
     justify-content: flex-start;
 }
 
@@ -664,7 +664,8 @@ a:hover {}
     flex-grow: 2;
     border: 1px solid var(--foreground-color);
     display: flex;
-    justify-content: flex-start;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     align-items: center;
     margin-right: 3rem;
     /*animation: 4s glow4 ease-out infinite alternate;*/
@@ -672,7 +673,7 @@ a:hover {}
 
 #home-footer-left div {
     padding: 0.5rem 1.5rem;
-    margin-right: 3rem;
+    margin-right: 0rem;
     /*border-right: 1px solid #c4ac9d;*/
     border-right: 0px solid var(--foreground-color);
     border-radius: 0px;
@@ -1130,7 +1131,6 @@ display: inline-block; height: 1px; width: 6rem; margin: 0rem 0.5rem; background
 
 #events h3 {
     display: inline;
-    font-family: 'Ogg-Thin';
     font-size: 3rem;
     color: var(--used-blue);
     padding-right: 2rem;
@@ -1138,7 +1138,6 @@ display: inline-block; height: 1px; width: 6rem; margin: 0rem 0.5rem; background
 
 #events h4 {
     display: inline;
-    font-family: 'Roobert-Light';
     font-size: 3rem;
     color: var(--used-blue);
     padding-right: 2rem;
@@ -1320,18 +1319,47 @@ display: inline-block; height: 1px; width: 6rem; margin: 0rem 0.5rem; background
 
     #mobile-overlay {
         overflow: scroll;
-        display: flex;
+        display: none;
         flex-flow: column nowrap;
         justify-content: flex-start;
         align-items: center;
     }
 
     #content {
-        display: none;
+        display: block;
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 10vw;
+    }
+
+    #home-footer-left {
+      flex-flow: column nowrap;
+    }
+
+    #title-details {
+      flex-flow: column nowrap;
+    }
+
+    #mobile-line-break {
+      display: block;
+    }
+
+    #symposium-title {
+        padding: 2rem 3rem;
+        width: 100%;
+        text-align: center;
+        overflow: visible;
+        /*text-shadow: 0px 0px 16px #c4ac9d;*/
+        /*animation: 4s textGlow1 ease-out infinite alternate;*/
+
+    }
+
+    #symposium-title-text {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
     }
 
 }

@@ -20,18 +20,27 @@ function lightMode() {
     let dc = getComputedStyle(root).getPropertyValue('--dark-color');
     let dp = getComputedStyle(root).getPropertyValue('--dark-purple');
     let db = getComputedStyle(root).getPropertyValue('--dark-blue');
+    let dg = getComputedStyle(root).getPropertyValue('--dark-green');
+    let lm = getComputedStyle(root).getPropertyValue('--light-menu-bg');
+    let ds = getComputedStyle(root).getPropertyValue('--dark-shadow');
+
 
     //set color vars
     root.style.setProperty('--background-color', lc);
     root.style.setProperty('--foreground-color', dc);
     root.style.setProperty('--used-purple', dp);
     root.style.setProperty('--used-blue', db);
+    root.style.setProperty('--used-green', dg);
+    root.style.setProperty('--menu-bg', lm);
+    root.style.setProperty('--menu-shadow', ds);
 
     //home button stuff
     document.getElementById("home-button").style.color = dc
     $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("stroke", dc );
     $( "#eye-open, #eye-open circle, #eye-open path" ).css("stroke", dc );
     $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("fill", lc );
+
+    //menu stuff
 
 
     console.log("YES")
@@ -49,8 +58,57 @@ function lightMode() {
 
     }
 
+    $( "#light-mode" ).css("display", "none" );
+    $( "#dark-mode" ).css("display", "" );
+
     //set localstorage
     localStorage.setItem("theme", "light")
+
+    //moth hover
+    $("#moth-hover-area").hover(function(){
+      $("#cursor").css({'display': 'flex', 'color': lc, 'background-color': dp, 'border-color': lc});
+      $("#cursor").html('<p><small>Spirits</small></p>');
+      $("#moth-2").css({'display': 'block'});
+      $("#moth-1").css({'display': 'none'});
+      $('html').css({'cursor': 'none'});
+      changeCursor();
+    }, function() {
+      $("#cursor").css({'display': 'none'});
+      $("#moth-2").css({'display': 'none'});
+      $("#moth-1").css({'display': ''});
+      $('html').css({'cursor': 'auto'});
+    });
+
+    // moon hover
+      $("#moon-hover-area").hover(function(){
+        $("#cursor").css({'display': 'flex', 'color': lc, 'background-color': db, 'border-color': lc});
+        $("#cursor").html('<p><small>Stars</small></p>');
+        $("#moon-2").css({'display': 'block'});
+        $("#moon-1").css({'display': 'none'});
+        $('html').css({'cursor': 'none'});
+        changeCursor();
+      }, function() {
+        $("#cursor").css({'display': 'none'});
+        $("#moon-2").css({'display': 'none'});
+        $("#moon-1").css({'display': ''});
+        $('html').css({'cursor': 'auto'});
+      });
+
+      // lotus hover
+        $("#lotus-hover-area").hover(function(){
+          $("#cursor").css({'display': 'block', 'color': lc, 'background-color': dg, 'border-color': lc});
+          $("#cursor").html('<p><small>Stones</small></p>');
+          $("#lotus-2").css({'display': 'block'});
+          $("#lotus-1").css({'display': 'none'});
+          $('html').css({'cursor': 'none'});
+
+          changeCursor();
+        }, function() {
+          $("#cursor").css({'display': 'none'});
+          $("#lotus-2").css({'display': 'none'});
+          $("#lotus-1").css({'display': ''});
+          $('html').css({'cursor': 'auto'});
+        });
 }
 
 function darkMode() {
@@ -59,13 +117,20 @@ function darkMode() {
     let lc = getComputedStyle(root).getPropertyValue('--light-color');
     let lp = getComputedStyle(root).getPropertyValue('--light-purple');
     let lb = getComputedStyle(root).getPropertyValue('--light-blue');
+    let lg = getComputedStyle(root).getPropertyValue('--light-green');
+    let dm = getComputedStyle(root).getPropertyValue('--dark-menu-bg');
+    let ls = getComputedStyle(root).getPropertyValue('--light-shadow');
+
 
     root.style.setProperty('--background-color', dc);
     root.style.setProperty('--foreground-color', lc);
     root.style.setProperty('--used-purple', lp)
-        root.style.setProperty('--used-blue', lb);
-;
-      $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("stroke", lc );
+    root.style.setProperty('--used-blue', lb);
+    root.style.setProperty('--used-green', lg);
+    root.style.setProperty('--menu-bg', dm);
+    root.style.setProperty('--menu-shadow', ls);
+
+    $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("stroke", lc );
     $( "#eye-open, #eye-open circle, #eye-open path" ).css("stroke", lc );
     $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("fill", dc );
 
@@ -79,7 +144,57 @@ function darkMode() {
         document.getElementById("nav").getElementsByTagName("h4")[2].style.color = lp
 
     }
+
+    $( "#light-mode" ).css("display", "" );
+    $( "#dark-mode" ).css("display", "none" );
+
     localStorage.setItem("theme", "dark")
+
+    //moth hover
+    $("#moth-hover-area").hover(function(){
+      $("#cursor").css({'display': 'flex', 'color': lp, 'background-color': dc, 'border-color': lp});
+      $("#cursor").html('<p><small>Spirits</small></p>');
+      $("#moth-2").css({'display': 'block'});
+      $("#moth-1").css({'display': 'none'});
+      $('html').css({'cursor': 'none'});
+      changeCursor();
+    }, function() {
+      $("#cursor").css({'display': 'none'});
+      $("#moth-2").css({'display': 'none'});
+      $("#moth-1").css({'display': ''});
+      $('html').css({'cursor': 'auto'});
+    });
+
+    // moon hover
+      $("#moon-hover-area").hover(function(){
+        $("#cursor").css({'display': 'flex', 'color': lb, 'background-color': dc, 'border-color': lb});
+        $("#cursor").html('<p><small>Stars</small></p>');
+        $("#moon-2").css({'display': 'block'});
+        $("#moon-1").css({'display': 'none'});
+        $('html').css({'cursor': 'none'});
+        changeCursor();
+      }, function() {
+        $("#cursor").css({'display': 'none'});
+        $("#moon-2").css({'display': 'none'});
+        $("#moon-1").css({'display': ''});
+        $('html').css({'cursor': 'auto'});
+      });
+
+      // lotus hover
+        $("#lotus-hover-area").hover(function(){
+          $("#cursor").css({'display': 'block', 'color': lg, 'background-color': dc, 'border-color': lg});
+          $("#cursor").html('<p><small>Stones</small></p>');
+          $("#lotus-2").css({'display': 'block'});
+          $("#lotus-1").css({'display': 'none'});
+          $('html').css({'cursor': 'none'});
+
+          changeCursor();
+        }, function() {
+          $("#cursor").css({'display': 'none'});
+          $("#lotus-2").css({'display': 'none'});
+          $("#lotus-1").css({'display': ''});
+          $('html').css({'cursor': 'auto'});
+        });
 }
 
 function lightModeHomeImages() {

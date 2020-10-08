@@ -80,25 +80,25 @@ $(document).ready(function(){
 
   } else {
 
-    $( "#menu" ).find('*').css("border-color", "#c4ac9d" );
+    /*$( "#menu" ).find('*').css("border-color", "#c4ac9d" );
     $(".menu-link, #menu-footer-1, #menu-footer-2, #menu-footer-4, #home-button").css({'color':'#c4ac9d', 'border-color':'#c4ac9d'});
     $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("stroke", "#c4ac9d" );
     $( "#eye-open, #eye-open circle, #eye-open path" ).css("stroke", "#c4ac9d" );
 
     $("#menu-events-link").hover(function(){
-      $(this).css({'color':'#b7c7f7','border-color':'#b7c7f7', 'box-shadow':'0px 0px 32px #b7c7f7'});
+      $(this).css({'border-color':'#b7c7f7', 'box-shadow':'0px 0px 32px #b7c7f7'});
     }, function(){
       $(this).css({'color':'#c4ac9d','border-color':'#c4ac9d', 'box-shadow':''});
     });
 
     $("#menu-mission-link").hover(function(){
-      $(this).css({'color':'#dea8fa','border-color':'#dea8fa', 'box-shadow':'0px 0px 32px #dea8fa'});
+      $(this).css({'border-color':'#dea8fa', 'box-shadow':'0px 0px 32px #dea8fa'});
     }, function(){
       $(this).css({'color':'#c4ac9d','border-color':'#c4ac9d', 'box-shadow':''});
     });
 
     $("#menu-sources-link").hover(function(){
-      $(this).css({'color':'#90a565','border-color':'#90a565', 'box-shadow':'0px 0px 32px #90a565'});
+      $(this).css({'border-color':'#90a565', 'box-shadow':'0px 0px 32px #90a565'});
     }, function(){
       $(this).css({'color':'#c4ac9d','border-color':'#c4ac9d', 'box-shadow':''});
     });
@@ -106,9 +106,9 @@ $(document).ready(function(){
     $("#menu-footer-1, #menu-footer-2, #menu-footer-4").hover(function(){
       $(this).css({'background-color':'#c4ac9d', 'color':'#090909'});
     }, function(){
-      $(this).css({'background-color':'#090909', 'color':'#c4ac9d'});
+      $(this).css({'background-color':'', 'color':'#c4ac9d'});
     });
-
+    */
   }
 
 
@@ -142,6 +142,7 @@ $(document).ready(function(){
     if ($('#menu').css("display") === "none"){
       $('#menu').fadeIn(400);
       $('#menu').css("display", "flex");
+      $('#menu-half').css("transform", "translateX(0)");
       /*$('#menu-button').css("background-color", "#c4ac9d");
       $('#menu-button').css("transform", "rotate(90deg)");
       $('#menu-button').css("border-color", "#c4ac9d");
@@ -176,6 +177,7 @@ $(document).ready(function(){
 
     } else {
       $('#menu').fadeOut(400);
+      $('#menu-half').css("transform", "");
       //$('#menu').css("display", "");
       //$('#nav').css("z-index", "100");
       //$('#menu-button').css("background-color", "");
@@ -210,57 +212,31 @@ $(document).ready(function(){
     }
   });
 
+  $("#menu-close").on( "click", function(){
+
+    $('#menu').fadeOut(400);
+    $('#menu-half').css("transform", "");
+
+    $("#eye-open").css("display","none");
+    $("#eye-closed").css("display","block");
+
+    $("#menu-button").hover(function(){
+
+      $("#eye-closed").css("display","none");
+      $("#eye-open").css("display","block");
+    }, function(){
+      $("#eye-open").css("display","none");
+      $("#eye-closed").css("display","block");
+    });
+
+  });
+
 
   $("#cursor").css({'display': 'none'});
   $("#moth-2").css({'display': 'none'});
   $("#moon-2").css({'display': 'none'});
   $("#lotus-2").css({'display': 'none'});
 
-//moth hover
-  $("#moth-hover-area").hover(function(){
-    $("#cursor").css({'display': 'flex', 'color': '#dea8fa', 'background-color': '#090909', 'border-color': '#dea8fa'});
-    $("#cursor").html('<p><small>Spirits</small></p>');
-    $("#moth-2").css({'display': 'block'});
-    $("#moth-1").css({'display': 'none'});
-    $('html').css({'cursor': 'none'});
-    changeCursor();
-  }, function() {
-    $("#cursor").css({'display': 'none'});
-    $("#moth-2").css({'display': 'none'});
-    $("#moth-1").css({'display': ''});
-    $('html').css({'cursor': 'auto'});
-  });
-
-// moon hover
-  $("#moon-hover-area").hover(function(){
-    $("#cursor").css({'display': 'flex', 'color': '#b7c7f7', 'background-color': '#090909', 'border-color': '#b7c7f7'});
-    $("#cursor").html('<p><small>Stars</small></p>');
-    $("#moon-2").css({'display': 'block'});
-    $("#moon-1").css({'display': 'none'});
-    $('html').css({'cursor': 'none'});
-    changeCursor();
-  }, function() {
-    $("#cursor").css({'display': 'none'});
-    $("#moon-2").css({'display': 'none'});
-    $("#moon-1").css({'display': ''});
-    $('html').css({'cursor': 'auto'});
-  });
-
-  // lotus hover
-    $("#lotus-hover-area").hover(function(){
-      $("#cursor").css({'display': 'block', 'color': '#90a565', 'background-color': '#090909', 'border-color': '#90a565'});
-      $("#cursor").html('<p><small>Stones</small></p>');
-      $("#lotus-2").css({'display': 'block'});
-      $("#lotus-1").css({'display': 'none'});
-      $('html').css({'cursor': 'none'});
-
-      changeCursor();
-    }, function() {
-      $("#cursor").css({'display': 'none'});
-      $("#lotus-2").css({'display': 'none'});
-      $("#lotus-1").css({'display': ''});
-      $('html').css({'cursor': 'auto'});
-    });
 
     (function() {
 

@@ -1,28 +1,6 @@
 $(document).ready(function(){
 
-  /*$("#menu-events-link").hover(function(){
-    $("#menu-events-link h2").css(function(){
-    });
-      {'opacity':'0'});
-    setTimeout(function(){ $("#menu-events-link h2").html('Stars'); }, 0);
-    setTimeout(function(){ $("#menu-events-link h2").css({'opacity':'1'}); }, 0);
-  }, function(){
-    $("#menu-events-link h2").css({'opacity':'0'});
-    setTimeout(function(){ $("#menu-events-link h2").html('Events'); }, 100);
-    setTimeout(function(){ $("#menu-events-link h2").css({'opacity':'1'}); }, 100);
-  });
-  $("#menu-mission-link").hover(function(){
-    $(this).css({'color':'#90a565','border-color':'#90a565', 'box-shadow':'0px 0px 32px #90a565'});
-  }, function(){
-    $(this).css({'color':'#dea8fa','border-color':'#dea8fa', 'box-shadow':''});
-  });
-  $("#menu-sources-link").hover(function(){
-    $(this).css({'color':'#90a565','border-color':'#90a565', 'box-shadow':'0px 0px 32px #90a565'});
-  }, function(){
-    $(this).css({'color':'#dea8fa','border-color':'#dea8fa', 'box-shadow':''});
-  });*/
-
-  if (window.location.pathname == "/spirits.html" || window.location.pathname == "/Users/ioanbutiu/github/awesite.github.io/spirits.html") {
+  /*if (window.location.pathname == "/spirits.html" || window.location.pathname == "/Users/ioanbutiu/github/awesite.github.io/spirits.html" || window.location.pathname == "/Users/ioanbutiu/Documents/GitHub/awesite.github.io/spirits.html") {
 
     console.log("on the mission page");
 
@@ -50,7 +28,7 @@ $(document).ready(function(){
       $(this).css({'background-color':'#090909', 'color':'#dea8fa'});
     });
 
-  } else if(window.location.pathname == "/stars.html" || window.location.pathname == "/Users/ioanbutiu/github/awesite.github.io/stars.html") {
+  } else if(window.location.pathname == "/stars.html" || window.location.pathname == "/Users/ioanbutiu/github/awesite.github.io/stars.html" || window.location.pathname == "/Users/ioanbutiu/Documents/GitHub/awesite.github.io/stars.html") {
 
     console.log("on the events page");
 
@@ -80,38 +58,7 @@ $(document).ready(function(){
 
   } else {
 
-    /*$( "#menu" ).find('*').css("border-color", "#c4ac9d" );
-    $(".menu-link, #menu-footer-1, #menu-footer-2, #menu-footer-4, #home-button").css({'color':'#c4ac9d', 'border-color':'#c4ac9d'});
-    $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("stroke", "#c4ac9d" );
-    $( "#eye-open, #eye-open circle, #eye-open path" ).css("stroke", "#c4ac9d" );
-
-    $("#menu-events-link").hover(function(){
-      $(this).css({'border-color':'#b7c7f7', 'box-shadow':'0px 0px 32px #b7c7f7'});
-    }, function(){
-      $(this).css({'color':'#c4ac9d','border-color':'#c4ac9d', 'box-shadow':''});
-    });
-
-    $("#menu-mission-link").hover(function(){
-      $(this).css({'border-color':'#dea8fa', 'box-shadow':'0px 0px 32px #dea8fa'});
-    }, function(){
-      $(this).css({'color':'#c4ac9d','border-color':'#c4ac9d', 'box-shadow':''});
-    });
-
-    $("#menu-sources-link").hover(function(){
-      $(this).css({'border-color':'#90a565', 'box-shadow':'0px 0px 32px #90a565'});
-    }, function(){
-      $(this).css({'color':'#c4ac9d','border-color':'#c4ac9d', 'box-shadow':''});
-    });
-
-    $("#menu-footer-1, #menu-footer-2, #menu-footer-4").hover(function(){
-      $(this).css({'background-color':'#c4ac9d', 'color':'#090909'});
-    }, function(){
-      $(this).css({'background-color':'', 'color':'#c4ac9d'});
-    });
-    */
-  }
-
-
+  }*/
 
   $("#menu-button").hover(function(){
 

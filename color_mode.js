@@ -1,10 +1,24 @@
 
+       let root = document.documentElement;
+
+   //get all color variables
+    let lc = getComputedStyle(root).getPropertyValue('--light-color');
+    let dc = getComputedStyle(root).getPropertyValue('--dark-color');
+    let dp = getComputedStyle(root).getPropertyValue('--dark-purple');
+    let db = getComputedStyle(root).getPropertyValue('--dark-blue');
+    let dg = getComputedStyle(root).getPropertyValue('--dark-green');
+    let lm = getComputedStyle(root).getPropertyValue('--light-menu-bg');
+    let ds = getComputedStyle(root).getPropertyValue('--dark-shadow');
+    let lp = getComputedStyle(root).getPropertyValue('--light-purple');
+    let lb = getComputedStyle(root).getPropertyValue('--light-blue');
+    let lg = getComputedStyle(root).getPropertyValue('--light-green');
+    let dm = getComputedStyle(root).getPropertyValue('--dark-menu-bg');
+    let ls = getComputedStyle(root).getPropertyValue('--light-shadow');
+
+    //get time variables
     var date = new Date()
     var hrs = date.getHours()
-console.log(hrs)
-   let root = document.documentElement;
-   let lc = getComputedStyle(root).getPropertyValue('--light-color');
-   let dc = getComputedStyle(root).getPropertyValue('--dark-color');
+
 
    if (localStorage.getItem('theme') == 'light' || (localStorage.getItem('theme')==null && hrs >5 && hrs <18)) {
        console.log(document.URL)
@@ -35,13 +49,7 @@ function lightMode() {
 
     //get color vars
     let root = document.documentElement;
-    let lc = getComputedStyle(root).getPropertyValue('--light-color');
-    let dc = getComputedStyle(root).getPropertyValue('--dark-color');
-    let dp = getComputedStyle(root).getPropertyValue('--dark-purple');
-    let db = getComputedStyle(root).getPropertyValue('--dark-blue');
-    let dg = getComputedStyle(root).getPropertyValue('--dark-green');
-    let lm = getComputedStyle(root).getPropertyValue('--light-menu-bg');
-    let ds = getComputedStyle(root).getPropertyValue('--dark-shadow');
+
 
 
     //set color vars
@@ -140,13 +148,7 @@ function lightMode() {
 
 function darkMode() {
     let root = document.documentElement;
-    let dc = getComputedStyle(root).getPropertyValue('--dark-color');
-    let lc = getComputedStyle(root).getPropertyValue('--light-color');
-    let lp = getComputedStyle(root).getPropertyValue('--light-purple');
-    let lb = getComputedStyle(root).getPropertyValue('--light-blue');
-    let lg = getComputedStyle(root).getPropertyValue('--light-green');
-    let dm = getComputedStyle(root).getPropertyValue('--dark-menu-bg');
-    let ls = getComputedStyle(root).getPropertyValue('--light-shadow');
+
 
 
     root.style.setProperty('--background-color', dc);

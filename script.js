@@ -2,10 +2,7 @@ $(document).ready(function(){
 
   /*$("#menu-events-link").hover(function(){
     $("#menu-events-link h2").css(function(){
-
     });
-
-
       {'opacity':'0'});
     setTimeout(function(){ $("#menu-events-link h2").html('Stars'); }, 0);
     setTimeout(function(){ $("#menu-events-link h2").css({'opacity':'1'}); }, 0);
@@ -14,13 +11,11 @@ $(document).ready(function(){
     setTimeout(function(){ $("#menu-events-link h2").html('Events'); }, 100);
     setTimeout(function(){ $("#menu-events-link h2").css({'opacity':'1'}); }, 100);
   });
-
   $("#menu-mission-link").hover(function(){
     $(this).css({'color':'#90a565','border-color':'#90a565', 'box-shadow':'0px 0px 32px #90a565'});
   }, function(){
     $(this).css({'color':'#dea8fa','border-color':'#dea8fa', 'box-shadow':''});
   });
-
   $("#menu-sources-link").hover(function(){
     $(this).css({'color':'#90a565','border-color':'#90a565', 'box-shadow':'0px 0px 32px #90a565'});
   }, function(){
@@ -85,25 +80,25 @@ $(document).ready(function(){
 
   } else {
 
-    $( "#menu" ).find('*').css("border-color", "#c4ac9d" );
+    /*$( "#menu" ).find('*').css("border-color", "#c4ac9d" );
     $(".menu-link, #menu-footer-1, #menu-footer-2, #menu-footer-4, #home-button").css({'color':'#c4ac9d', 'border-color':'#c4ac9d'});
     $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("stroke", "#c4ac9d" );
     $( "#eye-open, #eye-open circle, #eye-open path" ).css("stroke", "#c4ac9d" );
 
     $("#menu-events-link").hover(function(){
-      $(this).css({'color':'#b7c7f7','border-color':'#b7c7f7', 'box-shadow':'0px 0px 32px #b7c7f7'});
+      $(this).css({'border-color':'#b7c7f7', 'box-shadow':'0px 0px 32px #b7c7f7'});
     }, function(){
       $(this).css({'color':'#c4ac9d','border-color':'#c4ac9d', 'box-shadow':''});
     });
 
     $("#menu-mission-link").hover(function(){
-      $(this).css({'color':'#dea8fa','border-color':'#dea8fa', 'box-shadow':'0px 0px 32px #dea8fa'});
+      $(this).css({'border-color':'#dea8fa', 'box-shadow':'0px 0px 32px #dea8fa'});
     }, function(){
       $(this).css({'color':'#c4ac9d','border-color':'#c4ac9d', 'box-shadow':''});
     });
 
     $("#menu-sources-link").hover(function(){
-      $(this).css({'color':'#90a565','border-color':'#90a565', 'box-shadow':'0px 0px 32px #90a565'});
+      $(this).css({'border-color':'#90a565', 'box-shadow':'0px 0px 32px #90a565'});
     }, function(){
       $(this).css({'color':'#c4ac9d','border-color':'#c4ac9d', 'box-shadow':''});
     });
@@ -111,9 +106,9 @@ $(document).ready(function(){
     $("#menu-footer-1, #menu-footer-2, #menu-footer-4").hover(function(){
       $(this).css({'background-color':'#c4ac9d', 'color':'#090909'});
     }, function(){
-      $(this).css({'background-color':'#090909', 'color':'#c4ac9d'});
+      $(this).css({'background-color':'', 'color':'#c4ac9d'});
     });
-
+    */
   }
 
 
@@ -147,6 +142,7 @@ $(document).ready(function(){
     if ($('#menu').css("display") === "none"){
       $('#menu').fadeIn(400);
       $('#menu').css("display", "flex");
+      $('#menu-half').css("transform", "translateX(0)");
       /*$('#menu-button').css("background-color", "#c4ac9d");
       $('#menu-button').css("transform", "rotate(90deg)");
       $('#menu-button').css("border-color", "#c4ac9d");
@@ -163,7 +159,6 @@ $(document).ready(function(){
       $('#menu-button').css("border-color", "");
       $('#menu-button').css("transform", "");
       $('#menu-button svg').css("fill", "");
-
       }, function(){
         $('#menu-button').css("background-color", "#c4ac9d");
         $('#menu-button').css("border-color", "#c4ac9d");
@@ -182,6 +177,7 @@ $(document).ready(function(){
 
     } else {
       $('#menu').fadeOut(400);
+      $('#menu-half').css("transform", "");
       //$('#menu').css("display", "");
       //$('#nav').css("z-index", "100");
       //$('#menu-button').css("background-color", "");
@@ -197,7 +193,6 @@ $(document).ready(function(){
       $('#menu-button').css("border-color", "#c4ac9d");
       $('#menu-button').css("transform", "rotate(90deg)");
       $('#menu-button svg').css("fill", "#090909");
-
       }, function(){
         $('#menu-button').css("background-color", "");
         $('#menu-button').css("border-color", "");
@@ -217,57 +212,31 @@ $(document).ready(function(){
     }
   });
 
+  $("#menu-close").on( "click", function(){
+
+    $('#menu').fadeOut(400);
+    $('#menu-half').css("transform", "");
+
+    $("#eye-open").css("display","none");
+    $("#eye-closed").css("display","block");
+
+    $("#menu-button").hover(function(){
+
+      $("#eye-closed").css("display","none");
+      $("#eye-open").css("display","block");
+    }, function(){
+      $("#eye-open").css("display","none");
+      $("#eye-closed").css("display","block");
+    });
+
+  });
+
 
   $("#cursor").css({'display': 'none'});
   $("#moth-2").css({'display': 'none'});
   $("#moon-2").css({'display': 'none'});
   $("#lotus-2").css({'display': 'none'});
 
-//moth hover
-  $("#moth-hover-area").hover(function(){
-    $("#cursor").css({'display': 'flex', 'color': '#dea8fa', 'background-color': '#090909', 'border-color': '#dea8fa'});
-    $("#cursor").html('<p><small>Spirits</small></p>');
-    $("#moth-2").css({'display': 'block'});
-    $("#moth-1").css({'display': 'none'});
-    $('html').css({'cursor': 'none'});
-    changeCursor();
-  }, function() {
-    $("#cursor").css({'display': 'none'});
-    $("#moth-2").css({'display': 'none'});
-    $("#moth-1").css({'display': ''});
-    $('html').css({'cursor': 'auto'});
-  });
-
-// moon hover
-  $("#moon-hover-area").hover(function(){
-    $("#cursor").css({'display': 'flex', 'color': '#b7c7f7', 'background-color': '#090909', 'border-color': '#b7c7f7'});
-    $("#cursor").html('<p><small>Stars</small></p>');
-    $("#moon-2").css({'display': 'block'});
-    $("#moon-1").css({'display': 'none'});
-    $('html').css({'cursor': 'none'});
-    changeCursor();
-  }, function() {
-    $("#cursor").css({'display': 'none'});
-    $("#moon-2").css({'display': 'none'});
-    $("#moon-1").css({'display': ''});
-    $('html').css({'cursor': 'auto'});
-  });
-
-  // lotus hover
-    $("#lotus-hover-area").hover(function(){
-      $("#cursor").css({'display': 'block', 'color': '#90a565', 'background-color': '#090909', 'border-color': '#90a565'});
-      $("#cursor").html('<p><small>Stones</small></p>');
-      $("#lotus-2").css({'display': 'block'});
-      $("#lotus-1").css({'display': 'none'});
-      $('html').css({'cursor': 'none'});
-
-      changeCursor();
-    }, function() {
-      $("#cursor").css({'display': 'none'});
-      $("#lotus-2").css({'display': 'none'});
-      $("#lotus-1").css({'display': ''});
-      $('html').css({'cursor': 'auto'});
-    });
 
     (function() {
 
@@ -350,7 +319,6 @@ function changeCursor() {
 
 /*
 $(document).ready(function(){
-
   $("#nav-link-spirits").hover(function(){
     $('body').css("background-color", "#f8d6d1");
     $('#nav-link-spirits').css("box-shadow", "0px 56px 64px #e25d45, inset 0 0 64px 32px #af2a12");
@@ -361,7 +329,6 @@ $(document).ready(function(){
     $('#nav-link-stones').css("box-shadow", "0px 16px 24px #f4c2b9, inset 0 0 64px 32px #f4c2b9");
     $('#nav-link-stones').css("background-color", "#f8d6d1");
     $('#nav-link-stones').css("filter", "blur(8px)");
-
   }, function(){
     $('body').css("background-color", "")
     $('#nav-link-spirits').css("box-shadow", "");
@@ -373,7 +340,6 @@ $(document).ready(function(){
     $('#nav-link-stones').css("background-color", "");
     $('#nav-link-stones').css("filter", "");
   });
-
   $("#nav-link-stones").hover(function(){
     $('body').css("background-color", "#dfe9d5");
     $('#nav-link-stones').css("box-shadow", "0px 56px 64px #80a559, inset 0 0 64px 32px #4d7226");
@@ -383,7 +349,6 @@ $(document).ready(function(){
     $('#nav-link-stars').css("box-shadow", "0px 16px 24px #cfddc1, inset 0 0 64px 32px #cfddc1");
     $('#nav-link-stars').css("background-color", "#dfe9d5");
     $('#nav-link-stars').css("filter", "blur(8px)");
-
   }, function(){
     $('body').css("background-color", "")
     $('#nav-link-stones').css("box-shadow", "");
@@ -394,7 +359,6 @@ $(document).ready(function(){
     $('#nav-link-stars').css("background-color", "");
     $('#nav-link-stars').css("filter", "");
   });
-
   $("#nav-link-stars").hover(function(){
     $('body').css("background-color", "#d9dde9");
     $('#nav-link-stars').css("box-shadow", "0px 56px 64px #6879a6, inset 0 0 64px 32px #425790");
@@ -404,7 +368,6 @@ $(document).ready(function(){
     $('#nav-link-stones').css("box-shadow", "0px 16px 24px #c6cdde, inset 0 0 64px 32px #c6cdde");
     $('#nav-link-stones').css("background-color", "#d9dde9");
     $('#nav-link-stones').css("filter", "blur(8px)");
-
   }, function(){
     $('body').css("background-color", "")
     $('#nav-link-stars').css("box-shadow", "");
@@ -415,7 +378,5 @@ $(document).ready(function(){
     $('#nav-link-stones').css("background-color", "");
     $('#nav-link-stones').css("filter", "");
   });
-
-
 });
 */

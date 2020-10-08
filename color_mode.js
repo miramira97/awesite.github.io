@@ -1,16 +1,35 @@
-window.onload = function() {
-    console.log('3')
 
-    //use localstorage to pick theme so that it saves when moving around pages
-    console.log(localStorage.getItem('theme'))
-    if (localStorage.getItem('theme') == 'light') {
-        lightMode()
-        console.log(document.URL)
-    }
-    if (localStorage.getItem('theme') == 'dark' || localStorage.getItem('theme') == null) {
-        darkMode()
-    }
-}
+    var date = new Date()
+    var hrs = date.getHours()
+console.log(hrs)
+   let root = document.documentElement;
+   let lc = getComputedStyle(root).getPropertyValue('--light-color');
+   let dc = getComputedStyle(root).getPropertyValue('--dark-color');
+
+   if (localStorage.getItem('theme') == 'light' || (localStorage.getItem('theme')==null && hrs >5 && hrs <18)) {
+       console.log(document.URL)
+       root.style.setProperty('--background-color', lc);
+       root.style.setProperty('--foreground-color', dc);
+   }
+   else {
+       root.style.setProperty('--background-color', dc);
+       root.style.setProperty('--foreground-color', lc);
+
+   }
+
+   window.onload = function() {
+       console.log('3')
+       //use localstorage to pick theme so that it saves when moving around pages
+       console.log(localStorage.getItem('theme'))
+       if (localStorage.getItem('theme') == 'light'|| (localStorage.getItem('theme')==null && hrs >5 && hrs <18)) {
+           lightMode()
+           console.log(document.URL)
+       }
+       else {
+           darkMode()
+       }
+   }
+
 
 function lightMode() {
 

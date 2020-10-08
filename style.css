@@ -1,27 +1,21 @@
-
-@font-face {
-    font-family: 'Ogg-Regular';
-    src: url('fonts/Ogg-Regular.otf') format("opentype");
-}
-
-@font-face {
-    font-family: 'Apoc-Light';
-    src: url('fonts/ApocTrial-Light.otf') format("opentype");
-}
-
 @font-face {
     font-family: 'Apoc-Hairline';
-    src: url('fonts/ApocTrial-Hairline.otf') format("opentype");
+    src: url('fonts/Apoc-Hairline.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: 'Apoc-Hairline-It';
+    src: url('fonts/Apoc-HairlineItalic.woff2') format("woff2");
 }
 
 @font-face {
     font-family: 'Roobert-Light';
-    src: url('fonts/RoobertTRIAL-Light.otf') format("opentype");
+    src: url('fonts/Roobert-Light.woff2') format("woff2");
 }
 
 @font-face {
-    font-family: 'Roobert-Regular';
-    src: url('fonts/RoobertTRIAL-Regular.otf') format("opentype");
+    font-family: 'Roobert-Light-It';
+    src: url('fonts/Roobert-Light.woff2') format("woff2");
 }
 
 :root {

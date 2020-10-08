@@ -35,28 +35,13 @@ function lightMode() {
     root.style.setProperty('--menu-shadow', ds);
 
     //home button stuff
-    document.getElementById("home-button").style.color = dc
-    $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("stroke", dc );
-    $( "#eye-open, #eye-open circle, #eye-open path" ).css("stroke", dc );
-    $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("fill", lc );
-
-    //menu stuff
+    document.getElementById("home-button").style.color = '--foreground-color'
+    $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("stroke", 'var(--foreground-color)' );
+    $( "#eye-open, #eye-open circle, #eye-open path" ).css("stroke", 'var(--foreground-color)' );
+    $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("fill", 'none' );
 
 
     console.log("YES")
-
-    //page specific stuff
-    if (document.URL.includes("index.html")) {
-        lightModeHomeImages()
-    }
-    if (document.URL.includes("spirits.html")) {
-        document.getElementById("nav").getElementsByTagName("h4")[2].style.color = dp
-
-    }
-        if (document.URL.includes("stars.html")) {
-        document.getElementById("nav").getElementsByTagName("h4")[2].style.color = db
-
-    }
 
     $( "#light-mode" ).css("display", "none" );
     $( "#dark-mode" ).css("display", "" );
@@ -109,6 +94,29 @@ function lightMode() {
           $("#lotus-1").css({'display': ''});
           $('html').css({'cursor': 'auto'});
         });
+
+        //page specific stuff
+        if (document.URL.includes("index.html")) {
+            lightModeHomeImages();
+            root.style.setProperty('--foreground-color', dc);
+        }
+
+        if (document.URL.includes("stars.html")) {
+            lightModeStarsImages()
+            console.log("on the events page");
+            root.style.setProperty('--foreground-color', db);
+            document.getElementById("nav").getElementsByTagName("h4")[2].style.color = db;
+            document.getElementById("event-1").style.animation = 'none';
+        }
+
+        if (document.URL.includes("spirits.html")) {
+            console.log("on the mission page");
+            root.style.setProperty('--foreground-color', dp);
+            document.getElementById("nav").getElementsByTagName("h4")[2].style.color = dp;
+            document.getElementById("mission-statement").style.animation = 'none';
+        }
+
+
 }
 
 function darkMode() {
@@ -130,19 +138,29 @@ function darkMode() {
     root.style.setProperty('--menu-bg', dm);
     root.style.setProperty('--menu-shadow', ls);
 
-    $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("stroke", lc );
-    $( "#eye-open, #eye-open circle, #eye-open path" ).css("stroke", lc );
-    $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("fill", dc );
-
-    console.log("YES")
-    document.getElementById("home-button").style.color = lc
+    document.getElementById("home-button").style.color = '--foreground-color'
+    $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("stroke", 'var(--foreground-color)' );
+    $( "#eye-open, #eye-open circle, #eye-open path" ).css("stroke", 'var(--foreground-color)' );
+    $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("fill", 'none' );
 
     if (document.URL.includes("index.html")) {
-        darkModeHomeImages()
+        darkModeHomeImages();
+        root.style.setProperty('--foreground-color', lc);
     }
-    if (document.URL.includes("spirits.html")) {
-        document.getElementById("nav").getElementsByTagName("h4")[2].style.color = lp
 
+    if (document.URL.includes("stars.html")) {
+        darkModeStarsImages();
+        console.log("on the events page");
+        root.style.setProperty('--foreground-color', lb);
+        document.getElementById("nav").getElementsByTagName("h4")[2].style.color = lb;
+        document.getElementById("event-1").style.animation = '';
+    }
+
+    if (document.URL.includes("spirits.html")) {
+        console.log("on the mission page");
+        root.style.setProperty('--foreground-color', lp);
+        document.getElementById("nav").getElementsByTagName("h4")[2].style.color = lp;
+        document.getElementById("mission-statement").style.animation = '';
     }
 
     $( "#light-mode" ).css("display", "" );
@@ -198,19 +216,27 @@ function darkMode() {
 }
 
 function lightModeHomeImages() {
-    document.getElementById('moth-1').src = 'images/moth-bitmap-light-1.png'
-    document.getElementById('moth-2').src = 'images/moth-bitmap-light-2.png'
-    document.getElementById('moon-1').src = 'images/moon-bitmap-light-1-2.png'
-    document.getElementById('moon-2').src = 'images/moon-bitmap-light-2-2.png'
-    document.getElementById('lotus-1').src = 'images/lotus-bitmap-light-1.png'
-    document.getElementById('lotus-2').src = 'images/lotus-bitmap-light-2.png'
+  document.getElementById('moth-1').src = 'images/moth-bitmap-light-1.png'
+  document.getElementById('moth-2').src = 'images/moth-bitmap-light-2.png'
+  document.getElementById('moon-1').src = 'images/moon-bitmap-light-1-2.png'
+  document.getElementById('moon-2').src = 'images/moon-bitmap-light-2-2.png'
+  document.getElementById('lotus-1').src = 'images/lotus-bitmap-light-1.png'
+  document.getElementById('lotus-2').src = 'images/lotus-bitmap-light-2.png'
 }
 
 function darkModeHomeImages() {
-    document.getElementById('moth-1').src = 'images/moth-bitmap-1-2.png'
-    document.getElementById('moth-2').src = 'images/moth-bitmap-2-2.png'
-    document.getElementById('moon-1').src = 'images/moon-bitmap-1-12.png'
-    document.getElementById('moon-2').src = 'images/moon-bitmap-2-6.png'
-    document.getElementById('lotus-1').src = 'images/lotus-bitmap-1.png'
-    document.getElementById('lotus-2').src = 'images/lotus-bitmap-2.png'
+  document.getElementById('moth-1').src = 'images/moth-bitmap-1-2.png'
+  document.getElementById('moth-2').src = 'images/moth-bitmap-2-2.png'
+  document.getElementById('moon-1').src = 'images/moon-bitmap-1-12.png'
+  document.getElementById('moon-2').src = 'images/moon-bitmap-2-6.png'
+  document.getElementById('lotus-1').src = 'images/lotus-bitmap-1.png'
+  document.getElementById('lotus-2').src = 'images/lotus-bitmap-2.png'
+}
+
+function lightModeStarsImages() {
+  document.getElementById('event-1-image').src = 'images/ojibwe_cosmology_5.png'
+}
+
+function darkModeStarsImages() {
+  document.getElementById('event-1-image').src = 'images/ojibwe_cosmology_3.png'
 }

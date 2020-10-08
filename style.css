@@ -26,9 +26,9 @@
 
 :root {
   --dark-color: rgba(9, 9, 9, 1.00);
-  --light-color: rgba(245, 245, 245, 1.00);
+  --light-color: rgba(229, 225, 221, 1.00);
   --light-menu-bg: rgba(9, 9, 9, .25);
-  --dark-menu-bg: rgba(245, 245, 245, .25);
+  --dark-menu-bg: rgba(229, 225, 221, .25);
   --dark-shadow: rgba(9, 9, 9, .1);
   --light-shadow: rgba(245, 245, 245, .1);
   --light-blue: #b7c8f7;
@@ -55,15 +55,11 @@ html body {
     background-color:var(--background-color);
     color: var(--foreground-color);
 
-    transition: background-color 0.6s ease-out;
+    /*transition: background-color 0.6s ease-out;*/
 }
 
 body {
     overflow: auto;
-}
-
-html {
-    background-color: var(--background-color);
 }
 
 * {
@@ -158,7 +154,7 @@ h5 {
 h6 {
     display: inline;
     font-family: 'Roobert-Light', serif;
-    font-size: 4vw;
+    font-size: 5vw;
     font-weight: normal;
     padding: 0;
     margin: 0;
@@ -428,6 +424,11 @@ a:hover {}
     padding: 2rem 3rem;
 }
 
+#menu-home-button a {
+    color: var(--foreground-color) !important;
+    text-decoration: none;
+}
+
 #menu-content {
     flex: 4 1 auto;
     display: flex;
@@ -464,7 +465,7 @@ a:hover {}
 .menu-hover-text {
     opacity: 0;
     position: absolute;
-    transform: translateY(-0.25vw);
+    transform: translateY(0vw);
     transition: all 0.4s ease-in;
 }
 
@@ -1148,6 +1149,7 @@ display: inline-block; height: 1px; width: 6rem; margin: 0rem 0.5rem; background
   height: 60vh;
   object-fit: cover;
   object-position: center;
+  border-bottom: 1px solid var(--used-blue);
 }
 
 #event-title {

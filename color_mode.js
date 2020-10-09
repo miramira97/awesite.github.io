@@ -123,10 +123,9 @@ function lightMode() {
         });
 
         //page specific stuff
-        if (document.URL.includes("index.html")) {
-            lightModeHomeImages();
-            root.style.setProperty('--foreground-color', dc);
-        }
+                    lightModeHomeImages();
+
+      
 
         if (document.URL.includes("stars.html")) {
             lightModeStarsImages()
@@ -164,10 +163,9 @@ function darkMode() {
     $( "#eye-open, #eye-open circle, #eye-open path" ).css("stroke", 'var(--foreground-color)' );
     $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("fill", 'none' );
 
-    if (document.URL.includes("index.html")) {
         darkModeHomeImages();
         root.style.setProperty('--foreground-color', lc);
-    }
+    
 
     if (document.URL.includes("stars.html")) {
         darkModeStarsImages();

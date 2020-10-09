@@ -9,6 +9,11 @@
 }
 
 @font-face {
+    font-family: 'Apoc-Light';
+    src: url('fonts/ApocTrial-Light.otf') format("opentype");
+}
+
+@font-face {
     font-family: 'Roobert-Light';
     src: url('fonts/Roobert-Light.woff2') format("woff2");
 }
@@ -16,6 +21,11 @@
 @font-face {
     font-family: 'Roobert-Light-It';
     src: url('fonts/Roobert-Light.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: 'Roobert-Regular';
+    src: url('fonts/RoobertTRIAL-Regular.otf') format("opentype");
 }
 
 :root {
@@ -115,7 +125,7 @@ h2 {
 
 h3 {
     display: inline;
-    font-family: 'Apoc-Hairline', serif;
+    font-family: 'Apoc-Light', serif;
     font-size: 2vw;
     line-height: 1.5;
     font-weight: normal;
@@ -126,7 +136,7 @@ h3 {
 
 h4 {
     display: inline;
-    font-family: 'Roobert-Light', sans-serif;
+    font-family: 'Roobert-Regular', sans-serif;
     font-size: 2vw;
     line-height: 1.5;
     font-weight: normal;
@@ -157,7 +167,7 @@ h6 {
 
 p {
     display: inline;
-    font-family: 'Roobert-Light', serif;
+    font-family: 'Roobert-Regular', serif;
     font-size: 2vw;
     line-height: 1.5;
     font-weight: normal;
@@ -168,7 +178,7 @@ p {
 
 small {
     display: inline;
-    font-family: 'Apoc-Hairline', serif;
+    font-family: 'Apoc-Light', serif;
     font-size: 2vw;
     line-height: 1.5;
     font-weight: normal;

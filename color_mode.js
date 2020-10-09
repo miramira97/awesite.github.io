@@ -1,7 +1,21 @@
+window.onload = function() {
+    console.log('3')
 
-       let root = document.documentElement;
+    //use localstorage to pick theme so that it saves when moving around pages
+    console.log(localStorage.getItem('theme'))
+    if (localStorage.getItem('theme') == 'light') {
+        lightMode()
+        console.log(document.URL)
+    }
+    if (localStorage.getItem('theme') == 'dark' || localStorage.getItem('theme') == null) {
+        darkMode()
+    }
+}
 
-   //get all color variables
+function lightMode() {
+
+    //get color vars
+    let root = document.documentElement;
     let lc = getComputedStyle(root).getPropertyValue('--light-color');
     let dc = getComputedStyle(root).getPropertyValue('--dark-color');
     let dp = getComputedStyle(root).getPropertyValue('--dark-purple');
@@ -9,47 +23,6 @@
     let dg = getComputedStyle(root).getPropertyValue('--dark-green');
     let lm = getComputedStyle(root).getPropertyValue('--light-menu-bg');
     let ds = getComputedStyle(root).getPropertyValue('--dark-shadow');
-    let lp = getComputedStyle(root).getPropertyValue('--light-purple');
-    let lb = getComputedStyle(root).getPropertyValue('--light-blue');
-    let lg = getComputedStyle(root).getPropertyValue('--light-green');
-    let dm = getComputedStyle(root).getPropertyValue('--dark-menu-bg');
-    let ls = getComputedStyle(root).getPropertyValue('--light-shadow');
-
-    //get time variables
-    var date = new Date()
-    var hrs = date.getHours()
-
-
-   if (localStorage.getItem('theme') == 'light' || (localStorage.getItem('theme')==null && hrs >5 && hrs <18)) {
-       console.log(document.URL)
-       root.style.setProperty('--background-color', lc);
-       root.style.setProperty('--foreground-color', dc);
-   }
-   else {
-       root.style.setProperty('--background-color', dc);
-       root.style.setProperty('--foreground-color', lc);
-
-   }
-
-   window.onload = function() {
-       console.log('3')
-       //use localstorage to pick theme so that it saves when moving around pages
-       console.log(localStorage.getItem('theme'))
-       if (localStorage.getItem('theme') == 'light'|| (localStorage.getItem('theme')==null && hrs >5 && hrs <18)) {
-           lightMode()
-           console.log(document.URL)
-       }
-       else {
-           darkMode()
-       }
-   }
-
-
-function lightMode() {
-
-    //get color vars
-    let root = document.documentElement;
-
 
 
     //set color vars
@@ -123,11 +96,12 @@ function lightMode() {
         });
 
         //page specific stuff
-                    lightModeHomeImages();
+        if (document.URL.includes("index.html") || window.location.href.indexOf("index") > -1) {
+            lightModeHomeImages();
+            root.style.setProperty('--foreground-color', dc);
+        }
 
-      
-
-        if (document.URL.includes("stars.html")) {
+        if (document.URL.includes("stars.html") || window.location.href.indexOf("stars") > -1) {
             lightModeStarsImages()
             console.log("on the events page");
             root.style.setProperty('--foreground-color', db);
@@ -135,7 +109,7 @@ function lightMode() {
             document.getElementById("event-1").style.animation = 'none';
         }
 
-        if (document.URL.includes("spirits.html")) {
+        if (document.URL.includes("spirits.html") || window.location.href.indexOf("spirits") > -1) {
             console.log("on the mission page");
             root.style.setProperty('--foreground-color', dp);
             document.getElementById("nav").getElementsByTagName("h4")[2].style.color = dp;
@@ -147,7 +121,13 @@ function lightMode() {
 
 function darkMode() {
     let root = document.documentElement;
-
+    let dc = getComputedStyle(root).getPropertyValue('--dark-color');
+    let lc = getComputedStyle(root).getPropertyValue('--light-color');
+    let lp = getComputedStyle(root).getPropertyValue('--light-purple');
+    let lb = getComputedStyle(root).getPropertyValue('--light-blue');
+    let lg = getComputedStyle(root).getPropertyValue('--light-green');
+    let dm = getComputedStyle(root).getPropertyValue('--dark-menu-bg');
+    let ls = getComputedStyle(root).getPropertyValue('--light-shadow');
 
 
     root.style.setProperty('--background-color', dc);
@@ -163,11 +143,12 @@ function darkMode() {
     $( "#eye-open, #eye-open circle, #eye-open path" ).css("stroke", 'var(--foreground-color)' );
     $( "#eye-closed, #eye-closed circle, #eye-closed path" ).css("fill", 'none' );
 
+    if (document.URL.includes("index.html") || window.location.href.indexOf("index") > -1) {
         darkModeHomeImages();
         root.style.setProperty('--foreground-color', lc);
-    
+    }
 
-    if (document.URL.includes("stars.html")) {
+    if (document.URL.includes("stars.html") || window.location.href.indexOf("stars") > -1) {
         darkModeStarsImages();
         console.log("on the events page");
         root.style.setProperty('--foreground-color', lb);
@@ -175,7 +156,7 @@ function darkMode() {
         document.getElementById("event-1").style.animation = '';
     }
 
-    if (document.URL.includes("spirits.html")) {
+    if (document.URL.includes("spirits.html") || window.location.href.indexOf("spirits") > -1) {
         console.log("on the mission page");
         root.style.setProperty('--foreground-color', lp);
         document.getElementById("nav").getElementsByTagName("h4")[2].style.color = lp;

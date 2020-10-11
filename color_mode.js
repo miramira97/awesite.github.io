@@ -26,11 +26,11 @@ window.onload = function() {
 
     //use localstorage to pick theme so that it saves when moving around pages
     console.log(localStorage.getItem('theme'))
-    if (localStorage.getItem('theme') == 'light'||(localStorage.getItem('theme')==null&&hrs>6 &&hrs<18)) {
+    if (localStorage.getItem('theme') == 'light') {
         lightMode()
         console.log(document.URL)
     }
-    if (localStorage.getItem('theme') == 'dark' ||(localStorage.getItem('theme')==null&&hrs<6 ||hrs>18)) {
+    if (localStorage.getItem('theme') == 'dark' ||localStorage.getItem('theme')==null) {
         darkMode()
     }
 }

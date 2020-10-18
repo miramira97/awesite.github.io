@@ -135,6 +135,8 @@ function lightMode() {
         root.style.setProperty('--foreground-color', db);
         document.getElementById("nav").getElementsByTagName("h4")[2].style.color = db;
         document.getElementById("event-1").style.animation = 'none';
+                document.getElementById("event-2").style.animation = 'none';
+
     }
 
     if (window.location.href.indexOf("spirits") > -1) {
@@ -182,6 +184,8 @@ function darkMode() {
         root.style.setProperty('--foreground-color', lb);
         document.getElementById("nav").getElementsByTagName("h4")[2].style.color = lb;
         document.getElementById("event-1").style.animation = '';
+                document.getElementById("event-2").style.animation = '';
+
     }
 
     if (document.URL.includes("spirits.html") || window.location.href.indexOf("spirits") > -1) {

@@ -1109,17 +1109,19 @@ display: inline-block; height: 1px; width: 6rem; margin: 0rem 0.5rem; background
     display: inline-block;
     /*position:relative;
   z-index: -1;*/
-    margin: 3rem 9rem 3rem 3rem;
-    font-size: 4rem;
+
     font-weight: normal;
-    padding-top: 40px;
+
     float: left;
     border: 1px solid var(--used-blue);
     border-radius: 8px;
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-bottom: 40px;
     animation: 3s glow-blue linear infinite alternate;
+
+    width: 100%;
+    margin-top:5rem;
+    padding-bottom: 1rem;
+    margin-bottom:3rem;
+    overflow: hidden;
 }
 
 #events h1 {
